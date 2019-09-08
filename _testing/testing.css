@@ -1,0 +1,249 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+  padding-top: 10px;
+  height: 54px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-bar-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top-bar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo-container {
+  height: 44px;
+  width: 270px;
+}
+
+#logo-header {
+  height: 38px;
+}
+
+#logo-header:hover {
+  cursor: pointer;
+}
+
+#icon-small {
+  width: 25px;
+}
+
+.secondary {
+  background-color: #5da2d5;
+  color: white;
+}
+
+.button {
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.small.button {
+  height: 36px;
+  width: 76px;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 0px 10px;
+  /* margin: 0px 20px; */
+}
+
+/* Main Page  */
+.main-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Search Content */
+.main-search-content-container {
+  display: relative;
+}
+
+.slide-show-container, .slide {
+  display: absolute;
+}
+
+.main-search-content {
+  /* background-image: url("https://s3-ap-southeast-2.amazonaws.com/macquarie-ish-oncourse/9390f6ef-6c5f-4e92-babd-05fecaf77b41"); */
+  /* background-image: url("../assets/photos/splash/splash_search_background_1.jpg"); */
+  /* background-size: cover;
+  background-position: center; */
+  height: 514px;
+  width: 100%;
+  display: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-search-content h1 {
+  margin-bottom: 30px;
+}
+
+.search-picker-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-search-content h1 {
+  font-size: 45px;
+  color: white;
+  text-shadow: 5px 5px 0.05 black;
+}
+
+.main.button {
+  background-color: #f4654a;
+  color: white;
+}
+
+.medium.button {
+  height: 48px;
+  width: 144px;
+  font-size: 18px ;
+  border-radius: 4px;
+  padding: 0px 10px;
+  /* margin: 0px 20px; */
+}
+
+select, option, input[type="date"] {
+  height: 48px;
+  width: 158px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 0px;
+  font-family: 'Varela Round', sans-serif;
+  box-shadow: none;
+  padding-left: 10px;
+  color: #cecece;
+  font-size: 16px;
+}
+
+select.location {
+  width: 258px;
+}
+
+
+/* Image Banner */
+
+.image-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 292px;
+  width: 952px;
+  background-image: url("http://chegg.com/play/wp-content/uploads/sites/3/2013/02/cooking-college.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.image-banner h1 {
+  color: white;
+}
+
+.large.button {
+  height: 48px;
+  width: 258px;
+  font-size: 18px;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 4px;
+  padding: 0px 10px;
+  /* margin: 0px 20px; */
+}
+
+.page-featured-metros-international, .page-featured-metros, .image-banner {
+  margin: 30px 0px;
+}
+
+.page-featured-metros > .content-block, .page-featured-metros-international > .content-block {
+  background-image: url("https://wallpapercave.com/wp/aLUDwDa.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 144px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-featured-metros-international > .content-block {
+  background-image: url("https://images2.alphacoders.com/947/947089.jpg");
+}
+
+.content-city-infor, .content-block-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content-city-infor {
+  color: white;
+}
+
+.content-city-infor.header {
+  font-size: 25px;
+  padding: 5px;
+}
+
+ul{ list-style-type: none; }
+
+a { text-decoration: none }
+
+.footer-content {
+  /* margin-top: 50px; */
+  padding: 50px 0px;
+  background-color: #4f4f4f;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px 30px;
+  font-size: 12px;
+}
+
+.footer-block > p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-block > a {
+  padding: 5px 0px;
+}
+
+.footer-block > a:hover {
+  text-decoration: underline;
+}
+
+.main.button:hover {
+  background-color: #dd4a3a;
+}
+
+.secondary.button:hover {
+  background-color: #3289bf;
+}
+
