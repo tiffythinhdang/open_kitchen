@@ -4,7 +4,7 @@ import {
   CLEAR_ERRORS
 } from '../actions/session_actions';
 
-const sessionErrorReducer = (state = [], action) => {
+const sessionErrorsReducer = (state = [], action) => {
   Object.freeze(state);
 
   switch (action.type) {
@@ -22,5 +22,5 @@ const sessionErrorReducer = (state = [], action) => {
   }
 };
 
-export default sessionErrorReducer;
+export default sessionErrorsReducer;
 

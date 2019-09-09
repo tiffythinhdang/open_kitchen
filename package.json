@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode:development"
+    "start": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen/issues"
   },
-  "homepage": "https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen#readme"
+  "homepage": "https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.3.8"
+  }
 }
