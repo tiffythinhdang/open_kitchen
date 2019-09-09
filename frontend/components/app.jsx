@@ -12,6 +12,8 @@ import TopBar from './top_bar/top_bar';
 const App = () => (
   <div>
     <TopBar />
+    <Route path={'/signup'} component={SignUpFormContainer} />
+    <Route path={'/login'} component={LogInFormContainer} />
   </div>
 );
 
