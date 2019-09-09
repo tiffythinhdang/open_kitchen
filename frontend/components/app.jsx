@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom';
 
 import TopBar from './top_bar/top_bar';
+import SignUpFormContainer from './session_form/signup_form_container';
+import LogInFormContainer from './session_form/login_form_container';
 
 const App = () => (
   <div>

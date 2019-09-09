@@ -29,7 +29,7 @@ const clearErrors = () => ({
 export const signUp = (user) => dispatch => {
   return sessionAPIUtil.signUp(user)
     .then(user => dispatch(receiveCurrentUser(user)))
-    .fail(errors => dispatch(receiveErrors(errors.responseText)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 };
 
 export const logIn = (user) => dispatch => {
