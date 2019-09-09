@@ -15,7 +15,7 @@ const Greeting = ({ currentUser, logOut }) => {
 
   const personalGreeting = () => (
     <div>
-      <a className="greeting message">Hi {currentUser.first_name}</a>
+      <a className="greeting message">Hi {currentUser.firstName}</a>
       <a>
         <img src="../../../../assets/icons/small_icon_arrow_down.png" alt="arrow_down" />
       </a>

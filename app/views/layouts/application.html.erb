@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Openkitchen</title>
+    <title>Welcome to Open Kitchen</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <% if logged_in? %>
+      <script type="text/javascript">
+        window.currentUser = {
+          "id": "<%=current_user.id%>",
+          "firstName": "<%=current_user.first_name%>",
+          "lastName": "<%=current_user.last_name%>",
+          "email": "<%=current_user.email%>"
+        };
+      </script>
+    <% end %>
   </head>
 
   <body>
