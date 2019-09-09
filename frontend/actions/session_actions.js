@@ -7,9 +7,9 @@ export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 //action
-const receiveCurrentUser = (user) => ({
+const receiveCurrentUser = (currentUser) => ({
   type: RECEIVE_CURRENT_USER,
-  user
+  currentUser
 });
 
 const logOutCurrentUser = () => ({

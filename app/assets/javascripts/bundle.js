@@ -109,10 +109,10 @@ var LOG_OUT_CURRENT_USER = "LOG_OUT_CURRENT_USER";
 var RECEIVE_ERRORS = "RECEIVE_ERRORS";
 var CLEAR_ERRORS = "CLEAR_ERRORS"; //action
 
-var receiveCurrentUser = function receiveCurrentUser(user) {
+var receiveCurrentUser = function receiveCurrentUser(currentUser) {
   return {
     type: RECEIVE_CURRENT_USER,
-    user: user
+    currentUser: currentUser
   };
 };
 
@@ -467,7 +467,7 @@ var sessionReducer = function sessionReducer() {
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
       return {
-        currentUserId: action.user.id
+        currentUserId: action.currentUser.id
       };
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["LOG_OUT_CURRENT_USER"]:
