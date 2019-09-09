@@ -25,7 +25,7 @@ const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
-//thunk_action
+// thunk_action
 export const signUp = (user) => dispatch => {
   return sessionAPIUtil.signUp(user)
     .then(user => dispatch(receiveCurrentUser(user)))
