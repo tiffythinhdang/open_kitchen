@@ -15,18 +15,10 @@
 #  menu           :text             not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  lat            :float            not null
+#  lng            :float            not null
 #
 
 class Kitchen < ApplicationRecord
-  validates 
-    :name, 
-    :cuisine, :cost, 
-    :average_rating, 
-    :number_reviews, 
-    :address, 
-    :city, 
-    :country, 
-    :phone_number, 
-    :menu, 
-    presence: true
+  validates :name, :cuisine, :cost, :average_rating, :number_reviews, :address, :city, :country, :phone_number, :menu, presence: true
 end

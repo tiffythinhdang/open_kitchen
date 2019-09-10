@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_10_204938) do
+
+ActiveRecord::Schema.define(version: 2019_09_10_213208) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,14 +26,21 @@ ActiveRecord::Schema.define(version: 2019_09_10_204938) do
     t.string "country", null: false
     t.string "phone_number", null: false
     t.text "menu", null: false
-    t.float "lat", null: false
-    t.float "lng", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "lat", null: false
+    t.float "lng", null: false
     t.index ["average_rating"], name: "index_kitchens_on_average_rating"
     t.index ["city"], name: "index_kitchens_on_city"
     t.index ["cost"], name: "index_kitchens_on_cost"
     t.index ["country"], name: "index_kitchens_on_country"
+  end
+
+  create_table "timeslots", force: :cascade do |t|
+    t.string "day", null: false
+    t.time "time", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
