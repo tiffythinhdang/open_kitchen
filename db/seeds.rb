@@ -6,11 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'yaml'
 
 ActiveRecord::Base.transaction do 
+  Kitchen.destroy_all
+  Timeslot.destroy_all
+  KitchenTimeslotCapacity.destroy_all
+
   yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
   kitchens = yaml['kitchens']
-  users = yaml['users']
 
   # Create kitchens
   kichens.each do |kitchen|
@@ -34,6 +38,5 @@ ActiveRecord::Base.transaction do
       KitchenTimeslotCapacity.create!( kitchen_id: kitchen.id, timeslot_id: timeslot.id, capacity: capacity )
     end
   end
-
 end
 

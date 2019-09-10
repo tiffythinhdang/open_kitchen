@@ -1,14 +1,14 @@
-users:
-  - id: 1
-    first_name: Tiffany
-    last_name: Dang
-    email: tiffanydang@gmail.com
-    password: "123456"
-  - id: 2
-    first_name: Andy
-    last_name: Mok
-    email: andymok@gmail.com
-    password: "123456"
+# users:
+#   - id: 1
+#     first_name: Tiffany
+#     last_name: Dang
+#     email: tiffanydang@gmail.com
+#     password: "123456"
+#   - id: 2
+#     first_name: Andy
+#     last_name: Mok
+#     email: andymok@gmail.com
+#     password: "123456"
 
 kichens:
   - id: 1
