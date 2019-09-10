@@ -35,11 +35,11 @@ export const signUp = (user) => dispatch => {
 export const logIn = (user) => dispatch => {
   return sessionAPIUtil.logIn(user)
     .then(user => dispatch(receiveCurrentUser(user)))
-    .fail(errors => dispatch(receiveErrors(errors.responseText)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 };
 
 export const logOut = () => dispatch => {
   return sessionAPIUtil.logOut()
     .then(() => dispatch(logOutCurrentUser()))
-    .fail(errors => dispatch(receiveErrors(errors.responseText)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 };

@@ -40,12 +40,13 @@ class LogInForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="log-in modal-alert container">
         <h1>Log In</h1>
         {this.renderErrors()}
-        <form className="sign-up-form" onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="email"
+            className="form input"
             value={this.state.email}
             onChange={this.handleChange('email')}
             placeholder="Email"
@@ -53,16 +54,23 @@ class LogInForm extends React.Component {
 
           <input
             type="password"
+            className="form input"
             value={this.state.password}
             onChange={this.handleChange('password')}
             placeholder="Password"
           />
 
-          <button type="submit">Log In</button>
-          <p><Link to={'/'}>Cancel</Link></p>
-          <p>
-            <a>New to OpenKitchen? </a>
-            <Link to={'/signup'}>Create an Account</Link>
+          <button 
+            type="submit"
+            className="large main button">Log In
+          </button>
+          <p className="link-container">
+            <Link to={'/'} className="secondary link">Cancel</Link>
+          </p>
+          <p className="link-container">
+            <a>New to OpenKitchen?</a>
+            &nbsp;
+            <Link to={'/signup'} className='main link'>Create an Account</Link>
           </p>
         </form>
       </div>

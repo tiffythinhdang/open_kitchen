@@ -1,3 +1,81 @@
 // Place all the styles related to the staticpages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #FFFFFF;
+$lightgray: #B5B5B5;
+$mediumgray: #3C3C3C;
+$darkgray: #1E1E1E;
+$main_orange: #F7874E;
+
+.login.link {
+  font-family: 'Varela Round', sans-serif;
+  width: 78px;
+  height: 68px;
+  font-size: 14px;
+}
+
+.link.main {
+  color: $main_orange
+}
+
+.link.secondary {
+  color: $lightgray;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.button {
+  border-radius: 4px;
+  margin: 10px 20px;
+  text-align: center;
+  color: $white;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.small.button {
+  width: 78px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.medium.button {
+  width: 144px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.large.button {
+  width: 400px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.main.button {
+  background: $main_orange;
+}
+
+.secondary.button {
+  background: #69A0D1;
+}
+
+.main.button:hover {
+  background: #D16730;
+}
+
+.secondary.button:hover {
+  background: #4B7DA9;
+}
+
+.small.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.errors {
+  color: red;
+}
+
+

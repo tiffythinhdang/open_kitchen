@@ -2,21 +2,22 @@ import React from 'react';
 
 const DropDownPersonalNav = ({ logOut }) => {
   return (
-    <div className="drop down personal nav">
+    <div className="drop down personal nav hidden">
+      <div className="arrow-up"></div>
       <div>
-        <a href="#">My profile</a>
+        <a href="#" className="link">My profile</a>
       </div>
 
       <div>
-        <a href="#">My Reservations</a>
+        <a href="#" className="link">My Reservations</a>
       </div>
 
       <div>
-        <a href="#">My Saved Kitchens</a>
+        <a href="#" className="link">My Saved Kitchens</a>
       </div>
 
       <div>
-        <a onClick={logOut()}>Log Out</a>
+        <a onClick={logOut} className="link">Log Out</a>
       </div>
     </div>
   )

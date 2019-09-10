@@ -48,12 +48,13 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-    <div>
+      <div className="sign-up modal-alert container">
         <h1>Sign Up</h1>
         { this.renderErrors() }
-        <form className="login-in-form" onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input 
             type="text"
+            className="form input"
             value={this.state.first_name}
             onChange={this.handleChange('first_name')}
             placeholder="First Name"
@@ -61,6 +62,7 @@ class SignUpForm extends React.Component {
             
           <input 
             type="text"
+            className="form input"
             value={this.state.last_name}
             onChange={this.handleChange('last_name')}
             placeholder="Last Name"
@@ -68,6 +70,7 @@ class SignUpForm extends React.Component {
 
           <input 
             type="email"
+            className="form input"
             value={this.state.email}
             onChange={this.handleChange('email')}
             placeholder="Email"
@@ -75,6 +78,7 @@ class SignUpForm extends React.Component {
 
           <input 
             type="password"
+            className="form input"
             value={this.state.password}
             onChange={this.handleChange('password')}
             placeholder="Password * at least 6 characters"
@@ -82,16 +86,23 @@ class SignUpForm extends React.Component {
 
           <input 
             type="password"
+            className="form input"
             value={this.state.confirm_password}
             onChange={this.handleChange('confirm_password')}
             placeholder="Confirm Password"
           />
 
-          <button type="submit">Sign Up</button>
-          <p><Link to={'/'}>Cancel</Link></p>
-          <p>
-            <a>Already has an account? </a>
-            <Link to={'/login'}>Log In</Link>
+          <button 
+            type="submit"
+            className="large main button">Sign Up
+          </button>
+          <p className="link-container">
+            <Link to={'/'} className="secondary link">Cancel</Link>
+          </p>
+          <p className="link-container">
+            <a>Already has an account?</a>
+            &nbsp;
+            <Link to={'/login'} className='main link'>Log In</Link>
           </p>
         </form>
       </div>

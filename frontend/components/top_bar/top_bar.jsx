@@ -10,8 +10,8 @@ class TopBar extends React.Component {
 
   render () {
     return (
-      <div>
-        <Link to={'/'}>
+      <div className="top bar">
+        <Link to={'/'} className="logo">
           <img src="../../../../assets/finalize_logo.png" alt="logo"/>
         </Link>
         <GreetingContainer />
