@@ -8,14 +8,12 @@ import {
 } from 'react-router-dom';
 
 import TopBar from './top_bar/top_bar';
-import SignUpFormContainer from './session_form/signup_form_container';
-import LogInFormContainer from './session_form/login_form_container';
+import ModalContainer from './modal/modal_container';
 
 const App = () => (
   <div>
+    <ModalContainer />
     <TopBar />
-    <Route path={'/signup'} component={SignUpFormContainer} />
-    <Route path={'/login'} component={LogInFormContainer} />
   </div>
 );
 

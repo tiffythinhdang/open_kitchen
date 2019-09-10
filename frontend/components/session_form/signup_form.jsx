@@ -14,7 +14,6 @@ class SignUpForm extends React.Component {
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   handleChange(type) {
@@ -28,7 +27,11 @@ class SignUpForm extends React.Component {
       alert ("Passwords don't match");
     } else {
       this.props.signUp(this.state)
-        .then(user => this.props.history.push('/'))
+        .then(user => {
+          this.props.closeModal();
+          this.props.history.push('/');
+          }
+        )
     }
   }
 
@@ -97,12 +100,20 @@ class SignUpForm extends React.Component {
             className="large main button">Sign Up
           </button>
           <p className="link-container">
-            <Link to={'/'} className="secondary link">Cancel</Link>
+            <a
+              className="secondary link"
+              onClick={this.props.closeModal}
+              >Cancel
+            </a>
           </p>
           <p className="link-container">
             <a>Already has an account?</a>
             &nbsp;
-            <Link to={'/login'} className='main link'>Log In</Link>
+            <a
+              className='main link'
+              onClick={() => this.props.openModal('showLogIn')}
+            >Log In
+            </a>
           </p>
         </form>
       </div>

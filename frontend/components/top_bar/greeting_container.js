@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import Greeting from './greeting';
 import { logOut } from '../../actions/session_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => {
   const currentUserId = state.session.currentUserId;
@@ -13,7 +14,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    logOut: () => dispatch(logOut())
+    logOut: () => dispatch(logOut()),
+    openModal: (content) => dispatch(openModal(content)),
+    closeModal: () => dispatch(closeModal())
   }
 };
 

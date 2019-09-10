@@ -21,7 +21,11 @@ class LogInForm extends React.Component {
     e.preventDefault();
 
     this.props.logIn(this.state)
-      .then(user => this.props.history.push('/'))
+      .then(user => {
+        this.props.closeModal();
+        this.props.history.push('/');
+      }
+      )
   }
 
   renderErrors() {
@@ -65,12 +69,20 @@ class LogInForm extends React.Component {
             className="large main button">Log In
           </button>
           <p className="link-container">
-            <Link to={'/'} className="secondary link">Cancel</Link>
+            <a 
+              className="secondary link" 
+              onClick={this.props.closeModal}
+              >Cancel
+            </a>
           </p>
           <p className="link-container">
             <a>New to OpenKitchen?</a>
             &nbsp;
-            <Link to={'/signup'} className='main link'>Create an Account</Link>
+            <a 
+              className='main link'
+              onClick={ () =>this.props.openModal('showSignUp') }
+              >Create an Account
+            </a>
           </p>
         </form>
       </div>

@@ -1,38 +1,85 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import Modal from '../modal/modal';
 import DropDownPersonalNavContainer from './drop_down_personal_nav_container';
 
-const Greeting = ({ currentUser, logOut }) => {
-  const toggleDropDown = (e) => {
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props)
+    // this.state = {
+    //   showModal: false,
+    //   showSignUp: false,
+    //   showLogIn: false
+    // };
+
+    this.sessionLinks = this.sessionLinks.bind(this);
+    this.personalGreeting = this.personalGreeting.bind(this);
+  }
+
+  toggleDropDown(e) {
     e.preventDefault();
-    let dropDown = document.getElementsByClassName("drop down personal nav")[0];
+    let dropDown = document.getElementsByClassName("drop down container")[0];
     dropDown.classList.toggle("hidden");
   }
 
-  const sessionLinks = () => (
-    <div className="session links">
-      <Link to={'/signup'}>
-        <button className="small secondary button">Sign Up</button>
-      </Link>
-      <Link to={'/login'} className="login link">
-        Log In
-      </Link>
-    </div>
-  );
+  // openModal(type) {
+  //   return (e) => {
+  //     this.setState({
+  //       showModal: true,
+  //       [type]: true 
+  //     })
+  //   }
+  // }
 
-  const personalGreeting = () => (
-    <div className="personal greeting">
-      <a className="greeting message">Hi {currentUser.firstName}</a>
-      <a onClick={toggleDropDown} className="drop-down small icon">
-        <img src="../../../../assets/icons/small_icon_arrow_down.png" alt="arrow_down" />
-      </a>
-      <DropDownPersonalNavContainer />
-    </div>
-  );
+  // closeModal() {
+  //   this.setState({ 
+  //     showModal: false,
+  //     showSignUp: false,
+  //     showLogIn: false
+  //   })
+  // }
 
-  return (
-    currentUser ? personalGreeting() : sessionLinks()
-  )
+  sessionLinks() {
+    return (
+      <div className="session links">
+        <button 
+          className="small secondary button"
+          onClick={() =>this.props.openModal('showSignUp')}
+        >Sign Up</button>
+        <a 
+          className="login link"
+          onClick={() => this.props.openModal('showLogIn')}
+        >Log In</a>
+      </div>
+    )
+  }
+
+  personalGreeting() {
+    return (
+      <div className="personal greeting">
+        <a className="greeting message">Hi {this.props.currentUser.firstName}</a>
+        <a onClick={this.toggleDropDown} className="drop-down small icon">
+          <img src="../../../../assets/icons/small_icon_arrow_down.png" alt="arrow_down" />
+        </a>
+        <DropDownPersonalNavContainer />
+      </div>
+    )
+  }
+
+  render () {
+    return (
+      <div className="top-bar">
+        {/* <Modal 
+          visible={this.state.showModal}
+          signUpForm={this.state.showSignUp}
+          logInForm={this.state.showLogIn}
+          OncloseModal={this.closeModal.bind(this)}
+        /> */}
+        { this.props.currentUser ? this.personalGreeting() : this.sessionLinks() }
+      </div>
+    )
+  }
 };
 
 export default Greeting;
