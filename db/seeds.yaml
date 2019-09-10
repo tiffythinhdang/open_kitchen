@@ -1,19 +1,14 @@
-# users:
-#   - id: 1
-#     first_name: Tiffany
-#     last_name: Dang
-#     email: tiffanydang@gmail.com
-#   - id: 2
-#     first_name: Andy
-#     last_name: Mok
-#     email: andymok@gmail.com
-
-# reviews:
-#   - id: 1
-#     body: "The food is good"
-#     rating: 5
-#     user_id: 1
-#     kitchen_id: 
+users:
+  - id: 1
+    first_name: Tiffany
+    last_name: Dang
+    email: tiffanydang@gmail.com
+    password: "123456"
+  - id: 2
+    first_name: Andy
+    last_name: Mok
+    email: andymok@gmail.com
+    password: "123456"
 
 kichens:
   - id: 1
@@ -128,4 +123,10 @@ kichens:
     lat: 37.786722
     lng: 122.434232
 
-    
+# reviews:
+#   - id: 1
+#     body: "The food is good"
+#     rating: 5
+#     user_id: 1
+#     kitchen_id: 
+
