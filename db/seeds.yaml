@@ -128,4 +128,43 @@ kichens:
     lat: 37.786722
     lng: 122.434232
 
-  
+
+timeslots:
+  - id: 1
+    day: Monday
+    time: 10
+
+  - id: 2
+    day: Monday
+    time: 11
+
+  - id: 3
+    day: Monday
+    time: 12
+
+  - id: 4
+    day: Monday
+    time: 13
+
+  - id: 5
+    day: Monday
+    time: 14
+
+  - id: 2
+    day: Monday
+    time: 15
+
+  - id: 1
+    day: Monday
+    time: 10
+
+  - id: 2
+    day: Monday
+    time: 11
+  - id: 1
+    day: Monday
+    time: 10
+
+  - id: 2
+    day: Monday
+    time: 11

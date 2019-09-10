@@ -11,9 +11,20 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 2019_09_10_213208) do
+ActiveRecord::Schema.define(version: 2019_09_10_220037) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "kitchen_timeslot_capacities", force: :cascade do |t|
+    t.integer "kitchen_id", null: false
+    t.integer "timeslot_id", null: false
+    t.integer "capacity", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kitchen_id", "timeslot_id"], name: "index_kitchen_timeslot_capacities_on_kitchen_id_and_timeslot_id", unique: true
+    t.index ["kitchen_id"], name: "index_kitchen_timeslot_capacities_on_kitchen_id"
+    t.index ["timeslot_id"], name: "index_kitchen_timeslot_capacities_on_timeslot_id"
+  end
 
   create_table "kitchens", force: :cascade do |t|
     t.string "name", null: false

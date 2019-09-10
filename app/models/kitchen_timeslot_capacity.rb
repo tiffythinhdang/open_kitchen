@@ -1,0 +1,2 @@
+class KitchenTimeslotCapacity < ApplicationRecord
+end

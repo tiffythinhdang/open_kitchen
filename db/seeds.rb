@@ -13,3 +13,14 @@ kitchens = yaml['kitchens']
 kichens.each do |kitchen|
   Kitchen.create!(kitchen)
 end
+
+#Create timeslots
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+time_blocks = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+days.each do |day|
+  time_blocks.each do |block|
+    Timeslot.create!(day: day, time: block)
+  end
+end
+
