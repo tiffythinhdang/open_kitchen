@@ -7,10 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
-users = yaml['users']
+kitchens = yaml['kitchens']
 
-# Create users
-# User.create!(users)
-users.each do |user|
-  User.create!(user)
+# Create kitchens
+kichens.each do |kitchen|
+  Kitchen.create!(kitchen)
 end
