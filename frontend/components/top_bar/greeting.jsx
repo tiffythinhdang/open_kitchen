@@ -7,11 +7,6 @@ import DropDownPersonalNavContainer from './drop_down_personal_nav_container';
 class Greeting extends React.Component {
   constructor(props) {
     super(props)
-    // this.state = {
-    //   showModal: false,
-    //   showSignUp: false,
-    //   showLogIn: false
-    // };
 
     this.sessionLinks = this.sessionLinks.bind(this);
     this.personalGreeting = this.personalGreeting.bind(this);
@@ -22,23 +17,6 @@ class Greeting extends React.Component {
     let dropDown = document.getElementsByClassName("drop down container")[0];
     dropDown.classList.toggle("hidden");
   }
-
-  // openModal(type) {
-  //   return (e) => {
-  //     this.setState({
-  //       showModal: true,
-  //       [type]: true 
-  //     })
-  //   }
-  // }
-
-  // closeModal() {
-  //   this.setState({ 
-  //     showModal: false,
-  //     showSignUp: false,
-  //     showLogIn: false
-  //   })
-  // }
 
   sessionLinks() {
     return (
@@ -70,12 +48,6 @@ class Greeting extends React.Component {
   render () {
     return (
       <div className="top-bar">
-        {/* <Modal 
-          visible={this.state.showModal}
-          signUpForm={this.state.showSignUp}
-          logInForm={this.state.showLogIn}
-          OncloseModal={this.closeModal.bind(this)}
-        /> */}
         { this.props.currentUser ? this.personalGreeting() : this.sessionLinks() }
       </div>
     )
