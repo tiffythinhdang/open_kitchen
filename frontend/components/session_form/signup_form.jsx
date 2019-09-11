@@ -29,7 +29,6 @@ class SignUpForm extends React.Component {
       this.props.signUp(this.state)
         .then(user => {
           this.props.closeModal();
-          this.props.history.push('/');
           }
         )
     }

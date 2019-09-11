@@ -10,13 +10,11 @@
 #     email: andymok@gmail.com
 #     password: "123456"
 
-kichens:
+kitchens:
   - id: 1
     name: "Maira's Madelines"
     cuisine: "French"
     cost: 2
-    average_rating: 4.5
-    number_reviews: 25
     address: "Misson Bay District"
     city: "San Fransico"
     country: "United States"
@@ -28,8 +26,6 @@ kichens:
     name: "Yukiko's Mochi"
     cuisine: "Japanese"
     cost: 2
-    average_rating: 5
-    number_reviews: 21
     address: "Misson District"
     city: "San Fransico"
     country: "United States"
@@ -41,8 +37,6 @@ kichens:
     name: "Patta's Mooncakes"
     cuisine: "Chinese"
     cost: 3
-    average_rating: 4
-    number_reviews: 51
     address: "Misson District"
     city: "San Fransico"
     country: "United States"
@@ -53,9 +47,7 @@ kichens:
   - id: 4
     name: "Crystal's Sunset Dumplings"
     cuisine: "Chinese"
-    cost: 2
-    average_rating: 4.5
-    number_reviews: 32
+    cost: 2.5
     address: "Sunset District"
     city: "San Fransico"
     country: "United States"
@@ -66,9 +58,7 @@ kichens:
   - id: 5
     name: "Paella Boys"
     cuisine: "Spanish"
-    cost: 3
-    average_rating: 3.5
-    number_reviews: 21
+    cost: 3.5
     address: "Fillmore District"
     city: "San Fransico"
     country: "United States"
@@ -79,9 +69,7 @@ kichens:
   - id: 6
     name: "Venorica's Pasta"
     cuisine: "Italian"
-    cost: 4
-    average_rating: 4.7
-    number_reviews: 15
+    cost: 4.7
     address: "Hayes Valley District"
     city: "San Fransico"
     country: "United States"
@@ -93,21 +81,17 @@ kichens:
     name: "Grandma's Sauce"
     cuisine: "Italian"
     cost: 3
-    average_rating: 4
-    number_reviews: 11
     address: "Hayes Valley District"
     city: "San Fransico"
     country: "United States"
     phone_number: "455-680-2367"
-    menu: "Neapolitan sauce, Classic italian sauce, Meatball with sauce "polpette al sugo"""
+    menu: "Neapolitan sauce, Classic italian sauce, Meatball with sauce \"polpette al sugo\""
     lat: 37.777123
     lng: -122.425563
   - id: 8
     name: "Stefano's Sicilian Cannoli"
     cuisine: "Italian"
     cost: 3
-    average_rating: 3
-    number_reviews: 8
     address: "Lower Pacific Heights District"
     city: "San Fransico"
     country: "United States"

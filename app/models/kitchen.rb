@@ -20,7 +20,7 @@
 #
 
 class Kitchen < ApplicationRecord
-  validates :name, :cuisine, :cost, :average_rating, :number_reviews, :address, :city, :country, :phone_number, :menu, presence: true
+  validates :name, :cuisine, :cost, :address, :city, :country, :phone_number, :menu, presence: true
 
   has_many :reservations
 end

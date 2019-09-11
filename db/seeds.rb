@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'yaml'
-
 ActiveRecord::Base.transaction do 
   Kitchen.destroy_all
   Timeslot.destroy_all
@@ -17,7 +15,7 @@ ActiveRecord::Base.transaction do
   kitchens = yaml['kitchens']
 
   # Create kitchens
-  kichens.each do |kitchen|
+  kitchens.each do |kitchen|
     Kitchen.create!(kitchen)
   end
 
