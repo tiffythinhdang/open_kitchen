@@ -4,7 +4,7 @@ const DropDownPersonalNav = ({ logOut }) => {
   return (
     <div className="drop down container hidden">
       <div className="drop down personal nav">
-        <div className="arrow-up"></div>
+        {/* <div className="arrow-up"></div> */}
         <div className="drop down items">
           <a href="#" className="link">My profile</a>
         </div>

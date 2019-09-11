@@ -20,6 +20,7 @@ kitchens:
     country: "United States"
     phone_number: "509-740-7664"
     menu: "Madelines, Croissants"
+    description: "You will learn how to bake delicious madeleines. We will focus on two basic recipes: Vanilla and Lemon. We will share a working station, and each guest will have the ingredients to scale, mix and bake beautiful madeleines using vintage baking molds. I love cooking. I grew up in Brazil, lived in Tokyo and I have been in San Francisco for the last 10 years. I've attended culinary school and completed the Le Cordon Bleu culinary program. I have cooked professionally for over five years but my biggest pleasure is home cooking and share my skills with friends. All guests are welcome despite the language they speak but I can only speak English, Portuguese and Spanish."
     lat: 37.769304 
     lng: -122.389591
   - id: 2

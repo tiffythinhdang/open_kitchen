@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2019_09_11_054940) do
 
-ActiveRecord::Schema.define(version: 2019_09_11_005520) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2019_09_11_005520) do
     t.float "lng", null: false
     t.integer "average_rating"
     t.integer "number_reviews", default: 0
+    t.text "description", null: false
+    t.text "host_infor", null: false
     t.index ["city"], name: "index_kitchens_on_city"
     t.index ["cost"], name: "index_kitchens_on_cost"
     t.index ["country"], name: "index_kitchens_on_country"
