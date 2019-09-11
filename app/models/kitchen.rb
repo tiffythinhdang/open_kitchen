@@ -25,5 +25,5 @@ class Kitchen < ApplicationRecord
   validates :name, :cuisine, :cost, :address, :city, :country, :phone_number, :menu, presence: true
 
   has_many :reservations
-
+  
 end
