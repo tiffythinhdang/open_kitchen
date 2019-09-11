@@ -6,7 +6,15 @@ $white: #FFFFFF;
 $lightgray: #B5B5B5;
 $mediumgray: #3C3C3C;
 $darkgray: #1E1E1E;
+
 $main_orange: #F7874E;
+$hover_orange: #D16730;
+
+$main_blue: #69A0D1;
+$hover_blue: #4B7DA9;
+
+$main_yellow: #EED266;
+$hover_yellow: #DFC356;
 
 .login.link {
   font-family: 'Varela Round', sans-serif;
@@ -58,15 +66,15 @@ $main_orange: #F7874E;
 }
 
 .secondary.button {
-  background: #69A0D1;
+  background: $main_blue;
 }
 
 .main.button:hover {
-  background: #D16730;
+  background: $hover_orange;
 }
 
 .secondary.button:hover {
-  background: #4B7DA9;
+  background: $hover_blue;
 }
 
 .small.icon {

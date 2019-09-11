@@ -3,17 +3,33 @@ import React from 'react';
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="footer-content">
+      <footer className="footer content">
         <div className="footer block">
-          <p className="footer block title">OPEN KITCHEN</p>
-          <a href="#">About</a>
-          <a href="#">Inpriration site</a>
-        </div>
+          <div className="footer block item">
+            <p className="footer block title">OPEN KITCHEN</p>
+            <a className="link" href="#">About</a>
+            <a 
+              className="link" 
+              href="https://www.opentable.com/" 
+              target="_blank"
+              >Inpriration site
+            </a>
+          </div>
 
-        <div className="footer block">
-          <p className="footer block title">DISCOVER</p>
-          <a href="#">Beautiful Food Blogs</a>
-          <a href="#">2020 Food Trends Forecast</a>
+          <div className="footer block item">
+            <p className="footer block title">DISCOVER</p>
+            <a 
+              className="link" 
+              href="https://influencermarketinghub.com/12-best-food-blogs/"
+              target="_blank"
+              >Beautiful Food Blogs
+            </a>
+            <a 
+              className="link" 
+              href="https://www.eater.com/a/food-cities-maps-travel-guide"
+              target="_blank"
+              >Eater: Around the World</a>
+          </div>
         </div>
 
         <div className="footer disclaimer note">
