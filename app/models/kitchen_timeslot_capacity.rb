@@ -12,4 +12,7 @@
 
 class KitchenTimeslotCapacity < ApplicationRecord
   validates :timeslot_id, :kitchen_id, :capacity, presence: true
+  
+  belongs_to :kitchen
+  belongs_to :timeslot
 end

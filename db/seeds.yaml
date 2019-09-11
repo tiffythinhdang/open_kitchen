@@ -24,7 +24,6 @@ kichens:
     menu: "Madelines, Croissants"
     lat: 37.769304 
     lng: -122.389591
-
   - id: 2
     name: "Yukiko's Mochi"
     cuisine: "Japanese"
@@ -38,7 +37,6 @@ kichens:
     menu: "Strawberry Daifuku, Matcha Mochi, Sakura Mochi"
     lat: 37.763205
     lng: -122.413168
-  
   - id: 3
     name: "Patta's Mooncakes"
     cuisine: "Chinese"
@@ -52,7 +50,6 @@ kichens:
     menu: "Traditional Baked Mooncakes, Snowskin Mooncakes"
     lat: 37.761772
     lng: -122.411921
-
   - id: 4
     name: "Crystal's Sunset Dumplings"
     cuisine: "Chinese"
@@ -66,7 +63,6 @@ kichens:
     menu: "Pork and Chives Dumplings, Vegetarian Mushroom Dumplings, Fish Dumplings"
     lat: 37.763793
     lng: -122.463642
-  
   - id: 5
     name: "Paella Boys"
     cuisine: "Spanish"
@@ -80,7 +76,6 @@ kichens:
     menu: "Seafood Paella"
     lat: 37.783921
     lng:  -122.433297
-
   - id: 6
     name: "Venorica's Pasta"
     cuisine: "Italian"
@@ -94,7 +89,6 @@ kichens:
     menu: "Homemade Pasta"
     lat: 37.774443
     lng: -122.424448
-  
   - id: 7
     name: "Grandma's Sauce"
     cuisine: "Italian"
@@ -108,7 +102,6 @@ kichens:
     menu: "Neapolitan sauce, Classic italian sauce, Meatball with sauce "polpette al sugo"""
     lat: 37.777123
     lng: -122.425563
-
   - id: 8
     name: "Stefano's Sicilian Cannoli"
     cuisine: "Italian"

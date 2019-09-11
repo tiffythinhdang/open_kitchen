@@ -32,9 +32,9 @@ ActiveRecord::Base.transaction do
   end
 
   #Create kitchen_timeslot_capacities
-  Timeslot.all.each do |timeslot|
-    Kitchen.all.each do |kitchen|
-      capacity = rand(10..25)
+  Kitchen.all.each do |kitchen|
+    capacity = rand(10..25)
+    Timeslot.all.each do |timeslot|
       KitchenTimeslotCapacity.create!( kitchen_id: kitchen.id, timeslot_id: timeslot.id, capacity: capacity )
     end
   end
