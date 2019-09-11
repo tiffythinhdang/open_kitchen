@@ -119,7 +119,7 @@ var closeModal = function closeModal() {
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
   \*********************************************/
-/*! exports provided: RECEIVE_CURRENT_USER, LOG_OUT_CURRENT_USER, RECEIVE_ERRORS, CLEAR_ERRORS, signUp, logIn, logOut */
+/*! exports provided: RECEIVE_CURRENT_USER, LOG_OUT_CURRENT_USER, RECEIVE_ERRORS, CLEAR_ERRORS, receiveErrors, clearErrors, signUp, logIn, logOut */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -128,6 +128,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOG_OUT_CURRENT_USER", function() { return LOG_OUT_CURRENT_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ERRORS", function() { return RECEIVE_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLEAR_ERRORS", function() { return CLEAR_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveErrors", function() { return receiveErrors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearErrors", function() { return clearErrors; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUp", function() { return signUp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logIn", function() { return logIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logOut", function() { return logOut; });
@@ -157,13 +159,11 @@ var receiveErrors = function receiveErrors(errors) {
     errors: errors
   };
 };
-
 var clearErrors = function clearErrors() {
   return {
     type: CLEAR_ERRORS
   };
 }; // thunk_action
-
 
 var signUp = function signUp(user) {
   return function (dispatch) {
@@ -543,6 +543,11 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.props.clearErrors();
+    }
+  }, {
     key: "renderErrors",
     value: function renderErrors() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -635,6 +640,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
+    },
+    clearErrors: function clearErrors() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["clearErrors"])());
     }
   };
 };
@@ -724,6 +732,11 @@ function (_React$Component) {
           _this3.props.closeModal();
         });
       }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.props.clearErrors();
     }
   }, {
     key: "renderErrors",
@@ -836,6 +849,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
+    },
+    clearErrors: function clearErrors() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["clearErrors"])());
     }
   };
 };
@@ -1008,7 +1024,7 @@ function (_React$Component) {
         onClick: this.toggleDropDown,
         className: "drop-down small icon"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../../../../assets/icons/small_icon_arrow_down.png",
+        src: "../../../../assets/icons/small_icon_arrow-down.png",
         alt: "arrow_down"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drop_down_personal_nav_container__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }

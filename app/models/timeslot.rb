@@ -13,4 +13,5 @@ class Timeslot < ApplicationRecord
   validates :day, :time, presence: true
 
   has_many :reservations
+  has_many :kitchen_timeslot_capacities
 end

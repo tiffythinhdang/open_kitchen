@@ -38,7 +38,7 @@ class Greeting extends React.Component {
       <div className="personal greeting">
         <a className="greeting message">Hi {this.props.currentUser.firstName}</a>
         <a onClick={this.toggleDropDown} className="drop-down small icon">
-          <img src="../../../../assets/icons/small_icon_arrow_down.png" alt="arrow_down" />
+          <img src="../../../../assets/icons/small_icon_arrow-down.png" alt="arrow_down" />
         </a>
         <DropDownPersonalNavContainer />
       </div>
