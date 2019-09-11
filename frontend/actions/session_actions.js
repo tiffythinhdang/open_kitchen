@@ -16,12 +16,12 @@ const logOutCurrentUser = () => ({
   type: LOG_OUT_CURRENT_USER
 });
 
-const receiveErrors = (errors) => ({
+export const receiveErrors = (errors) => ({
   type: RECEIVE_ERRORS,
   errors
 });
 
-const clearErrors = () => ({
+export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 

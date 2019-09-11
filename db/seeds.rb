@@ -5,12 +5,120 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
-yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
-users = yaml['users']
+ActiveRecord::Base.transaction do 
+  User.destroy_all
+  Kitchen.destroy_all
+  Timeslot.destroy_all
+  KitchenTimeslotCapacity.destroy_all
 
-# Create users
-# User.create!(users)
-users.each do |user|
-  User.create!(user)
+  yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
+  kitchens = yaml['kitchens']
+
+  # Create kitchens
+  kitchens.each do |kitchen|
+    Kitchen.create!(kitchen)
+  end
+
+  #Create users 
+  user_1 = User.create!(
+    # id: 1,
+    first_name: "Demo",
+    last_name: "User",
+    email: "demo_user@gmail.com",
+    password: "123456",
+    location: "San Francisco"
+  )
+
+  user_2 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_3 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_4 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_5 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_6 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_7 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_8 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_9 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_10 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  #Create timeslots
+  days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  time_blocks = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+  days.each do |day|
+    time_blocks.each do |block|
+      Timeslot.create!(day: day, time: block)
+    end
+  end
+
+  #Create kitchen_timeslot_capacities
+  Kitchen.all.each do |kitchen|
+    capacity = rand(10..25)
+    Timeslot.all.each do |timeslot|
+      KitchenTimeslotCapacity.create!( kitchen_id: kitchen.id, timeslot_id: timeslot.id, capacity: capacity )
+    end
+  end
 end
+

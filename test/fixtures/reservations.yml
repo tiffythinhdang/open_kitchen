@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: reservations
+#
+#  id          :bigint           not null, primary key
+#  user_id     :integer          not null
+#  kitchen_id  :integer          not null
+#  timeslot_id :integer          not null
+#  date        :date             not null
+#  party_size  :integer          not null
+#  state       :string           default("upcoming")
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  kitchen_id: 1
+  timeslot_id: 1
+  date: 2019-09-10
+  party_size: 1
+  state: MyString
+
+two:
+  user_id: 1
+  kitchen_id: 1
+  timeslot_id: 1
+  date: 2019-09-10
+  party_size: 1
+  state: MyString

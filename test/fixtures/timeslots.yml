@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: timeslots
+#
+#  id         :bigint           not null, primary key
+#  day        :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  time       :integer          not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: MyString
+  time: 2019-09-10 14:32:08
+
+two:
+  day: MyString
+  time: 2019-09-10 14:32:08

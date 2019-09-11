@@ -23,9 +23,12 @@ class LogInForm extends React.Component {
     this.props.logIn(this.state)
       .then(user => {
         this.props.closeModal();
-        this.props.history.push('/');
       }
-      )
+    )
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   renderErrors() {

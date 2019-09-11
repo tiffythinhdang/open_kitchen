@@ -10,10 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_08_224620) do
+ActiveRecord::Schema.define(version: 2019_09_11_212821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "kitchen_timeslot_capacities", force: :cascade do |t|
+    t.integer "kitchen_id", null: false
+    t.integer "timeslot_id", null: false
+    t.integer "capacity", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kitchen_id", "timeslot_id"], name: "index_kitchen_timeslot_capacities_on_kitchen_id_and_timeslot_id", unique: true
+    t.index ["kitchen_id"], name: "index_kitchen_timeslot_capacities_on_kitchen_id"
+    t.index ["timeslot_id"], name: "index_kitchen_timeslot_capacities_on_timeslot_id"
+  end
+
+  create_table "kitchens", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "cuisine", null: false
+    t.integer "cost", null: false
+    t.string "address", null: false
+    t.string "city", null: false
+    t.string "country", null: false
+    t.string "phone_number", null: false
+    t.text "menu", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "lat", null: false
+    t.float "lng", null: false
+    t.integer "average_rating"
+    t.integer "number_reviews", default: 0
+    t.text "description", null: false
+    t.text "host_infor", null: false
+    t.index ["city"], name: "index_kitchens_on_city"
+    t.index ["cost"], name: "index_kitchens_on_cost"
+    t.index ["country"], name: "index_kitchens_on_country"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "kitchen_id", null: false
+    t.integer "timeslot_id", null: false
+    t.date "date", null: false
+    t.integer "party_size", null: false
+    t.string "state", default: "upcoming"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["date"], name: "index_reservations_on_date"
+    t.index ["kitchen_id"], name: "index_reservations_on_kitchen_id"
+    t.index ["state"], name: "index_reservations_on_state"
+    t.index ["timeslot_id"], name: "index_reservations_on_timeslot_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "timeslots", force: :cascade do |t|
+    t.string "day", null: false
+    t.integer "time", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false

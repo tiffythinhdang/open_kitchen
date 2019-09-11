@@ -1,16 +1,113 @@
-users:
+kitchens:
   - id: 1
-    first_name: Tiffany
-    last_name: Dang
-    email: tiffanydang@gmail.com
+    name: "Maira's Madelines"
+    cuisine: "French"
+    cost: 2
+    address: "Misson Bay District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "509-740-7664"
+    menu: "Madelines, Croissants"
+    description: "You will learn how to bake delicious madeleines. We will focus on two basic recipes: Vanilla and Lemon. We will share a working station, and each guest will have the ingredients to scale, mix and bake beautiful madeleines using vintage baking molds."
+    host_infor: "I love cooking. I grew up in Brazil, lived in Tokyo and I have been in San Francisco for the last 10 years. I've attended culinary school and completed the Le Cordon Bleu culinary program. I have cooked professionally for over five years but my biggest pleasure is home cooking and share my skills with friends."
+    lat: 37.769304 
+    lng: -122.389591
   - id: 2
-    first_name: Andy
-    last_name: Mok
-    email: andymok@gmail.com
+    name: "Yukiko's Mochi"
+    cuisine: "Japanese"
+    cost: 2
+    address: "Misson District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "286-752-8680"
+    menu: "Strawberry Daifuku, Matcha Mochi, Sakura Mochi"
+    description: "In this fun class, you will learn how to make three different mochi desserts. We will hand-pound glutinous sweet rice into authentic mochi! Sweet red bean paste, fresh strawberries (upon availability), and chocolate will be available to fill your mochi with. You will get to eat a lot of mochi, and best of all take home a box with lots of homemade mochi to share!"
+    host_infor: "I have always been passionate about teaching guests how to make delicious dishes from my Japanese heritage. I come from Fukushima, Japan and learned how to cook traditional Japanese meals and desserts from my mother. I learned how to make mochi many years ago with my friends, and have been making it for more than 20 years."
+    lat: 37.763205
+    lng: -122.413168
+  - id: 3
+    name: "Patta's Mooncakes"
+    cuisine: "Chinese"
+    cost: 3
+    address: "Misson District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "371-671-3381"
+    menu: "Traditional Baked Mooncakes"
+    description: "A mooncake is a traditional Chinese pastry. It is made from wheat flour and sweet stuffing, such as sugar and lotus seed powder. It's a symbol of family reunion, and the cake is traditionally cut into pieces that equal the number of people in the family. Join our moon cake making class and bring home a box of specially-made moon cakes to share with your friends and family!"
+    host_infor: "Growing up in the heart of Bangkok, good quality, fresh food was my first love in life. After completing my studies in Architecture, I lived and ate my way around the world, spending some years abroad in Singapore, France, Hong Kong and San Francisco which I called home for over a decade. In 2015, I co-founded the food startup, BiteUnite, and I am passionate about sharing quality home-cooked food with the community."
+    lat: 37.761772
+    lng: -122.411921
+  - id: 4
+    name: "Crystal's Sunset Dumplings"
+    cuisine: "Chinese"
+    cost: 2.5
+    address: "Sunset District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "765-463-8620"
+    menu: "Pork and Chives Dumplings, Vegetarian Mushroom Dumplings, Fish Dumplings"
+    description: "We will make healthy colorful / instagramable wraps from scratch, and we will mix our own fillings .After that we will learn at least 3 kinds of folding technics and rolling wraps from our homemade dough for making your own dumplings fest."
+    host_infor: "Made in China and love in sharing food with friends, I’ve been living in many countries （Bangkok, Thailand and Lund, Sweden) in my 20s, also experienced different cuisine and ways of living. I explored to make chinese food when i lived far away from home, absorbed different ingredients from places i have been lived and my Chinese food foundation. I would like to share with food lovers about my passion and creativity in food and lifestyle."
+    lat: 37.763793
+    lng: -122.463642
+  - id: 5
+    name: "Paella Boys"
+    cuisine: "Spanish"
+    cost: 3.5
+    address: "Fillmore District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "465-760-8642"
+    menu: "Seafood Paella"
+    description: "We’ll teach you how to cook a real Spanish seafood paella with real Spanish cooks in a real San Francisco Victorian backyard. By the end of the class, you’ll acquire all the necessary paella skills and knowledge to impress your friends and family. You’ll learn all the tricks and tips on how to master cooking times and quantities, and the best of all is that you’ll get to eat a delicious paella at the end."
+    host_infor: "My friend and I are two humble boys from Madrid who crossed paths in San Francisco in 2013. We have the same philosophy of life—to eat well and chill out. My friend learned his mother’s paella recipes when he was little, and has a lot of experience preparing paellas for large gatherings. I’ve been teaching Spanish for years and have all the necessary skills to make your experience unforgettable."
+    lat: 37.783921
+    lng:  -122.433297
+  - id: 6
+    name: "Venorica's Pasta"
+    cuisine: "Italian"
+    cost: 4.7
+    address: "Hayes Valley District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "676-753-2640"
+    menu: "Homemade Pasta"
+    description: "I will teach you the secrets of making home made pasta in my kitchen studio, located in Hayes Valley District. I am an Italian Chef, cooking has always been my passion and I am looking forward to sharing it with you. We will use a selection of ingredients from local organic producers as I strongly believe in the importance of quality to make simple dishes with great taste."
+    host_infor: "I am a Professional Chef and creator of several successful food-projects in Italy. For many years, I had an important cooking school in Rome along with my restaurants (#tricoloremonti, #tricolorepaninigourmet). Now I am a Food designer and a Food consultant (#inblackstudio)."
+    lat: 37.774443
+    lng: -122.424448
+  - id: 7
+    name: "Grandma Sauce"
+    cuisine: "Italian"
+    cost: 3
+    address: "Hayes Valley District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "455-680-2367"
+    menu: "Neapolitan sauce, Classic italian sauce, Meatball with sauce \"polpette al sugo\""
+    description: "Learn to cook the most tasty and versatile recipe of Italian cuisine... Tomato Sauce! Following my family recipe we will prepare our iconic italian dishes. Discover all the Grandma secrets that nobody will reveal you, with a passionate and hungry local in this social cooking class, on a sunny garden rooftop!"
+    host_infor: "I'm originally from \"San Marzano\" (the tomato sauce's homeland) and from a family of producers of canned sauce with the Conditalia® brand, and extra virgin olive oil from generations. I was taught to cook only with the products my family produces, or with local and seasonal products exclusively outdoors (not in greenhouses) due to the more pronounced flavors."
+    lat: 37.777123
+    lng: -122.425563
+  - id: 8
+    name: "Stefano's Sicilian Cannoli"
+    cuisine: "Italian"
+    cost: 3
+    address: "Lower Pacific Heights District"
+    city: "San Fransico"
+    country: "United States"
+    phone_number: "268-634-2350"
+    menu: "Sicilian Cannoli"
+    description: "I will teach you how to prepare a crusty shell, used to cover Cannoli, the typical Sicilian Sweet. You will kneadwith your hands and fry the dough into the peculiar shape. You will also see how the cream is prepared to fill up Cannoli’s shell, starting from the traditional Ricotta Sweet up to the custard."
+    host_infor: "For many years,we offered the possibility to take Cooking Classes at our restaurants in the Bay Area. Courses are aimed at both beginners and experts, and provide the opportunity for entertaining experiences,which are both educational and unique to their kind."
+    lat: 37.786722
+    lng: 122.434232
 
-reviews:
-  - id: 1
-    body: "The food is good"
-    rating: 5
-    user_id: 1
-    kitchen_id: 
+# reviews:
+#   - id: 1
+#     body: "The food is good"
+#     rating: 5
+#     user_id: 1
+#     kitchen_id: 
+
