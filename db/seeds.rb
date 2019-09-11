@@ -5,8 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
 ActiveRecord::Base.transaction do 
+  User.destroy_all
   Kitchen.destroy_all
   Timeslot.destroy_all
   KitchenTimeslotCapacity.destroy_all
@@ -19,9 +21,91 @@ ActiveRecord::Base.transaction do
     Kitchen.create!(kitchen)
   end
 
+  #Create users 
+  user_1 = User.create!(
+    # id: 1,
+    first_name: "Demo",
+    last_name: "User",
+    email: "demo_user@gmail.com",
+    password: "123456",
+    location: "San Francisco"
+  )
+
+  user_2 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_3 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_4 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_5 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_6 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_7 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_8 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_9 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
+  user_10 = User.create!(
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    email: Faker::Internet.unique.free_email,
+    password: "123456",
+    location: Faker::Nation.capital_city
+  )
+
   #Create timeslots
   days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-  time_blocks = [9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0]
+  time_blocks = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
   days.each do |day|
     time_blocks.each do |block|
