@@ -1,0 +1,81 @@
+$white: #FFFFFF;
+$lightgray: #B5B5B5;
+$mediumgray: #3C3C3C;
+$darkgray: #1E1E1E;
+$main_orange: #F7874E;
+
+#modal-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8)
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  color: $white;
+  z-index: 4;
+}
+
+.modal-close:hover {
+  color: $main_orange;
+}
+
+.modal-alert.container {
+  position: absolute;
+  left: 27.64%;
+  right: 27.64%;
+  top: 10%;
+  bottom: 10%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  z-index: 3;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
+}
+
+.modal-alert, .modal-alert > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-alert > h1 {
+  font-size: 52px;
+  color: $main_orange;
+  width: 400px;
+  height: 90px;
+  text-align: center;
+}
+
+.link-container {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form.input {
+  width: 400px;
+  height: 54.5px;
+  border: 1px solid #B5B5B5;
+  border-radius: 4px;
+  font-size: 16px;
+  color: $mediumgray;
+  padding-left: 20px;
+  margin: 7px 20px;
+  box-sizing: border-box;
+}
+
+.form.input::placeholder {
+  color: $lightgray;
+}

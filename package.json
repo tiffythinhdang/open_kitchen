@@ -11,6 +11,8 @@
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "webpack": "^4.39.3"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
@@ -22,7 +24,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode:development"
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
   },
   "repository": {
     "type": "git",
@@ -34,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen/issues"
   },
-  "homepage": "https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen#readme"
+  "homepage": "https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.3.8"
+  }
 }
