@@ -1,9 +1,4 @@
-$white: #FFFFFF;
-$lightgray: #B5B5B5;
-$mediumgray: #3C3C3C;
-$darkgray: #1E1E1E;
-$main_orange: #F7874E;
-
+@import './utils.scss';
 
 // @media only screen and (min-width: 1440px) {
   .top.bar {
@@ -81,5 +76,8 @@ $main_orange: #F7874E;
     font-size: 12px;
   }
 
-
+  .drop.down.items > a:hover {
+    color: $main_orange;
+  }
 // }
+

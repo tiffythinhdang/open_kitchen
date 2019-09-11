@@ -9,11 +9,13 @@ import {
 
 import TopBar from './top_bar/top_bar';
 import ModalContainer from './modal/modal_container';
+import Footer from './footer/footer';
 
 const App = () => (
   <div>
     <ModalContainer />
     <TopBar />
+    <Footer />
   </div>
 );
 

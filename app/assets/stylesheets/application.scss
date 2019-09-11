@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+@import './utils.scss';
 
 .hidden {
   display: none;
