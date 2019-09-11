@@ -17,6 +17,8 @@
 #  lng            :float            not null
 #  average_rating :integer
 #  number_reviews :integer          default(0)
+#  description    :text             not null
+#  host_infor     :text             not null
 #
 
 require 'test_helper'

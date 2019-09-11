@@ -6,7 +6,7 @@
 #  day        :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  time       :float            not null
+#  time       :integer          not null
 #
 
 require 'test_helper'
