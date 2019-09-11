@@ -1,8 +1,4 @@
-$white: #FFFFFF;
-$lightgray: #B5B5B5;
-$mediumgray: #3C3C3C;
-$darkgray: #1E1E1E;
-$main_orange: #F7874E;
+@import './utils.scss';
 
 #modal-screen {
   position: fixed;
