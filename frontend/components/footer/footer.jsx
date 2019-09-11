@@ -7,6 +7,7 @@ class Footer extends React.Component {
         <div className="footer block">
           <div className="footer block item">
             <p className="footer block title">OPEN KITCHEN</p>
+            {/* TODO: add the About Page link once the page is completed */}
             <a className="link" href="#">About</a>
             <a 
               className="link" 
