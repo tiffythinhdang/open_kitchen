@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from 'assets/images/finalize_logo.png'; 
 
 import GreetingContainer from './greeting_container';
 
@@ -12,7 +13,7 @@ class TopBar extends React.Component {
     return (
       <div className="top bar">
         <Link to={'/'} className="logo">
-          <img src="../../../../assets/finalize_logo.png" alt="logo"/>
+          <img src={logo} alt="logo"/>
         </Link>
         <GreetingContainer />
       </div>

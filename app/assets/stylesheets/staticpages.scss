@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import './utils.scss';
 
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
 .login.link {
   font-family: 'Varela Round', sans-serif;
   width: 78px;

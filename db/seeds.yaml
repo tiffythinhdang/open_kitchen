@@ -41,7 +41,7 @@ kitchens:
   - id: 4
     name: "Crystal's Sunset Dumplings"
     cuisine: "Chinese"
-    cost: 2.5
+    cost: 2
     address: "Sunset District"
     city: "San Francisco"
     country: "United States"
@@ -54,7 +54,7 @@ kitchens:
   - id: 5
     name: "Paella Boys"
     cuisine: "Spanish"
-    cost: 3.5
+    cost: 3
     address: "Fillmore District"
     city: "San Francisco"
     country: "United States"
@@ -67,7 +67,7 @@ kitchens:
   - id: 6
     name: "Venorica's Pasta"
     cuisine: "Italian"
-    cost: 4.7
+    cost: 4
     address: "Hayes Valley District"
     city: "San Francisco"
     country: "United States"

@@ -72,7 +72,7 @@ class SearchBar extends React.Component {
         className="select items"
         key={i}
         value={city[0]}
-      >{city[0] + " ," + city[1]}
+      >{city[0] + ", " + city[1]}
       </option>
     )
   }
@@ -84,7 +84,6 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const city_by_country = this.state.city_country.split(", ");
-    debugger
     const request = {
       date: this.state.date,
       time: this.state.time,
@@ -93,7 +92,7 @@ class SearchBar extends React.Component {
       country: city_by_country[1]
     }
     this.props.fetchKitchens(request)
-      .then(kitchens => console.log(kitchens))
+      .then(kitchens => this.props.history.push('/search'))
   }
 
   render() {

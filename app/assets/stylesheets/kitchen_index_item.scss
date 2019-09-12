@@ -1,0 +1,92 @@
+@import './utils.scss';
+
+.kitchen-index.item-container {
+  width: 800px;
+  height: 275px;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  border-top: 2px solid $lightgray;
+  margin-top: 20px;
+}
+
+.kitchen-index.item.profile-img {
+  width: 275px;
+  height: 275px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.kitchen-index.item.profile-img > img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.kitchen-index.item-infor {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.kitchen-index.item-infor > h3 {
+  height: 40px;
+  font-size: 25px;
+  color: $main_blue;
+  font-weight: bold;
+}
+
+.kitchen-index.rating-review {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.kitchen-index.item.rating-review > .rating {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+}
+
+.kitchen-index.item.rating-review > .review {
+  color: $lightgray;
+  font-size: 14px;
+}
+
+.medium.star {
+  width: 25px;
+  height: 25px;
+}
+
+.kitchen-index.item.cpl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kitchen-index.item.cuisine, .kitchen-index.item.price, .kitchen-index.item.location{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.kitchen-index.item > p {
+  width: 150px;
+}
+
+.kitchen-index.item > p.infor {
+  width: 300px;
+}
+
+
+
