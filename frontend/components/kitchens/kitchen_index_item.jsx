@@ -1,9 +1,13 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import iconStarGray from 'assets/images/medium_icon_star_gray.png';
 
 class KitchenIndexItem extends React.Component {
   constructor(props){
     super(props);
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
   displayRatings(){
@@ -36,15 +40,25 @@ class KitchenIndexItem extends React.Component {
     }
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    this.props.history.push(`/kitchens/${this.props.kitchen.id}`)
+  }
+
   render() {
     return (
       <div className="kitchen-index item-container">
         <div className="kitchen-index item profile-img">
-          <img src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg" alt="profile-picture"/>
+          {/* Need to link real pictures with S3 later */}
+          <img 
+            src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg" 
+            alt="profile-picture"
+            onClick={this.handleClick}
+          />
         </div>
 
         <div className="kitchen-index item-infor">
-          <h3>{this.props.kitchen.name}</h3>
+          <a onClick={this.handleClick}>{this.props.kitchen.name}</a>
 
           <div className="kitchen-index item rating-review">
             { this.displayRatings() }
@@ -74,4 +88,4 @@ class KitchenIndexItem extends React.Component {
   }
 }
 
-export default KitchenIndexItem;
+export default withRouter(KitchenIndexItem);

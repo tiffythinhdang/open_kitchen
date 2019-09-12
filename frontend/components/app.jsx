@@ -11,14 +11,14 @@ import TopBar from './top_bar/top_bar';
 import ModalContainer from './modal/modal_container';
 import Footer from './footer/footer';
 import SearchPage from './search_page';
-// import SearchBarContainer from './search_bar/search_bar_container';
+import KitchenShowContainer from './kitchens/kitchen_show_container';
 
 const App = () => (
   <div>
     <ModalContainer />
     <TopBar />
     <Route path="/search" component={SearchPage} />
-    {/* <SearchBarContainer /> */}
+    <Route path="/kitchens/:kitchenId" component={KitchenShowContainer} />
     <Footer />
   </div>
 );

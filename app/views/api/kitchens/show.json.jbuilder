@@ -1,1 +1,1 @@
-json.extract! kitchen, *kitchen.attributes.keys 
+json.extract! @kitchen, *@kitchen.attributes.keys 

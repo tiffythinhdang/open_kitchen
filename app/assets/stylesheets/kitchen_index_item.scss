@@ -17,6 +17,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .kitchen-index.item.profile-img > img {
@@ -24,6 +25,11 @@
   height: 250px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.kitchen-index.item.profile-img > img:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .kitchen-index.item-infor {
@@ -34,11 +40,17 @@
   align-items: flex-start;
 }
 
-.kitchen-index.item-infor > h3 {
+.kitchen-index.item-infor > a {
   height: 40px;
   font-size: 25px;
   color: $main_blue;
   font-weight: bold;
+}
+
+.kitchen-index.item-infor > a:hover {
+  text-decoration: underline;
+  color: $main_orange;
+  cursor: pointer;
 }
 
 .kitchen-index.rating-review {
