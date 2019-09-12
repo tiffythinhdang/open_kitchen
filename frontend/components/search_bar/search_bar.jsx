@@ -1,14 +1,14 @@
 import React from 'react';
 
-
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
+    let today = new Date().toISOString().substr(0, 10);
     this.state = {
-      date: "",
+      date: today,
       time: "12",
       party_size: 2,
-      city: "San Francisco",
+      city_country: "San Francisco, United States"
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -72,12 +72,21 @@ class SearchBar extends React.Component {
   }
 
   handleChange(type) {
-    return (e) => this.setState({ [type]: e.target.value })
+    return (e) => this.setState({ [type]: e.target.value }) 
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.fetchKitchens(this.state)
+    const city_by_country = this.state.city_country.split(", ");
+    debugger
+    const request = {
+      date: this.state.date,
+      time: this.state.time,
+      party_size: this.state.party_size,
+      city: city_by_country[0],
+      country: city_by_country[1]
+    }
+    this.props.fetchKitchens(request)
       .then(kitchens => console.log(kitchens))
   }
 
@@ -85,7 +94,8 @@ class SearchBar extends React.Component {
     return (
       <div className="search bar">
         <form onSubmit={this.handleSubmit}>
-          <div className="date-time-party selector container"> 
+          <div className="date-time-party selector-container"> 
+            <img className="small icon calendar" src={ "<%= asset_path small_icon_calendar.png %>" } />
             <input
             className="date selector" 
             type="date"
@@ -111,9 +121,9 @@ class SearchBar extends React.Component {
           </div>
 
           <select
-            className="city selector"
-            value={this.state.city}
-            onChange={this.handleChange("city")}
+            className="city-country selector"
+            value={this.state.city_country}
+            onChange={this.handleChange("city_country")}
           >
             {this.generateCityOptions() }
           </select>

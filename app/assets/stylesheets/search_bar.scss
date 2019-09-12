@@ -1,0 +1,56 @@
+@import './utils.scss';
+
+.search.bar {
+  width: 972px;
+  height: 68px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.search.bar > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selector {
+  height: 48px;
+  width: 160px;
+  border: 1px solid $lightgray;
+  background-color: $white;
+  border-radius: 4px;
+  font-size: 14px;
+  color: $mediumgray;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.date.selector {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.time.selector {
+  border-radius: 0px;
+  border-style: solid none solid none;
+}
+
+.party-size.selector {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.date-time-party.selector-container {
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.city-country.selector {
+  width: 288px;
+  margin: 10px 20px;
+}
+

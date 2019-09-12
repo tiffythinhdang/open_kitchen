@@ -1,10 +1,15 @@
 class Api::KitchensController < ApplicationController
   def index
-    debugger
     #Need to comeback for other params process
     req_city = kitchen_params[:city]
-    # req_country = kitchen_params[:country]
-    @kitchens = Kitchen.where("city = ?", req_city)#.where(country: req_country)
+    req_country = kitchen_params[:country]
+    req_party_size = kitchen_params[:party_size]
+    req_timeslot_id = Timeslot.find_by(
+      "time = ? and day = ?", 
+      kitchen_params[:time], 
+      kitchen_params[:date].to_time.strftime("%A")).id
+  
+    @kitchens = Kitchen.where("city = ? and country = ?", req_city, req_country)
 
     render :index
   end
