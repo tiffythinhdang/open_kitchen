@@ -15,8 +15,8 @@ const receiveAKitchen = (kitchen) => ({
 });
 
 //thunk actions
-export const fetchKitchens = () => dispatch => (
-  KitchenAPIUtil.fetchKitchens()
+export const fetchKitchens = (request) => dispatch => (
+  KitchenAPIUtil.fetchKitchens(request)
     .then(kitchens => dispatch(receiveKitchens(kitchens)))
   //Errors handling need to be done here! 
 );

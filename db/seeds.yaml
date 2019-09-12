@@ -4,7 +4,7 @@ kitchens:
     cuisine: "French"
     cost: 2
     address: "Misson Bay District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "509-740-7664"
     menu: "Madelines, Croissants"
@@ -17,7 +17,7 @@ kitchens:
     cuisine: "Japanese"
     cost: 2
     address: "Misson District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "286-752-8680"
     menu: "Strawberry Daifuku, Matcha Mochi, Sakura Mochi"
@@ -30,7 +30,7 @@ kitchens:
     cuisine: "Chinese"
     cost: 3
     address: "Misson District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "371-671-3381"
     menu: "Traditional Baked Mooncakes"
@@ -43,7 +43,7 @@ kitchens:
     cuisine: "Chinese"
     cost: 2.5
     address: "Sunset District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "765-463-8620"
     menu: "Pork and Chives Dumplings, Vegetarian Mushroom Dumplings, Fish Dumplings"
@@ -56,7 +56,7 @@ kitchens:
     cuisine: "Spanish"
     cost: 3.5
     address: "Fillmore District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "465-760-8642"
     menu: "Seafood Paella"
@@ -69,7 +69,7 @@ kitchens:
     cuisine: "Italian"
     cost: 4.7
     address: "Hayes Valley District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "676-753-2640"
     menu: "Homemade Pasta"
@@ -82,7 +82,7 @@ kitchens:
     cuisine: "Italian"
     cost: 3
     address: "Hayes Valley District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "455-680-2367"
     menu: "Neapolitan sauce, Classic italian sauce, Meatball with sauce \"polpette al sugo\""
@@ -95,7 +95,7 @@ kitchens:
     cuisine: "Italian"
     cost: 3
     address: "Lower Pacific Heights District"
-    city: "San Fransico"
+    city: "San Francisco"
     country: "United States"
     phone_number: "268-634-2350"
     menu: "Sicilian Cannoli"
@@ -103,6 +103,19 @@ kitchens:
     host_infor: "For many years,we offered the possibility to take Cooking Classes at our restaurants in the Bay Area. Courses are aimed at both beginners and experts, and provide the opportunity for entertaining experiences,which are both educational and unique to their kind."
     lat: 37.786722
     lng: 122.434232
+  - id: 9
+    name: "Downtown Vegan"
+    cuisine: "American"
+    cost: 3
+    address: "Downtown LA"
+    city: "Los Angeles"
+    country: "United States"
+    phone_number: "294-754-8820"
+    menu: "To be decided"
+    description: "We will make a 3-course organic meal of either Latin, Asian or Italian fare, your choice! Choice of cuisine goes to those who book first. If you book after a person or persons has chosen the cuisine, I will let you know what has been selected."
+    host_infor: "Hi I'm Bekah! I have been a plant-based chef going on 5 years now. I have studied plant-based cuisine and nutrition. It is my passion to teach others how to make delicious satisfying meals using plants. There are so many tricks in the vegan kitchen I can't wait to share with you!"
+    lat: 34.047221
+    lng: -118.257182
 
 # reviews:
 #   - id: 1
