@@ -1,5 +1,11 @@
 import React from 'react';
 
+import iconCalendar from 'assets/images/small_icon_calendar.png'; // uses the assets alias to map to the client/app/assets/ directory followed by `images/my-image.png`
+import iconClock from 'assets/images/small_icon_clock.png'; 
+import iconUser from 'assets/images/small_icon_user.png'; 
+import iconLocation from 'assets/images/small_icon_location.png'; 
+
+
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -95,39 +101,51 @@ class SearchBar extends React.Component {
       <div className="search bar">
         <form onSubmit={this.handleSubmit}>
           <div className="date-time-party selector-container"> 
-            <img className="small icon calendar" src={ "<%= asset_path small_icon_calendar.png %>" } />
-            <input
-            className="date selector" 
-            type="date"
-            value={this.state.date}
-            onChange={this.handleChange("date")}
-            />
+            <div className="input-container with-icon">
+              <img className="small icon calendar" src={iconCalendar} />
+              <input
+                className="date selector"
+                type="date"
+                required="required"
+                value={this.state.date}
+                onChange={this.handleChange("date")}
+              />
+            </div>
+            
+            <div className="input-container with-icon">
+              <img className="small icon clock" src={iconClock} />
+              <select
+                className="time selector"
+                value={this.state.time}
+                onChange={this.handleChange("time")}
+              >
+                {this.generateTimeOptions()}
+              </select>
+            </div>
 
-            <select
-            className="time selector"
-            value={this.state.time}
-            onChange={this.handleChange("time")}
-            >
-              { this.generateTimeOptions() }
-            </select>
-
-            <select
-            className="party-size selector"
-            value={this.state.party_size}
-            onChange={this.handleChange("party_size")}
-            >
-              { this.generatePartyOptions() }
-            </select>
+            <div className="input-container with-icon">
+              <img className="small icon user" src={iconUser} />
+              <select
+                className="party-size selector"
+                value={this.state.party_size}
+                onChange={this.handleChange("party_size")}
+              >
+                {this.generatePartyOptions()}
+              </select>
+            </div>
           </div>
 
-          <select
-            className="city-country selector"
-            value={this.state.city_country}
-            onChange={this.handleChange("city_country")}
-          >
-            {this.generateCityOptions() }
-          </select>
-
+          <div className="input-container with-icon">
+            <img className="small icon location" src={iconLocation} />
+            <select
+              className="city-country selector"
+              value={this.state.city_country}
+              onChange={this.handleChange("city_country")}
+            >
+              {this.generateCityOptions()}
+            </select>
+          </div>
+         
           <button type="submit" className="main medium button">Search</button>
         </form>
       </div>
