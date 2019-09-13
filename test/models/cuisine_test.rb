@@ -1,15 +1,17 @@
 # == Schema Information
 #
-# Table name: cities
+# Table name: cuisines
 #
 #  id         :bigint           not null, primary key
 #  name       :string           not null
-#  country    :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class City < ApplicationRecord
-  validates :name, :country, presence: true
-  validates :name, uniqueness: { scope: :country }
+require 'test_helper'
+
+class CuisineTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end

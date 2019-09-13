@@ -1,6 +1,6 @@
 class Api::CuisinesController < ApplicationController
   def index
-    @cuisines = Kitchen.pluck(:cuisine).uniq
+    @cuisines = Cuisine.pluck(:name)
     render json: @cuisines
   end
 end
