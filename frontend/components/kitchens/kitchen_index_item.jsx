@@ -1,27 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import iconStarGray from 'assets/images/medium_icon_star_gray.png';
+import RatingDisplay from './rating_display';
 
 class KitchenIndexItem extends React.Component {
   constructor(props){
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
-  }
-
-  displayRatings(){
-    if (!this.props.kitchen.average_rating) {
-      return (
-        <div className="rating">
-          <img className="medium star" src={iconStarGray} alt="star"/>
-          <img className="medium star" src={iconStarGray} alt="star"/>
-          <img className="medium star" src={iconStarGray} alt="star"/>
-          <img className="medium star" src={iconStarGray} alt="star"/>
-          <img className="medium star" src={iconStarGray} alt="star"/>
-        </div>
-      )
-    }
   }
 
   displayPrice(){
@@ -36,7 +22,7 @@ class KitchenIndexItem extends React.Component {
         return "$$$$";
 
       default:
-        return "";
+        return "Price is not published";
     }
   }
 
@@ -61,7 +47,9 @@ class KitchenIndexItem extends React.Component {
           <a onClick={this.handleClick}>{this.props.kitchen.name}</a>
 
           <div className="kitchen-index item rating-review">
-            { this.displayRatings() }
+              <div className="rating">
+                <RatingDisplay rating={this.props.kitchen.averageRating} />
+              </div>
             <p className="review">{this.props.kitchen.numberReviews} reviews</p>
           </div>
 

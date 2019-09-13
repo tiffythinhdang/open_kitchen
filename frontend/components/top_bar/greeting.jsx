@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Modal from '../modal/modal';
 import DropDownPersonalNavContainer from './drop_down_personal_nav_container';
 import iconArrowDown from 'assets/images/small_icon_arrow-down.png'; 
 

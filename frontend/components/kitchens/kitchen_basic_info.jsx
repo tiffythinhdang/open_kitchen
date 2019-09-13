@@ -1,7 +1,7 @@
 import React from 'react';
-import iconStarGray from 'assets/images/medium_icon_star_gray.png'; 
-import iconStarGold from 'assets/images/medium_icon_star_gold.png'; 
-import iconStarHalf from 'assets/images/medium_icon_star_half_gold.png'; 
+
+import RatingDisplay from './rating_display';
+
 import iconCutlery from 'assets/images/small_icon_cutlery.png'; 
 import iconReview from 'assets/images/small_icon_review.png'; 
 import iconDollar from 'assets/images/small_icon_dollar.png'; 
@@ -18,37 +18,10 @@ const KitchenBasicInfo = (props) => {
     }
   };
 
-  const displayRatings = (rating) => {
-    const stars = [];
-    // add 2 for a full star, 1 for half-star, 0 for no star
-    for (let i = 1; i < 6; i ++) {
-      if (!rating || rating - i < 0 ) {
-        stars.push(0);
-      } else if ( rating - i >= 0 ){
-        stars.push(2);
-      } 
-    };
-
-    if (Math.round(rating) - rating > 0) {
-      stars.pop();
-      stars.push(1);
-    } 
-
-    return stars.sort().reverse().map( (star, i) => {
-      if (star === 2) {
-        return <img key={i} className="medium star" src={iconStarGold} alt="star" />
-      } else if (star === 1) {
-        return <img key={i} className="medium star" src={iconStarHalf} alt="star" />
-      } else {
-        return <img key={i} className="medium star" src={iconStarGray} alt="star" />
-      }
-    });
-  }
-
   return (
     <div className="kitchen basic-infor">
       <div className="rating">
-        { displayRatings(averageRating) }
+        <RatingDisplay rating={averageRating}/>
       </div>
 
       <div className="num-reviews">

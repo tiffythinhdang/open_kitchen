@@ -7,6 +7,7 @@ import iconLocation from 'assets/images/small_icon_location.png';
 
 
 class SearchBar extends React.Component {
+  
   constructor(props) {
     super(props);
     let today = new Date().toISOString().substr(0, 10);
@@ -71,7 +72,7 @@ class SearchBar extends React.Component {
       <option
         className="select items"
         key={i}
-        value={city[0]}
+        value={city[0] + ", " + city[1]}
       >{city[0] + ", " + city[1]}
       </option>
     )
@@ -107,6 +108,7 @@ class SearchBar extends React.Component {
                 type="date"
                 required="required"
                 value={this.state.date}
+                min={new Date().toISOString().substr(0, 10)}
                 onChange={this.handleChange("date")}
               />
             </div>
