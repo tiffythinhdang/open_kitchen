@@ -7,8 +7,9 @@ class Api::KitchensController < ApplicationController
     req_timeslot_id = Timeslot.find_by(
       "time = ? and day = ?", 
       kitchen_params[:time], 
-      kitchen_params[:date].to_time.strftime("%A")).id
-  
+      kitchen_params[:date].to_time.strftime("%A")
+    ).id
+
     @kitchens = Kitchen.where("city = ? and country = ?", req_city, req_country)
 
     render :index

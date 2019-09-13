@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
     this.state = {
       date: today,
       time: "12",
-      party_size: 2,
+      party_size: "2",
       city_country: "San Francisco, United States"
     }
 
