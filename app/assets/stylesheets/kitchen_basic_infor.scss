@@ -1,0 +1,25 @@
+@import './utils.scss';
+
+.kitchen.basic-infor {
+  height: 50px;
+  margin: 10px px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.kitchen.basic-infor > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 25px;
+}
+
+.kitchen.basic-infor > div > .icon {
+  opacity: 0.3;
+  padding-right: 10px;
+}
+
+.kitchen.basic-infor > div > a {
+  font-weight: bold;
+}
