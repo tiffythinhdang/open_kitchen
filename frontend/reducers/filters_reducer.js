@@ -7,12 +7,8 @@ const defaultFilters = Object.freeze({
   time: "12",
   date: today,
   party_size: "2",
-  cost: {
-    "2": true,
-    "3": true,
-    "4": true
-  },
-  city: "San Francisco",
+  cost: ["2"],
+  city: ["San Francisco"],
   country: ["United States"],
   cuisine: ["American"]
 });

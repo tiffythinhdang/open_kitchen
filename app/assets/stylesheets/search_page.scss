@@ -1,0 +1,13 @@
+@import './utils.scss';
+
+.search-page.main-content {
+  width: 1250;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filter-options {
+  width: 200px;
+  margin-right: 50px;
+}

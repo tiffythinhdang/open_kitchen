@@ -1,6 +1,9 @@
 import React from 'react';
 
-class Filter extends React.Component {
+import PriceFilter from './filter_price';
+import CityFilterContainer from './filter_city_container';
+
+class Filters extends React.Component {
   constructor(props){
     super(props);
   }
@@ -8,10 +11,11 @@ class Filter extends React.Component {
   render() {
     return(
       <div className="filter-options">
-
+        <PriceFilter />
+        <CityFilterContainer />
       </div>
     )
   }
 }
 
-export default Filter;
+export default Filters;
