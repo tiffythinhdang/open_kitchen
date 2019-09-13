@@ -1,0 +1,82 @@
+@import './utils.scss';
+
+.kitchen-show.header {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.kitchen-show.nav-container {
+  height: 48px;
+  width: 640px;
+  position: relative;
+  background-color: $white;
+  border-radius: 8px 8px 0px 0px;
+  top: -48px;
+  padding-top: 20px;
+  margin-left: 14%;
+  box-sizing: border-box;
+}
+
+.kitchen-show.nav {
+  // Need to come back for sticky nav
+  // position: -webkit-sticky;
+  // position: sticky;
+  // top: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 25px;
+}
+
+.kitchen-show-nav.item {
+  padding-right: 50px;
+}
+
+.kitchen-show-nav.item:hover {
+  color: $main_orange;
+}
+// Need to come back for slider bar under Nav
+// .slider-bar {
+//   height: 2px;
+//   width: 25%;
+//   background-color: $lightgray;
+//   border: none;
+// }
+
+.kitchen-show.main-content { 
+  width: 640px;
+  position: relative;
+  top: -48px;
+  background-color: $white;
+  margin-left: 14%;
+  padding: 0px 25px;
+  box-sizing: border-box;
+}
+
+.kitchen-show.main-content > h1 {
+  font-size: 45px;
+  font-weight: bold;
+  color: $main_blue;
+  padding: 30px 0px;
+  border-top: 1px solid $lightgray;
+  border-bottom: 1px solid $lightgray;
+}
+
+.kitchen-show > h3, .kitchen-show > p {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.kitchen-show > h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: $main_orange;
+  border-bottom: 1px solid $lightgray;
+}
+
+.kitchen-show > p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+

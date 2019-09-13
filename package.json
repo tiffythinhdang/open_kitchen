@@ -43,6 +43,7 @@
   },
   "homepage": "https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen#readme",
   "devDependencies": {
+    "file-loader": "^4.2.0",
     "webpack-cli": "^3.3.8"
   }
 }
