@@ -68,12 +68,12 @@ class SearchBar extends React.Component {
   }
 
   generateCityOptions() {
-    return this.props.cities.map((city, i) =>
+    return this.props.cities.map((location, i)=>
       <option
         className="select items"
         key={i}
-        value={city[0] + ", " + city[1]}
-      >{city[0] + ", " + city[1]}
+        value={location.city + ", " + location.country}
+      >{location.city + ", " + location.country}
       </option>
     )
   }

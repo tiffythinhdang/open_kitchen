@@ -8,7 +8,7 @@ import SearchBar from './search_bar';
 
 const mapStateToProps = state => {
   return {
-    cities: state.entities.cities
+    cities: Object.values(state.entities.cities)
   }
 };
 
