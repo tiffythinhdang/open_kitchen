@@ -29,7 +29,7 @@ const KitchenBasicInfo = (props) => {
       } 
     };
 
-    if (Math.round(rating) - rating >= 0.5) {
+    if (Math.round(rating) - rating > 0) {
       stars.pop();
       stars.push(1);
     } 
