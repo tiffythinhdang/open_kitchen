@@ -1,30 +1,49 @@
 import React from 'react';
 
-import iconCutlery from 'assets/images/small_icon_cutlery.png';
-import iconReview from 'assets/images/small_icon_review.png';
 import iconDollar from 'assets/images/small_icon_dollar.png'; 
-import iconLocation from 'assets/images/small_icon_location.png'; 
-import icon5Star from 'assets/images/medium_icon_5_star_gold.png'; 
-import icon4Star from 'assets/images/medium_icon_4_star_gold.png'; 
-import icon3Star from 'assets/images/medium_icon_3_star_gold.png'; 
 
 class PriceFilter extends React.Component {
   constructor(props) {
     super(props);
+
+    this.toggleSelected = this.toggleSelected.bind(this);
   }
+
+  toggleSelected(e) {
+    e.preventDefault();
+    const selected = e.target;
+    selected.classList.toggle("selected");
+  } 
 
   render() {
     return(
       <div className="price-filter">
         <div className="price-filter title">
-          <img  className="small icon dollar" src={iconDollar} alt="icon dollar"/>
+          <img  className="small icon light dollar" src={iconDollar} alt="icon dollar"/>
           <h3 className="title">Price</h3>
         </div>
 
         <div className="price-filter items">
-          <input type="checkbox" value="2"/><span>$$</span>
-          <input type="checkbox" value="3"/><span>$$$</span>
-          <input type="checkbox" value="4"/><span>$$$$</span>
+          <button 
+            className="price-selector n1" 
+            value="2"
+            onClick={this.toggleSelected}
+            >$$
+          </button>
+
+          <button 
+            className="price-selector n2" 
+            value="3"
+            onClick={this.toggleSelected}
+            >$$$
+          </button>
+
+          <button 
+            className="price-selector n3" 
+            value="4"
+            onClick={this.toggleSelected}
+            >$$$$
+          </button>
         </div>
       </div>
     )

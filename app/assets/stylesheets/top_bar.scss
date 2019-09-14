@@ -17,17 +17,19 @@
   }
 
   .personal.greeting {
-    display: flex;
     width: 100px;
-    justify-content: space-between;
     align-items: center;
     font-family: 'Varela Round', sans-serif;
     font-size: 14px;
   }
 
+  .personal.greeting  a, .drop-down.small.icon  {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   .drop-down.small.icon {
-    display: flex;
-    align-items: center;
+    padding-left: 20px;
   }
 
   .drop.down.personal.nav {

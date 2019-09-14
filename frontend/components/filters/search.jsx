@@ -6,10 +6,9 @@ import Filters from './filters';
 
 const Search = () => (
   <div>
-    {/* <header className="search-page header"> */}
-      {/* <h1>Eperience the World through someone else's kitchen</h1> */}
+    <header className="search-page header">
       <SearchBarContainer />
-    {/* </header> */}
+    </header>
     <div className="search-page main-content">
       <Filters />
       <KitchenIndexContainer />

@@ -24,6 +24,7 @@ class SearchBar extends React.Component {
 
   componentDidMount(){
     this.props.fetchAllCities();
+    this.props.fetchAllCuisines();
   }
 
   generateTimeOptions() {

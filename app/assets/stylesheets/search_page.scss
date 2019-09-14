@@ -1,5 +1,14 @@
 @import './utils.scss';
 
+.search-page.header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("https://mommycelyarroyorecipe.files.wordpress.com/2016/02/bg.jpg");
+}
+
 .search-page.main-content {
   width: 1250;
   display: flex;
