@@ -4,8 +4,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :kitchens, only: [:index, :show]
     
-    resources :cities, only: [:index]
+    # resources :cities, only: [:index]
     resources :cuisines, only: [:index]
+    resources :locations, only: [:index]
   end
 
   root "staticpages#root"
