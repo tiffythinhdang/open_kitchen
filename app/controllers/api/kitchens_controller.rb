@@ -1,8 +1,7 @@
 class Api::KitchensController < ApplicationController
   def index
     #Need to comeback for other params process
-    req_city = kitchen_params[:city]
-    req_country = kitchen_params[:country]
+    req_location = kitchen_params[:location_id]
     req_party_size = kitchen_params[:party_size]
     req_timeslot_id = Timeslot.find_by(
       "time = ? and day = ?", 
@@ -10,7 +9,7 @@ class Api::KitchensController < ApplicationController
       kitchen_params[:date].to_time.strftime("%A")
     ).id
 
-    @kitchens = Kitchen.where("city = ? and country = ?", req_city, req_country)
+    @kitchens = Kitchen.where(location_id: req_location)
 
     render :index
   end
@@ -28,6 +27,6 @@ class Api::KitchensController < ApplicationController
   private
 
   def kitchen_params
-    params.require(:request).permit(:date, :time, :city, :country, :party_size)
+    params.require(:request).permit(:date, :time, :location_id, :party_size)
   end
 end
