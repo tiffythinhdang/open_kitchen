@@ -7,7 +7,7 @@ kitchens:
     city: "San Francisco"
     country: "United States"
     phone_number: "509-740-7664"
-    menu: "Madelines, Croissants"
+    menu: "Blueberry Madelines and Lemon-Orange Madelines"
     description: "You will learn how to bake delicious madeleines. We will focus on two basic recipes: Vanilla and Lemon. We will share a working station, and each guest will have the ingredients to scale, mix and bake beautiful madeleines using vintage baking molds."
     host_infor: "I love cooking. I grew up in Brazil, lived in Tokyo and I have been in San Francisco for the last 10 years. I've attended culinary school and completed the Le Cordon Bleu culinary program. I have cooked professionally for over five years but my biggest pleasure is home cooking and share my skills with friends."
     lat: 37.769304 
@@ -116,6 +116,49 @@ kitchens:
     host_infor: "Hi I'm Bekah! I have been a plant-based chef going on 5 years now. I have studied plant-based cuisine and nutrition. It is my passion to teach others how to make delicious satisfying meals using plants. There are so many tricks in the vegan kitchen I can't wait to share with you!"
     lat: 34.047221
     lng: -118.257182
+
+cities:
+  - id: 1
+    name: "San Francisco"
+    country: "United States"
+  - id: 2
+    name: "Los Angeles"
+    country: "United States"
+  - id: 3
+    name: "New York"
+    country: "United States"
+  - id: 4
+    name: "Chicago"
+    country: "United States"
+  - id: 5
+    name: "Tokyo"
+    country: "Japan"
+  - id: 6
+    name: "Seoul"
+    country: "Korea"
+  - id: 7
+    name: "Rome"
+    country: "Italy"
+  - id: 8
+    name: "Paris"
+    country: "France"
+
+cuisines:
+  - id: 1
+    name: "American"
+  - id: 2
+    name: "Japanese"
+  - id: 3
+    name: "Korean"
+  - id: 4
+    name: "Chinese"
+  - id: 5
+    name: "French"
+  - id: 6
+    name: "Italian"
+  - id: 7
+    name: "Mexican"
+
 
 # reviews:
 #   - id: 1

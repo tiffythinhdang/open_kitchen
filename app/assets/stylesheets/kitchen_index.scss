@@ -1,0 +1,32 @@
+@import './utils.scss';
+
+.kitchen-index.container {
+  width: 800px;
+}
+
+.kitchen-index.notfound.container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kitchen-index.notfound.container > h1, .kitchen-index.notfound.container > h3 {
+  color: $lightgray;
+  text-align: center;
+}
+
+.kitchen-index.notfound.container > h1 {
+  font-size: 100px;
+  padding-top: 50px;
+}
+
+.kitchen-index.notfound.container > h3 {
+  font-size: 30px;
+  padding-top: 25px;
+}
+
+
+
+

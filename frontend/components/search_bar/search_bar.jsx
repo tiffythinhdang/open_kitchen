@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
     this.state = {
       date: today,
       time: "12",
-      party_size: 2,
+      party_size: "2",
       city_country: "San Francisco, United States"
     }
 
@@ -24,6 +24,7 @@ class SearchBar extends React.Component {
 
   componentDidMount(){
     this.props.fetchAllCities();
+    this.props.fetchAllCuisines();
   }
 
   generateTimeOptions() {
@@ -68,12 +69,12 @@ class SearchBar extends React.Component {
   }
 
   generateCityOptions() {
-    return this.props.cities.map((city, i) =>
+    return this.props.cities.map((location, i)=>
       <option
         className="select items"
         key={i}
-        value={city[0] + ", " + city[1]}
-      >{city[0] + ", " + city[1]}
+        value={location.city + ", " + location.country}
+      >{location.city + ", " + location.country}
       </option>
     )
   }
@@ -147,7 +148,7 @@ class SearchBar extends React.Component {
             </select>
           </div>
          
-          <button type="submit" className="main medium button">Search</button>
+          <button type="submit" className="main medium button search">Search</button>
         </form>
       </div>
     )

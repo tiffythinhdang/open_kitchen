@@ -1,6 +1,6 @@
 class Api::CitiesController < ApplicationController
   def index
-    @cities = Kitchen.pluck(:city, :country).uniq
-    render json: @cities
+    @cities = City.all
+    render :index 
   end
 end

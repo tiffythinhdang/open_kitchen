@@ -15,10 +15,10 @@
 #  updated_at     :datetime         not null
 #  lat            :float            not null
 #  lng            :float            not null
-#  average_rating :integer
 #  number_reviews :integer          default(0)
 #  description    :text             not null
 #  host_infor     :text             not null
+#  average_rating :float
 #
 
 require 'test_helper'

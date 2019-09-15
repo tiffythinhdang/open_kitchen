@@ -1,0 +1,103 @@
+@import './utils.scss';
+
+.filter-options {
+  margin-top: 20px;
+}
+
+.filter-options, .cuisine-filter, .city-filter, .price-filter, .rating-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cuisine-filter, .city-filter, .price-filter, .rating-filter {
+  margin-bottom: 20px;
+}
+
+.cuisine-filter.title, .city-filter.title, .price-filter.title, .rating-filter.title {
+  width: 200px;
+  height: 55px;
+  border-top: 2px solid $lightgray;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+.filter-options h3 {
+  font-size: 18px;
+  line-height: 22px;
+  color: $main_orange;
+  padding-left: 10px;
+}
+
+.cuisine-filter.items, .city-filter.items, .price-filter.items, .rating-filter.items {
+  margin: 0;
+}
+
+.cuisine-selector, .city-selector, .rating-selector {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+  border: 1px solid $lightgray;
+  width: 15px;
+  height: 15px;
+}
+
+.rating-filter-stars {
+  height: 25px;
+  width: auto;
+}
+
+.price-filter.items {
+  flex-direction: row;
+}
+
+.price-selector {
+  width: 64px;
+  height: 48px;
+  background-color: $off_white;
+  border-radius: 4px 0px 0px 4px;
+  border: 1px solid $lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin: 10px 0;
+}
+
+.price-selector.selected {
+  background-color: $main_blue;
+  color: white;
+  border: 1px solid $hover_blue;
+}
+
+.price-selector.n2 {
+  border-radius: 0;
+  border-style: solid none solid none;
+}
+
+.price-selector.n3 {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.price-selector:hover {
+  background-color: $lightgray;
+  color: $white;
+}
+
+.price-selector.selected:hover {
+  background-color: $hover_blue;
+  color: $white;
+}
+
+
+
+
+
+

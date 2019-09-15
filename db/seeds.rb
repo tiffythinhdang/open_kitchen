@@ -15,10 +15,22 @@ ActiveRecord::Base.transaction do
 
   yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
   kitchens = yaml['kitchens']
+  cities = yaml['cities']
+  cuisines = yaml['cuisines']
 
   # Create kitchens
   kitchens.each do |kitchen|
     Kitchen.create!(kitchen)
+  end
+
+  # Create cities
+  cities.each do |city|
+    City.create!(city)
+  end
+
+  # Create kitchens
+  cuisines.each do |cuisine|
+    Cuisine.create!(cuisine)
   end
 
   #Create users 
