@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
       date: today,
       time: "12",
       party_size: "2",
-      city_country: "San Francisco, United States"
+      location_id: 1
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -69,12 +69,11 @@ class SearchBar extends React.Component {
   }
 
   generateCityOptions() {
-    debugger
     return this.props.locations.map(location => 
       <option
         className="select items"
         key={location.id}
-        value={location.city + ", " + location.country}
+        value={location.id}
       >{location.city + ", " + location.country}
       </option>
     )
@@ -86,15 +85,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const city_by_country = this.state.city_country.split(", ");
-    const request = {
-      date: this.state.date,
-      time: this.state.time,
-      party_size: this.state.party_size,
-      city: city_by_country[0],
-      country: city_by_country[1]
-    }
-    this.props.fetchKitchens(request)
+    this.props.fetchKitchens(this.state)
       .then(kitchens => this.props.history.push('/search'))
   }
 
@@ -142,8 +133,8 @@ class SearchBar extends React.Component {
             <img className="small icon location" src={iconLocation} />
             <select
               className="city-country selector"
-              value={this.state.city_country}
-              onChange={this.handleChange("city_country")}
+              value={this.state.location_id}
+              onChange={this.handleChange("location_id")}
             >
               {this.generateCityOptions()}
             </select>
