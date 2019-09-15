@@ -10,7 +10,7 @@
 }
 
 .search-page.main-content {
-  width: 1250;
+  width: 1250px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -19,4 +19,10 @@
 .filter-options {
   width: 200px;
   margin-right: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .search-page.header {
+    height: 300px;
+  }
 }

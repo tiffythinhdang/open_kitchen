@@ -148,7 +148,7 @@ class SearchBar extends React.Component {
             </select>
           </div>
          
-          <button type="submit" className="main medium button">Search</button>
+          <button type="submit" className="main medium button search">Search</button>
         </form>
       </div>
     )
