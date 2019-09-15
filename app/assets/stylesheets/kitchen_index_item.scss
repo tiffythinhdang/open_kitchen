@@ -25,6 +25,7 @@
   height: 250px;
   object-fit: cover;
   border-radius: 8px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .kitchen-index.item.profile-img > img:hover {
