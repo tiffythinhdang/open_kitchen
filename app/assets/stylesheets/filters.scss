@@ -4,18 +4,18 @@
   margin-top: 20px;
 }
 
-.filter-options, .cuisine-filter, .city-filter, .price-filter {
+.filter-options, .cuisine-filter, .city-filter, .price-filter, .rating-filter {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.cuisine-filter, .city-filter, .price-filter {
+.cuisine-filter, .city-filter, .price-filter, .rating-filter {
   margin-bottom: 20px;
 }
 
-.cuisine-filter.title, .city-filter.title, .price-filter.title {
+.cuisine-filter.title, .city-filter.title, .price-filter.title, .rating-filter.title {
   width: 200px;
   height: 55px;
   border-top: 2px solid $lightgray;
@@ -31,11 +31,11 @@
   padding-left: 10px;
 }
 
-.cuisine-filter.items, .city-filter.items, .price-filter.items {
+.cuisine-filter.items, .city-filter.items, .price-filter.items, .rating-filter.items {
   margin: 0;
 }
 
-.cuisine-selector, .city-selector {
+.cuisine-selector, .city-selector, .rating-selector {
   height: 30px;
   display: flex;
   justify-content: flex-start;
@@ -47,6 +47,11 @@
   border: 1px solid $lightgray;
   width: 15px;
   height: 15px;
+}
+
+.rating-filter-stars {
+  height: 25px;
+  width: auto;
 }
 
 .price-filter.items {

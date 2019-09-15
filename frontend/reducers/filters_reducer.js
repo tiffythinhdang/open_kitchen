@@ -1,16 +1,12 @@
 import { UPDATE_FILTER } from '../actions/filters_actions';
-// import { fetchAllCities } from '../actions/cities_action';
 
 let today = new Date().toISOString().substr(0, 10);
 
 const defaultFilters = Object.freeze({
-  time: "12",
-  date: today,
-  party_size: "2",
-  cost: ["2"],
-  city: ["San Francisco"],
-  country: ["United States"],
-  cuisine: ["American"]
+  address: [],
+  averageRating: [],
+  cost: [],
+  cuisine: []
 });
 
 const filtersReducer = (state = defaultFilters, action) => {

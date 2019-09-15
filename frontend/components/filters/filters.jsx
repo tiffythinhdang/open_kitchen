@@ -1,8 +1,9 @@
 import React from 'react';
 
 import PriceFilter from './filter_price';
-import CityFilterContainer from './filter_city_container';
+// import CityFilterContainer from './filter_city_container';
 import CuisineFilterContainer from './filter_cuisine_container';
+import RatingFilterContainer from './filter_rating_container';
 
 class Filters extends React.Component {
   constructor(props){
@@ -13,7 +14,8 @@ class Filters extends React.Component {
     return(
       <div className="filter-options">
         <PriceFilter />
-        <CityFilterContainer />
+        <RatingFilterContainer />
+        {/* <CityFilterContainer /> */}
         <CuisineFilterContainer />
       </div>
     )

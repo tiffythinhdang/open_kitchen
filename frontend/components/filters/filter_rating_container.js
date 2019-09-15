@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 
-import Search from './search';
+import RatingFilter from './filter_rating';
 import { updateFilter } from '../../actions/filters_actions';
 
 const mapStateToProps = state => {
+  const averageRating = state.ui.filters.averageRating || [];
   return {
-    kitchens: Object.values(state.entities.kitchens),
-    filters: state.ui.filters
+    averageRating: averageRating
   }
 };
 
@@ -16,4 +16,5 @@ const mapDistpatchToProps = dispatch => {
   }
 };
 
-export default connect(mapStateToProps, mapDistpatchToProps)(Search);
+export default connect(mapStateToProps, mapDistpatchToProps)(RatingFilter);
+
