@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PriceFilter from './filter_price';
+import PriceFilterContainer from './filter_price_container';
 // import CityFilterContainer from './filter_city_container';
 import CuisineFilterContainer from './filter_cuisine_container';
 import RatingFilterContainer from './filter_rating_container';
@@ -13,7 +13,7 @@ class Filters extends React.Component {
   render() {
     return(
       <div className="filter-options">
-        <PriceFilter />
+        <PriceFilterContainer />
         <RatingFilterContainer />
         {/* <CityFilterContainer /> */}
         <CuisineFilterContainer />

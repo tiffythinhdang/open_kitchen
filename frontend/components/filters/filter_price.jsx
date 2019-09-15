@@ -5,15 +5,38 @@ import iconDollar from 'assets/images/small_icon_dollar.png';
 class PriceFilter extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      filteredPrices: this.props.filteredPrices
+    };
 
-    this.toggleSelected = this.toggleSelected.bind(this);
+    this.toggleSelect = this.toggleSelect.bind(this);
+    this.displayClassName = this.displayClassName.bind(this);
   }
 
-  toggleSelected(e) {
+  displayClassName(name, cost) {
+    if (this.state.filteredPrices.includes(cost)) {
+      return name + " selected";
+    } else {
+      return name;
+    }
+  }
+
+  toggleSelect(e) {
     e.preventDefault();
-    const selected = e.target;
-    selected.classList.toggle("selected");
-  } 
+    const selectedEl = e.target;
+
+    const currPrice = parseInt(selectedEl.value);
+    let newPrices;
+
+    if (!selectedEl.classList.contains("selected")) {
+      newPrices = this.state.filteredPrices.concat(currPrice);
+    } else {
+      newPrices = this.state.filteredPrices.filter(price => price !== currPrice)
+    }
+    
+    this.setState({ filteredPrices: newPrices });
+    this.props.updateFilter("cost", newPrices);
+  }
 
   render() {
     return(
@@ -25,23 +48,23 @@ class PriceFilter extends React.Component {
 
         <div className="price-filter items">
           <button 
-            className="price-selector n1" 
+            className={this.displayClassName("price-selector n1", 2)} 
             value="2"
-            onClick={this.toggleSelected}
+            onClick={this.toggleSelect}
             >$$
           </button>
 
           <button 
-            className="price-selector n2" 
+            className={this.displayClassName("price-selector n2", 3)}
             value="3"
-            onClick={this.toggleSelected}
+            onClick={this.toggleSelect}
             >$$$
           </button>
 
           <button 
-            className="price-selector n3" 
+            className={this.displayClassName("price-selector n3", 4)} 
             value="4"
-            onClick={this.toggleSelected}
+            onClick={this.toggleSelect}
             >$$$$
           </button>
         </div>
