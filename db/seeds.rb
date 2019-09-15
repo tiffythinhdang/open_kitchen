@@ -19,17 +19,17 @@ ActiveRecord::Base.transaction do
   locations = yaml['locations']
   cuisines = yaml['cuisines']
 
-  # Create kitchens
-  kitchens.each do |kitchen|
-    Kitchen.create!(kitchen)
-  end
-
   # Create locations
   locations.each do |location|
     Location.create!(location)
   end
 
   # Create kitchens
+  kitchens.each do |kitchen|
+    Kitchen.create!(kitchen)
+  end
+
+  # Create cuisines
   cuisines.each do |cuisine|
     Cuisine.create!(cuisine)
   end
