@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_15_203042) do
+ActiveRecord::Schema.define(version: 2019_09_15_204129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,9 +37,6 @@ ActiveRecord::Schema.define(version: 2019_09_15_203042) do
     t.string "name", null: false
     t.string "cuisine", null: false
     t.integer "cost", null: false
-    t.string "address", null: false
-    t.string "city", null: false
-    t.string "country", null: false
     t.string "phone_number", null: false
     t.text "menu", null: false
     t.datetime "created_at", null: false
@@ -50,9 +47,10 @@ ActiveRecord::Schema.define(version: 2019_09_15_203042) do
     t.text "description", null: false
     t.text "host_infor", null: false
     t.float "average_rating"
-    t.index ["city"], name: "index_kitchens_on_city"
+    t.integer "location_id", null: false
+    t.string "region", null: false
     t.index ["cost"], name: "index_kitchens_on_cost"
-    t.index ["country"], name: "index_kitchens_on_country"
+    t.index ["location_id"], name: "index_kitchens_on_location_id"
   end
 
   create_table "locations", force: :cascade do |t|

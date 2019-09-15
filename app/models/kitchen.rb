@@ -22,7 +22,7 @@
 #
 
 class Kitchen < ApplicationRecord
-  validates :name, :cuisine, :cost, :address, :city, :country, :phone_number, :menu, presence: true
+  validates :name, :cuisine, :cost, :region, :location_id, :phone_number, :menu, presence: true
 
   has_many :reservations
   
