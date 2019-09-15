@@ -9,8 +9,8 @@ const receiveAllLocations = (locations) => ({
 });
 
 //thunk actions
-export const fetchAllLocations = () => dispatch => (
+export const fetchAllLocations = () => dispatch => {
   LocationsAPIUtil.fetchAllLocations()
     .then(locations => dispatch(receiveAllLocations(locations)))
   //Errors handling need to be done here! 
-);
+};

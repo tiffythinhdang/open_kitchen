@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchAllCities();
+    this.props.fetchAllLocations();
     this.props.fetchAllCuisines();
   }
 
@@ -69,10 +69,11 @@ class SearchBar extends React.Component {
   }
 
   generateCityOptions() {
-    return this.props.cities.map((location, i)=>
+    debugger
+    return this.props.locations.map(location => 
       <option
         className="select items"
-        key={i}
+        key={location.id}
         value={location.city + ", " + location.country}
       >{location.city + ", " + location.country}
       </option>
@@ -156,4 +157,3 @@ class SearchBar extends React.Component {
 };
 
 export default SearchBar;
-
