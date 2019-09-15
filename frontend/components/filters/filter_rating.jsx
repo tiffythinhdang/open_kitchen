@@ -1,6 +1,6 @@
 import React from 'react';
 
-import iconReview from 'assets/images/small_icon_review.png';
+import iconRating from 'assets/images/small_icon_rating.png';
 import icon5Star from 'assets/images/medium_icon_5_star_gold.png';
 import icon4Star from 'assets/images/medium_icon_4_star_gold.png';
 import icon3Star from 'assets/images/medium_icon_3_star_gold.png';
@@ -34,7 +34,7 @@ class RatingFilter extends React.Component {
     return (
       <div className="rating-filter">
         <div className="rating-filter title">
-          <img className="small icon light review" src={iconReview} alt="icon review" />
+          <img className="small icon light review" src={iconRating} alt="icon review" />
           <h3 className="title">Rating</h3>
         </div>
 
