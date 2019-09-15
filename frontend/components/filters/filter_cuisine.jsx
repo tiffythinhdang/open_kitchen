@@ -5,6 +5,11 @@ import iconCutlery from 'assets/images/small_icon_cutlery.png';
 class CuisineFilter extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      filteredCuisines: this.props.filteredCuisines
+    };
+
+    this.toggleSelect = this.toggleSelect.bind(this);
   }
 
   displayCuisines() {
@@ -13,10 +18,26 @@ class CuisineFilter extends React.Component {
         <input
           className="checkbox"
           type="checkbox"
-          value={cuisine} />
+          value={cuisine}
+          onChange={this.toggleSelect}
+          checked={this.state.filteredCuisines.includes(cuisine)}/>
         <label>{cuisine}</label> 
       </div>
     )
+  }
+
+  toggleSelect(e) {
+    const currCuisine = e.target.value;
+    let newCuisines;
+
+    if (e.target.checked) {
+      newCuisines = this.state.filteredCuisines.concat(currCuisine);
+    } else {
+      newCuisines = this.state.filteredCuisines.filter(cuisine => cuisine !== currCuisine)
+    }
+
+    this.setState({ filteredCuisines: newCuisines });
+    this.props.updateFilter("cuisine", newCuisines);
   }
 
   render() {

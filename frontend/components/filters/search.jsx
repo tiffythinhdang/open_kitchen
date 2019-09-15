@@ -27,7 +27,7 @@ class Search extends React.Component {
 
     for (let i = 0; i < kitchens.length; i++) {
       let currKitchen = kitchens[i];
-      
+
       for (let j = 0; j < filterCatergories.length; j++) {
         let currCategory = filterCatergories[j];
         let currVals = this.props.filters[currCategory];
