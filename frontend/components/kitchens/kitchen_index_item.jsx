@@ -66,7 +66,7 @@ class KitchenIndexItem extends React.Component {
 
             <div className="kitchen-index item location">
               <p>Location</p>
-              <p className="infor">{this.props.kitchen.address}</p>
+              <p className="infor">{this.props.kitchen.region}</p>
             </div>
 
           </div>
