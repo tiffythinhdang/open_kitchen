@@ -6,9 +6,6 @@
 #  name           :string           not null
 #  cuisine        :string           not null
 #  cost           :integer          not null
-#  address        :string           not null
-#  city           :string           not null
-#  country        :string           not null
 #  phone_number   :string           not null
 #  menu           :text             not null
 #  created_at     :datetime         not null
@@ -19,6 +16,8 @@
 #  description    :text             not null
 #  host_infor     :text             not null
 #  average_rating :float
+#  location_id    :integer          not null
+#  region         :string           not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

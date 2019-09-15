@@ -12,4 +12,6 @@
 class Location < ApplicationRecord
   validates :city, :country, presence: true
   validates :city, uniqueness: { scope: :country }
+
+  has_many :kitchens
 end
