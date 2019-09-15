@@ -1,4 +1,4 @@
-import { RECEIVE_CITIES } from '../actions/cities_action';
+import { RECEIVE_CITIES } from '../../actions/cities_action';
 
 const citiesReducer = (state = [], action) => {
   Object.freeze(state);

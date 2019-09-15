@@ -3,7 +3,6 @@ import { UPDATE_FILTER } from '../actions/filters_actions';
 let today = new Date().toISOString().substr(0, 10);
 
 const defaultFilters = Object.freeze({
-  address: [],
   averageRating: [],
   cost: [],
   cuisine: []
