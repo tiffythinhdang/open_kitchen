@@ -9,11 +9,12 @@ const mapStateToProps = (state, { location }) => {
 
   return {
     form: {
-      userId: state.session.currentUserId,
-      kitchenId: kitchenId,
-      timeSlotId: timeSlotId,
+      user_id: state.session.currentUserId,
+      kitchen_id: kitchenId,
+      timeslot_id: timeSlotId,
       date: state.search.date,
-      party_size: state.search.party_size
+      party_size: state.search.party_size,
+      optional_request: ""
     },
     time: new URLSearchParams(location.search).get('time'),
     kitchen: state.entities.kitchens[kitchenId],

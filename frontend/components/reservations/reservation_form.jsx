@@ -8,11 +8,14 @@ class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.form;
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   displayDate(){
     const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-    return (new Date(this.props.form.date)).toLocaleDateString('en-US', DATE_OPTIONS)
+    const date = this.props.form.date.split("-");
+    return (new Date(...date)).toLocaleDateString('en-US', DATE_OPTIONS)
   }
 
   displayPartySize() {
@@ -29,7 +32,7 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault()
-    this.props.createReservation(this.state);
+    this.props.action(this.state);
   }
 
   render() {
@@ -71,7 +74,7 @@ class ReservationForm extends React.Component {
             type="text"
             className="form input"
             value={this.state.specialRequest}
-            // onChange={this.handleChange('specialRequest')}
+            onChange={this.handleChange('optional_request')}
             placeholder="Add a special request (optional)"
           />
         </div>

@@ -5,6 +5,7 @@ class Api::ReservationsController < ApplicationController
   end
   
   def create
+    debugger
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save!
@@ -27,6 +28,14 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :timeslot_id, :date, :party_size, :state)
+    params.require(:reservation).permit(
+      :user_id, 
+      :kitchen_id, 
+      :timeslot_id, 
+      :date, 
+      :party_size, 
+      :state,
+      :optional_request
+    )
   end
 end

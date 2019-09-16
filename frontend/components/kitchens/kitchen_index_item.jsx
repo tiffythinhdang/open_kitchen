@@ -54,7 +54,7 @@ class KitchenIndexItem extends React.Component {
 
       this.props.history.push({
         pathname: '/reservations/new',
-        search: `kitchenId=${kitchen.id}&time=${req_time}&timeSLotId=${timeSLotId}`
+        search: `kitchenId=${kitchen.id}&time=${req_time}&timeSlotId=${timeSLotId}`
       });
     }
   }
