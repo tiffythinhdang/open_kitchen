@@ -8,10 +8,8 @@ import iconUser from 'assets/images/small_icon_user.png';
 import iconLocation from 'assets/images/small_icon_location.png'; 
 
 class SearchBar extends React.Component {
-  
   constructor(props) {
     super(props);
-    let today = new Date().toISOString().substr(0, 10);
     this.state = this.props.search;
 
     this.handleChange = this.handleChange.bind(this);

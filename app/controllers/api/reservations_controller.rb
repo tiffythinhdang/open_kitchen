@@ -8,14 +8,14 @@ class Api::ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     
     unless Reservation.is_possible?(@reservation)
-      render :json ["Sorry this time is no longer available"], status: 422
+      render json: ["Sorry this time is no longer available"], status: 422
       return
     end
  
-    if @reservation.save!
+    if @reservation.save
       render :show
     else
-      render json: @errors.full_messages, status: 422
+      render json: @reservation.errors.full_messages, status: 422
     end
   end
 
@@ -25,7 +25,7 @@ class Api::ReservationsController < ApplicationController
     if @reservation.update(reservation_params)
       render :show
     else
-      render json: @errors.full_messages, status: 422
+      render json: @reservation.errors.full_messages, status: 422
     end
   end
 

@@ -18,7 +18,9 @@ const mapStateToProps = (state, { location }) => {
     },
     time: new URLSearchParams(location.search).get('time'),
     kitchen: state.entities.kitchens[kitchenId],
-    formType: "Make Reservation"
+    formType: "Make Reservation",
+    reservations: state.entities.reservations,
+    errors: state.errors.reservation
   }
 };
 
