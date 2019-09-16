@@ -5,9 +5,13 @@ class Api::ReservationsController < ApplicationController
   end
   
   def create
-    debugger
     @reservation = Reservation.new(reservation_params)
-
+    
+    unless Reservation.is_possible?(@reservation)
+      render :json ["Sorry this time is no longer available"], status: 422
+      return
+    end
+ 
     if @reservation.save!
       render :show
     else

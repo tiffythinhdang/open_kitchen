@@ -46,4 +46,5 @@ class Kitchen < ApplicationRecord
   def num_availabilities(date, timeslot_id)
     self.capacity(timeslot_id) - self.expecting_booked_party_size(date, timeslot_id)
   end
+
 end
