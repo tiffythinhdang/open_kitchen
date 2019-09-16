@@ -11,12 +11,7 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     let today = new Date().toISOString().substr(0, 10);
-    this.state = {
-      date: today,
-      time: "12",
-      party_size: "2",
-      location_id: 1
-    }
+    this.state = this.props.search;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -85,6 +80,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.receiveSearch(this.state);
     this.props.fetchKitchens(this.state)
       .then(kitchens => this.props.history.push('/search'))
   }

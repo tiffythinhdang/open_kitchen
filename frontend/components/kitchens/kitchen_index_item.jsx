@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import RatingDisplay from './rating_display';
+import convertNumberToTime from '../../util/convert_time_util';
 
 class KitchenIndexItem extends React.Component {
   constructor(props){
@@ -26,9 +27,25 @@ class KitchenIndexItem extends React.Component {
     }
   }
 
+  displayTimeslots(){
+    const availableTimeslots = this.props.kitchen.availableTimeslots;
+    return availableTimeslots.map(timeslot => 
+      <button 
+        className="main medium button timeslot"
+        key={timeslot.id} 
+        onClick={this.handleMakeReservation}
+        >{convertNumberToTime(timeslot.time)}
+      </button>
+    )
+  }
+
   handleClick(e) {
     e.preventDefault();
     this.props.history.push(`/kitchens/${this.props.kitchen.id}`)
+  }
+
+  handleMakeReservation(e) {
+
   }
 
   render() {
@@ -70,7 +87,12 @@ class KitchenIndexItem extends React.Component {
             </div>
 
           </div>
+          
+          <div className="kitchen-index item-timeslots">
+            {this.displayTimeslots()}
+          </div>
         </div>
+
       </div>
     )
   }

@@ -9,12 +9,6 @@
       :region, 
       :average_rating, 
       :number_reviews
-    json.set! :available_timeslot_ids do
-      kitchen_with_timeslot.last.each do |timeslot|
-        json.set! timeslot.id do 
-          json.extract! timeslot, :id, :time, :day
-        end
-      end
-    end
+    json.available_timeslots kitchen_with_timeslot.last
   end
 end

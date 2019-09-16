@@ -14,8 +14,3 @@ export const fetchAllCuisines = () => dispatch => (
     .then(cuisines => dispatch(receiveAllCuisines(cuisines)))
   //Errors handling need to be done here! 
 );
-
-
-
-
-
