@@ -27,4 +27,23 @@ class Kitchen < ApplicationRecord
   has_many :kitchen_timeslot_capacities
   has_many :reservations
 
+  def capacity(timeslot_id)
+    self.kitchen_timeslot_capacities.find_by(timeslot_id: timeslot_id).capacity
+  end
+
+  def find_reservations(date, timeslot_id, state)
+    self.reservations.where(
+      date: date, 
+      timeslot_id: timeslot_id,
+      state: state
+    )
+  end
+
+  def expecting_booked_party_size(date, timeslot_id)
+    self.find_reservations(date, timeslot_id, "upcoming").pluck(:party_size).sum
+  end
+
+  def num_availabilities(date, timeslot_id)
+    self.capacity(timeslot_id) - self.expecting_booked_party_size(date, timeslot_id)
+  end
 end

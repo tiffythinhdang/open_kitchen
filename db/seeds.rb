@@ -133,5 +133,14 @@ ActiveRecord::Base.transaction do
       KitchenTimeslotCapacity.create!( kitchen_id: kitchen.id, timeslot_id: timeslot.id, capacity: capacity )
     end
   end
+
+  #Create reservations
+#   Reservation.create(user_id: user_1.id, kitchen_id: 1, timeslot_id: 3, date: "2019-12-22", )
+#   user_id     :integer          not null
+# #  kitchen_id  :integer          not null
+# #  timeslot_id :integer          not null
+# #  date        :date             not null
+# #  party_size  :integer          not null
+# #  state       :string           default("upcoming")
 end
 

@@ -19,5 +19,5 @@ class Reservation < ApplicationRecord
   
   belongs_to :user
   belongs_to :kitchen
-  belongs_to :timeslot_id
+  belongs_to :timeslot
 end
