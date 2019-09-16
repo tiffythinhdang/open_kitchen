@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import ReservationForm from './reservation_form';
+import { createReservation } from '../../actions/reservations_actions'
 
 const mapStateToProps = (state, { location }) => {
   let kitchenId = new URLSearchParams(location.search).get('kitchenId');
@@ -22,7 +23,7 @@ const mapStateToProps = (state, { location }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-
+    action: (reservation) => dispatch(createReservation(reservation))
   }
 };
 
