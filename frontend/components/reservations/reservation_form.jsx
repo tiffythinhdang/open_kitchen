@@ -49,12 +49,12 @@ class ReservationForm extends React.Component {
             <div className="reservation-form name-dtp dtp">
               <div className="reservation-form name-dtp date">
                 <img className="small icon calendar light" src={iconCalendar} />
-                <p className="reservation-form date">{this.displayDate()}</p>
+                <p>{this.displayDate()}</p>
               </div>
 
               <div className="reservation-form name-dtp time">
                 <img className="small icon clock light" src={iconClock} />
-                <p className="reservation-form date">{this.props.time}</p>
+                <p>{this.props.time}</p>
               </div>
   
               <div className="reservation-form name-dtp party">
@@ -81,6 +81,8 @@ class ReservationForm extends React.Component {
           onClick={this.handleSubmit}
           value={this.props.formType}
         />
+
+        <p className="reservation-form foot-note">By clicking <span className='hightlight text'>“Complete reservation”</span> you agree to the <span className='hightlight text'>OpenKitchen Terms of Use</span> and <span className='hightlight text'>Privacy Policy</span>.</p>
       </div>
     )
   }

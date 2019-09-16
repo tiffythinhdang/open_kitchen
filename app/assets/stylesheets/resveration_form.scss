@@ -2,7 +2,7 @@
 
 .reservation-form.container {
   width: 50%;
-  margin: auto;
+  margin-left: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,7 @@
   font-size: 18px;
   color: $mediumgray;
   font-weight: bold;
-  margin-right: 20px;
+  margin: 10px 20px;
 }
 
 .reservation-form.kitchen-img > img {
@@ -48,6 +48,7 @@
 }
 
 .reservation-form.name-dtp.dtp, .reservation-form.name-dtp.date, .reservation-form.name-dtp.time, .reservation-form.name-dtp.party {
+  height: 30px;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -58,4 +59,17 @@
 
 .reservation-form.name-dtp.date > p, .reservation-form.name-dtp.time > p, .reservation-form.name-dtp.party > p {
   margin-left: 10px;
+}
+
+.reservation-form.special-requests {
+  margin-bottom: 20px;
+}
+
+.reservation-form.foot-note{
+  font-size: 12px;
+  margin: 10px 20px;
+}
+
+.hightlight.text {
+  color: $main_orange;
 }
