@@ -20,4 +20,8 @@ class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :kitchen
   belongs_to :timeslot
+
+  def check_for_availability
+
+  end
 end
