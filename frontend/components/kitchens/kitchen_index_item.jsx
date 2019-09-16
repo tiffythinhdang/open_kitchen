@@ -9,6 +9,7 @@ class KitchenIndexItem extends React.Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleMakeReservation = this.handleMakeReservation.bind(this);
   }
 
   displayPrice(){
@@ -30,12 +31,13 @@ class KitchenIndexItem extends React.Component {
   displayTimeslots(){
     const availableTimeslots = this.props.kitchen.availableTimeslots;
     return availableTimeslots.map(timeslot => 
-      <button 
+      <input
+        type="submit" 
         className="main medium button timeslot"
         key={timeslot.id} 
-        onClick={this.handleMakeReservation}
-        >{convertNumberToTime(timeslot.time)}
-      </button>
+        onClick={this.handleMakeReservation(timeslot.id)}
+        value={convertNumberToTime(timeslot.time)}
+      />
     )
   }
 
@@ -44,8 +46,17 @@ class KitchenIndexItem extends React.Component {
     this.props.history.push(`/kitchens/${this.props.kitchen.id}`)
   }
 
-  handleMakeReservation(e) {
+  handleMakeReservation(timeSLotId) {
+    return (e) => {
+      e.preventDefault();
+      const kitchen = this.props.kitchen;
+      const req_time = e.target.value;
 
+      this.props.history.push({
+        pathname: '/reservations/new',
+        search: `kitchenId=${kitchen.id}&time=${req_time}&timeSLotId=${timeSLotId}`
+      });
+    }
   }
 
   render() {

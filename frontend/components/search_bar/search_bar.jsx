@@ -1,10 +1,11 @@
 import React from 'react';
 
+import convertNumberToTime from '../../util/convert_time_util';
+
 import iconCalendar from 'assets/images/small_icon_calendar.png'; // uses the assets alias to map to the client/app/assets/ directory followed by `images/my-image.png`
 import iconClock from 'assets/images/small_icon_clock.png'; 
 import iconUser from 'assets/images/small_icon_user.png'; 
 import iconLocation from 'assets/images/small_icon_location.png'; 
-
 
 class SearchBar extends React.Component {
   
@@ -29,13 +30,7 @@ class SearchBar extends React.Component {
     };
     let val;
     return timeOptions.map((opt, i) => {
-      if (opt < 12) {
-        val = opt + ":00 AM";
-      } else if (opt === 12) {
-        val = opt + ":00 PM";
-      } else {
-        val = (opt % 12) + ":00 PM";
-      }
+      val = convertNumberToTime(opt);
       return <option 
         className="select items" 
         key={i} 
