@@ -16,7 +16,6 @@
 class Reservation < ApplicationRecord
   validates :user_id, :kitchen_id, :timeslot_id, :date, :party_size, :state, presence: true
   validates :state, inclusion: { in: ["upcoming", "cancelled", "fulfilled"] }
-  validate :is_available
   
   belongs_to :user
   belongs_to :kitchen
