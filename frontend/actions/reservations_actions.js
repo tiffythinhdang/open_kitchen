@@ -33,14 +33,17 @@ export const fetchReservations = (userId) => dispatch => (
     .fail(errors => dispatch(receiveReservationErrors(errors.responseJSON)))
 );
 
-export const createReservation = (reservation) => dispatch => {
-  return ReservationAPIUtil.createReservation(reservation)
+export const fetchAReservation = (id) => dispatch => (
+  ReservationAPIUtil.fetchAReservation(id)
     .then(reservation => dispatch(receiveAReservation(reservation)))
-    .fail(errors => 
-    { //debugger
-      return dispatch(receiveReservationErrors(errors.responseJSON))
-    })
-};
+    .fail(errors => dispatch(receiveReservationErrors(errors.responseJSON)))
+);
+
+export const createReservation = (reservation) => dispatch => (
+  ReservationAPIUtil.createReservation(reservation)
+    .then(reservation => dispatch(receiveAReservation(reservation)))
+    .fail(errors => dispatch(receiveReservationErrors(errors.responseJSON)))
+);
 
 export const updateReservation = (reservation) => dispatch => (
   ReservationAPIUtil.updateReservation(reservation)

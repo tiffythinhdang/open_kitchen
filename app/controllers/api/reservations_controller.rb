@@ -19,6 +19,18 @@ class Api::ReservationsController < ApplicationController
     end
   end
 
+  def show
+    @reservation = Reservation.find_by(id: params[:id])
+    @kitchen_name = Kitchen.find_by(id: @reservation.kitchen_id).name
+    @time = Timeslot.find_by(id: @reservation.timeslot_id).time
+
+    if @reservation
+      render :show
+    else
+      render json: ["No reservation found"], status: 404
+    end
+  end
+
   def update
     @reservation = Reservation.find_by(id: params[:id])
 

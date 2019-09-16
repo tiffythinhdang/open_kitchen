@@ -6,8 +6,6 @@ import {
 
 const reservationErrorsReducer = (state = [], action) => {
   Object.freeze(state);
-  // debugger
-
   switch (action.type) {
     case RECEIVE_A_RESERVATION:
       return [];

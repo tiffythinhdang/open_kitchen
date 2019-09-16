@@ -1,0 +1,115 @@
+@import './utils.scss';
+
+.reservation-show.container {
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
+  margin-left: 75px;
+  margin-top: 25px;
+}
+
+.success-messages.container {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  background-color: $main_green;
+  font-size: 14px;
+  color: $white;
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.success-messages.container > img {
+  margin-right: 20px;
+  height: 40px;
+  width: auto;
+}
+
+.success-messages.container > .summary {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.success-messages.summary > .main-message {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.reservation-show.container > h3{
+  font-size: 18px;
+  color: $mediumgray;
+  font-weight: bold;
+  margin: 10px 20px;
+}
+
+.reservation-show.kitchen-img > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.reservation-show.summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 20px 20px;
+}
+
+.reservation-show.name-dtp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reservation-show.name-dtp > h2 {
+  font-size: 28px;
+  color: $main_blue;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.reservation-show.name-dtp.dtp, .reservation-show.name-dtp.date, .reservation-show.name-dtp.time, .reservation-show.name-dtp.party {
+  height: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reservation-show.name-dtp.date, .reservation-show.name-dtp.time, .reservation-show.name-dtp.party {
+  margin-right: 25px;
+}
+
+.reservation-show.name-dtp.date > p, .reservation-show.name-dtp.time > p, .reservation-show.name-dtp.party > p {
+  margin-left: 10px;
+}
+
+.reservation-show.optional.request {
+  margin: 20px 0px;
+  color: $lightgray;
+}
+
+.reservation-show.action-buttons {
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid $lightgray;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.reservation-show.action-buttons > .link-container {
+  width: 75px;
+  height: 48px;
+  text-align: center;
+  margin: 10px 20px;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

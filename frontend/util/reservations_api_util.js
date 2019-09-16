@@ -6,6 +6,13 @@ export const fetchReservations = (userId) => (
   })
 );
 
+export const fetchAReservation = (id) => (
+  $.ajax({
+    url: `/api/reservations/${id}`,
+    method: "GET"
+  })
+);
+
 export const createReservation = (reservation) => (
   $.ajax({
     url: `/api/reservations/`,

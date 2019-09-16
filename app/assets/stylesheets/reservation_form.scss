@@ -78,7 +78,7 @@
   color: $main_orange;
 }
 
-.success-messages.container, .failed-messages.container {
+.failed-messages.container {
   width: 100%;
   height: 100px;
   font-size: 14px;
@@ -90,28 +90,24 @@
   margin-left: 20px;
 }
 
-.success-messages.container {
-  background-color: $main_green;
-}
-
 .failed-messages.container {
   background-color: $main_red;
 }
 
-.success-messages.container > img, .failed-messages.container > img{
+.failed-messages.container > img{
   margin: 0px 20px;
   height: 40px;
   width: auto;
 }
 
-.success-messages.container > .summary, .failed-messages.container > .summary {
+.failed-messages.container > .summary {
   height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.success-messages.summary > .main-message, .failed-messages.summary > .main-message {
+.failed-messages.summary > .main-message {
   font-size: 18px;
   font-weight: bold;
 }

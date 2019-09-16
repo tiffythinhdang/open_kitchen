@@ -9,7 +9,7 @@ import locationsReducer from './locations_reducer';
 const entitiesReducer = combineReducers({
   users: usersReducer,
   kitchens: kitchensReducer,
-  reseravations: reservationsReducer,
+  reservations: reservationsReducer,
   locations: locationsReducer,
   cuisines: cuisinesReducer
 });
