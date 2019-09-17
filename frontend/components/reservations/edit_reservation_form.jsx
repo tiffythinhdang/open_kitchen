@@ -56,24 +56,13 @@ constructor(props) {
     })
   }
 
-  toggleEditForm() {
-    let editForm = document.querySelector('.reservation-edit.container');
-    let buttons = document.querySelector('.reservation-show-action-buttons.container');
-    editForm.classList.toggle("hidden");
-    buttons.classList.toggle("hidden");
-  }
-
   handleChange(type) {
     return (e) => this.setState({ [type]: e.target.value })
   }
 
   handleSearch(e) {
     e.preventDefault();
-
     this.props.fetchTimeslots(this.state)
-    // this.props.receiveSearch(this.state);
-    // this.props.fetchKitchens(this.state)
-    //   .then(kitchens => this.props.history.push('/search'))
   }
 
   render() {
@@ -122,7 +111,7 @@ constructor(props) {
               <p className="link-container">
                 <a
                   className="secondary link"
-                  onClick={this.toggleEditForm}
+                  onClick={this.props.toggleEditForm}
                 >Cancel
               </a>
               </p>
@@ -132,7 +121,7 @@ constructor(props) {
         </div>
         <TimeslotsIndexContainer 
           reservation={this.props.reservation}
-          toggleEditForm={this.toggleEditForm}
+          toggleEditForm={this.props.toggleEditForm}
         />
       </div>
     )

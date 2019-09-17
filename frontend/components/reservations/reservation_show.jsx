@@ -102,6 +102,7 @@ class ReservationShow extends React.Component {
   toggleEditForm() {
     let editForm = document.querySelector('.reservation-edit.container');
     let buttons = document.querySelector('.reservation-show-action-buttons.container');
+    this.props.clearTimeslots();
     editForm.classList.toggle("hidden");
     buttons.classList.toggle("hidden");
   }
@@ -150,7 +151,10 @@ class ReservationShow extends React.Component {
 
         { this.displayButtons() } 
 
-        <EditReservationFormContainer reservation={this.props.reservation}/>
+        <EditReservationFormContainer 
+          reservation={this.props.reservation}
+          toggleEditForm={this.toggleEditForm}
+        />
       </div>
     )
   }

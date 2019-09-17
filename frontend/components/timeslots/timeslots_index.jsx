@@ -37,9 +37,8 @@ class TimeslotsIndex extends React.Component {
       
       this.props.updateReservation(newReservation)
         .then(res => {
-          this.props.clearTimeslots();
-          this.props.fetchAReservation(res.reservation.id);
           this.props.toggleEditForm();
+          this.props.fetchAReservation(res.reservation.id);
       })
     }
   }
