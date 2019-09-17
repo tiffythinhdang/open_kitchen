@@ -5,13 +5,15 @@ import kitchensReducer from './kitchens_reducer';
 import reservationsReducer from './reservations_reducer';
 import cuisinesReducer from './cuisines_reducer';
 import locationsReducer from './locations_reducer';
+import timeslotsReducer from './timeslots_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
   kitchens: kitchensReducer,
   reservations: reservationsReducer,
   locations: locationsReducer,
-  cuisines: cuisinesReducer
+  cuisines: cuisinesReducer,
+  timeslots: timeslotsReducer
 });
 
 export default entitiesReducer;
