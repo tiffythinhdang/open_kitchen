@@ -15,8 +15,7 @@ const mapDispatchToProps = dispatch => {
   return {
     updateReservation: (id) => dispatch(updateReservation(id)),
     openModal: (content, params) => dispatch(openModal(content, params)),
-    closeModal: () => dispatch(closeModal()),
-    
+    closeModal: () => dispatch(closeModal())
   }
 };
 

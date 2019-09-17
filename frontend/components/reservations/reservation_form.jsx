@@ -112,19 +112,6 @@ class ReservationForm extends React.Component {
     }
   }
 
-  displayUpdateLinks() {
-    if (this.state.status === "success") {
-      let reservationId = this.state.reservation.id;
-      return (
-        <div className="reservation-form action-links">
-          <Link className="secondary link" to={`/reservations/${reservationId}/`}>Modify your Reservation</Link>
-        </div>
-      )
-    } else {
-      return "";
-    }
-  }
-
   handleChange(type){
     return (e) => this.setState({ [type]: e.target.value })
   }

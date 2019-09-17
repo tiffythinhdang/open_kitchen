@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import convertNumberToTime from '../../util/convert_time_util';
+import randNum from '../../util/random_number_util';
 
 import iconCalendar from 'assets/images/small_icon_calendar.png';
 import iconClock from 'assets/images/small_icon_clock.png';
 import iconUser from 'assets/images/small_icon_user.png';
 import iconCheck from 'assets/images/large_icon_white_check.png'; 
+import iconClose from 'assets/images/large_icon_white_close.png';
 
 class ReservationShow extends React.Component {
   constructor(props) {
@@ -23,8 +25,10 @@ class ReservationShow extends React.Component {
 
   displayDate() {
     const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-    const date = this.props.reservation.date.split("-");
-    return (new Date(...date)).toLocaleDateString('en-US', DATE_OPTIONS)
+    let date = this.props.reservation.date.split("-");
+    const month = String(parseInt(date[1]) - 1);
+    date = [ date[0], month, date[2] ];
+    return (new Date(...date)).toLocaleDateString('en-US', DATE_OPTIONS);
   }
 
   displayPartySize() {
@@ -44,6 +48,30 @@ class ReservationShow extends React.Component {
     }
   }
 
+  displayMessages() {
+    if (this.props.reservation.state === "upcoming") {
+      return (
+        <div className="success-messages container">
+          <img className="success icon" src={iconCheck} alt="icon check" />
+          <div className="success-messages summary">
+            <p className="main-message">Thanks! Your reservation is confirmed.</p>
+            <p>Confirmation #{randNum()}</p>
+          </div>
+        </div>
+      )
+    } else if (this.props.reservation.state === "cancelled") {
+      return (
+        <div className="failed-messages container">
+          <img className="failed icon" src={iconClose} alt="icon close" />
+          <div className="failed-messages summary">
+            <p className="main-message">This reservation has been cancelled</p>
+            <p>Please contact the restaurant for further inquiry</p>
+          </div>
+        </div>
+      )
+    }
+  }
+
   handleModify() {
 
   }
@@ -56,14 +84,14 @@ class ReservationShow extends React.Component {
     if (!this.props.reservation) return null;
     return (
       <div className="reservation-show container">
-
-        <div className="success-messages container">
+        { this.displayMessages() }
+        {/* <div className="success-messages container">
           <img className="success icon" src={iconCheck} alt="icon check" />
           <div className="success-messages summary">
             <p className="main-message">Thanks! Your reservation is confirmed.</p>
             <p>Confirmation #00000</p>
           </div>
-        </div>
+        </div> */}
 
         <div className="reservation-show summary">
           <div className="reservation-show kitchen-img">
