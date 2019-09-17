@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 25px;
+  margin-top: 75px;
   margin-bottom: 25px;
 }
 
@@ -16,6 +16,7 @@
   color: $mediumgray;
   font-weight: bold;
   margin: 10px 20px;
+
 }
 
 .reservation-form.kitchen-img > img {
@@ -65,7 +66,7 @@
   margin-bottom: 20px;
 }
 
-.reservation-form.container > .link-container, .reservation-form.action-links {
+.reservation-form.action-button-and-link > .link-container, .reservation-form.action-links {
   margin-left: 20px;
 }
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Search from './search';
 import { updateFilter } from '../../actions/filters_actions';
 
+
 const mapStateToProps = state => {
   return {
     kitchens: Object.values(state.entities.kitchens),

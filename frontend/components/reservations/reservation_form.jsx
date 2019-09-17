@@ -62,7 +62,7 @@ class ReservationForm extends React.Component {
         
         {this.renderErrors()}
 
-        <h1>You're almost there!</h1>
+        <h3>You're almost there!</h3>
 
         <div className="reservation-form summary">
           <div className="reservation-form kitchen-img">
