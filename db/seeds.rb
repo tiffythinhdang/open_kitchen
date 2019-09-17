@@ -10,25 +10,26 @@ require 'faker'
 ActiveRecord::Base.transaction do 
   User.destroy_all
   Kitchen.destroy_all
+  Location.destroy_all
   Timeslot.destroy_all
   KitchenTimeslotCapacity.destroy_all
 
   yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
   kitchens = yaml['kitchens']
-  cities = yaml['cities']
+  locations = yaml['locations']
   cuisines = yaml['cuisines']
+
+  # Create locations
+  locations.each do |location|
+    Location.create!(location)
+  end
 
   # Create kitchens
   kitchens.each do |kitchen|
     Kitchen.create!(kitchen)
   end
 
-  # Create cities
-  cities.each do |city|
-    City.create!(city)
-  end
-
-  # Create kitchens
+  # Create cuisines
   cuisines.each do |cuisine|
     Cuisine.create!(cuisine)
   end
@@ -132,5 +133,14 @@ ActiveRecord::Base.transaction do
       KitchenTimeslotCapacity.create!( kitchen_id: kitchen.id, timeslot_id: timeslot.id, capacity: capacity )
     end
   end
+
+  #Create reservations
+#   Reservation.create(user_id: user_1.id, kitchen_id: 1, timeslot_id: 3, date: "2019-12-22", )
+#   user_id     :integer          not null
+# #  kitchen_id  :integer          not null
+# #  timeslot_id :integer          not null
+# #  date        :date             not null
+# #  party_size  :integer          not null
+# #  state       :string           default("upcoming")
 end
 

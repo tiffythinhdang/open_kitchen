@@ -6,10 +6,10 @@ const _nullModal = {
 
 const modalReducer = (state = _nullModal, action) => {
   Object.freeze(state);
-
+  // debugger
   switch (action.type) {
     case OPEN_MODAL:
-      return {open: true, [action.content]: true};
+      return {open: true, [action.content]: true, params: action.params };
 
     case CLOSE_MODAL:
       return _nullModal;

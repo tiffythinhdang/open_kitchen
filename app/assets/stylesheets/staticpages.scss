@@ -58,6 +58,14 @@
   background: $main_orange;
 }
 
+.button.cancel {
+  background: $main_red;
+}
+
+.main.button.cancel:hover {
+  background: $hover_red;
+}
+
 .secondary.button {
   background: $main_blue;
 }
@@ -82,4 +90,5 @@
 .errors {
   color: red;
 }
+
 

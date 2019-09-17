@@ -3,9 +3,8 @@ kitchens:
     name: "Maira's Madelines"
     cuisine: "French"
     cost: 2
-    address: "Misson Bay District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Misson Bay District"
+    location_id: 1
     phone_number: "509-740-7664"
     menu: "Blueberry Madelines and Lemon-Orange Madelines"
     description: "You will learn how to bake delicious madeleines. We will focus on two basic recipes: Vanilla and Lemon. We will share a working station, and each guest will have the ingredients to scale, mix and bake beautiful madeleines using vintage baking molds."
@@ -16,9 +15,8 @@ kitchens:
     name: "Yukiko's Mochi"
     cuisine: "Japanese"
     cost: 2
-    address: "Misson District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Misson District"
+    location_id: 1
     phone_number: "286-752-8680"
     menu: "Strawberry Daifuku, Matcha Mochi, Sakura Mochi"
     description: "In this fun class, you will learn how to make three different mochi desserts. We will hand-pound glutinous sweet rice into authentic mochi! Sweet red bean paste, fresh strawberries (upon availability), and chocolate will be available to fill your mochi with. You will get to eat a lot of mochi, and best of all take home a box with lots of homemade mochi to share!"
@@ -29,9 +27,8 @@ kitchens:
     name: "Patta's Mooncakes"
     cuisine: "Chinese"
     cost: 3
-    address: "Misson District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Misson District"
+    location_id: 1
     phone_number: "371-671-3381"
     menu: "Traditional Baked Mooncakes"
     description: "A mooncake is a traditional Chinese pastry. It is made from wheat flour and sweet stuffing, such as sugar and lotus seed powder. It's a symbol of family reunion, and the cake is traditionally cut into pieces that equal the number of people in the family. Join our moon cake making class and bring home a box of specially-made moon cakes to share with your friends and family!"
@@ -42,9 +39,8 @@ kitchens:
     name: "Crystal's Sunset Dumplings"
     cuisine: "Chinese"
     cost: 2
-    address: "Sunset District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Sunset District"
+    location_id: 1
     phone_number: "765-463-8620"
     menu: "Pork and Chives Dumplings, Vegetarian Mushroom Dumplings, Fish Dumplings"
     description: "We will make healthy colorful / instagramable wraps from scratch, and we will mix our own fillings .After that we will learn at least 3 kinds of folding technics and rolling wraps from our homemade dough for making your own dumplings fest."
@@ -55,9 +51,8 @@ kitchens:
     name: "Paella Boys"
     cuisine: "Spanish"
     cost: 3
-    address: "Fillmore District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Fillmore District"
+    location_id: 1
     phone_number: "465-760-8642"
     menu: "Seafood Paella"
     description: "We’ll teach you how to cook a real Spanish seafood paella with real Spanish cooks in a real San Francisco Victorian backyard. By the end of the class, you’ll acquire all the necessary paella skills and knowledge to impress your friends and family. You’ll learn all the tricks and tips on how to master cooking times and quantities, and the best of all is that you’ll get to eat a delicious paella at the end."
@@ -68,9 +63,8 @@ kitchens:
     name: "Venorica's Pasta"
     cuisine: "Italian"
     cost: 4
-    address: "Hayes Valley District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Hayes Valley District"
+    location_id: 1
     phone_number: "676-753-2640"
     menu: "Homemade Pasta"
     description: "I will teach you the secrets of making home made pasta in my kitchen studio, located in Hayes Valley District. I am an Italian Chef, cooking has always been my passion and I am looking forward to sharing it with you. We will use a selection of ingredients from local organic producers as I strongly believe in the importance of quality to make simple dishes with great taste."
@@ -81,9 +75,8 @@ kitchens:
     name: "Grandma Sauce"
     cuisine: "Italian"
     cost: 3
-    address: "Hayes Valley District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Hayes Valley District"
+    location_id: 1
     phone_number: "455-680-2367"
     menu: "Neapolitan sauce, Classic italian sauce, Meatball with sauce \"polpette al sugo\""
     description: "Learn to cook the most tasty and versatile recipe of Italian cuisine... Tomato Sauce! Following my family recipe we will prepare our iconic italian dishes. Discover all the Grandma secrets that nobody will reveal you, with a passionate and hungry local in this social cooking class, on a sunny garden rooftop!"
@@ -94,9 +87,8 @@ kitchens:
     name: "Stefano's Sicilian Cannoli"
     cuisine: "Italian"
     cost: 3
-    address: "Lower Pacific Heights District"
-    city: "San Francisco"
-    country: "United States"
+    region: "Lower Pacific Heights District"
+    location_id: 1
     phone_number: "268-634-2350"
     menu: "Sicilian Cannoli"
     description: "I will teach you how to prepare a crusty shell, used to cover Cannoli, the typical Sicilian Sweet. You will kneadwith your hands and fry the dough into the peculiar shape. You will also see how the cream is prepared to fill up Cannoli’s shell, starting from the traditional Ricotta Sweet up to the custard."
@@ -107,40 +99,123 @@ kitchens:
     name: "Downtown Vegan"
     cuisine: "American"
     cost: 3
-    address: "Downtown LA"
-    city: "Los Angeles"
-    country: "United States"
+    region: "Downtown LA"
+    location_id: 2
     phone_number: "294-754-8820"
     menu: "To be decided"
     description: "We will make a 3-course organic meal of either Latin, Asian or Italian fare, your choice! Choice of cuisine goes to those who book first. If you book after a person or persons has chosen the cuisine, I will let you know what has been selected."
     host_infor: "Hi I'm Bekah! I have been a plant-based chef going on 5 years now. I have studied plant-based cuisine and nutrition. It is my passion to teach others how to make delicious satisfying meals using plants. There are so many tricks in the vegan kitchen I can't wait to share with you!"
     lat: 34.047221
     lng: -118.257182
+  - id: 10
+    name: "Gluten-free L.A. Workshop"
+    cuisine: "American"
+    cost: 3
+    region: "Echo Park"
+    location_id: 2
+    phone_number: "789-356-1230"
+    menu: "A homemade gluten & sugar-free feast with natural/biodynamic wine tasting"
+    description: "We will start the day in my garden, picking out some herbs and citrus needed for our menu, over coffees with freshly homemade almond milk. After we get to know each other a bit, we will move inside to our Scandinavian farmhouse-style kitchen, where we will go over the menu of what we're making for the day."
+    host_infor: "I came to Los Angeles to continue pursuing my career in hostessing cooking classes and dinner parties. When I found out I had a gluten-allergy at 20, while living and cooking at a boutique hotel in Spain, I was unrelenting in creating gluten-free recipes that didn't taste gluten-free. Aside from always focusing on local, seasonal cuisine, I focus on creating beautiful menus that aren't health conscious (5-tiered cakes and all)."
+    lat: 34.081359
+    lng: -118.251283
+  - id: 11
+    name: "Joshua Brewery"
+    cuisine: "American"
+    cost: 2
+    region: "Eagle Rock"
+    location_id: 2
+    phone_number: "564-535-2522"
+    menu: "A variety of delicious international and American craft beer."
+    description: "We provide all of the brewing equipment already set up – see exactly what is needed to brew craft beer and compare to huge American breweries. Oh, and you do all the brewing! (just under our careful guidance). A variety of delicious American craft beer tastings will be curated throughout the day. You will also sample different styles of beers from breweries all over the globe, with explanations of brewing techniques and beer styles. Learn how to judge beer like a pro."
+    host_infor: "for nearly 10 years. I've won several homebrewing competitions and judged many more, and stil​l love nothing more than hanging out with a group of new friends, enjoying some incredible craft beers, and brewing up a new batch. I moved to California in the hunt for some of the worlds best beer, and I'm happy to say I've found it!"
+    lat: 34.129065
+    lng: -118.214892
+  - id: 12
+    name: "Artisian Gelato"
+    cuisine: "Italian"
+    cost: 3
+    region: "Huntington Park"
+    location_id: 2
+    phone_number: "344-264-3460"
+    menu: "A variety of seasonal gelato"
+    description: "Upon arrival, enjoy a delicious espresso or cappuccino while Katyna gives you a tour of the shop and dives into some gelato education. From there, gets hands-on experience making gelato of your own. We'll start at the very beginning preparing the natural ingredients (no additives, thickeners, colorants or artificial flavors!) needed to create amazing flavors and then we'll mix, mash, simmer and eventually create the gelato thickened consistency you’re used to seeing. Repeat the process, making two different variations of gelato, sorbetto, and variegato."
+    host_infor: "Katyna is the brain behind Fatamorgana Gelato. She used to be a costume designer for films and TV in Rome, where she lived with her film producer husband & two daughters. She is a talented chef in her own right and has a passion for original & unique flavors. This, combined with a love for the gifts of nature, led her to learn from Fatamorgana's founder, Maria Spagnuolo, the secrets of the ancient art of artisan Gelato making. "
+    lat: 33.985798
+    lng: -118.214099
+  - id: 13
+    name: "Teas With Herbs"
+    cuisine: "American"
+    cost: 2
+    region: "Lower East Side"
+    location_id: 3
+    phone_number: "594-674-5470"
+    menu: "A variety of teas with herbs"
+    description: "There will be a choice of herbs for tea making, each serving a specific healing function in the body. Then I will talk about tinctures, infusions and oils. Each person will make either a tincture, infusion or an oil to take home. (Tinctures include the use of alcohol, so it should only be made by and used on adults over 21.)"
+    host_infor: "I'm a Brooklyn-based homeopathic public health professional, that studies in an apothecary under a world renowned herbalist. I hold a masters degree from Columbia University's School of Public Health in sociomedical sciences and social determinants of health."
+    lat: 40.718009
+    lng: -73.989644
+  - id: 14
+    name: "Coffee Tasting: from farm to cup"
+    cuisine: "American"
+    cost: 2
+    region: "East Village"
+    location_id: 3
+    phone_number: "454-752-9420"
+    menu: "Coffee of different variety"
+    description: "The experience starts with a freshly brewed cup of coffee - as YOU enjoy your cup of coffee I will briefly discuss the history of coffee, how 787 Coffee project contributes to NYC by being the only grown in USA coffee shop and what makes Puerto Ricos' coffee so special. I will teach you a couple of Brewing methods, we will taste and discuss differences. Finally you will make YOUR own pour over cup of coffee trying three different coffees - Medium & Dark Roast as well as 787 Coffee's award winning specialty coffee (Freshest Cup you'll have in New York)"
+    host_infor: "I am Joshua, a guy that loves traveling and nature, in an effort to share my passion for coffee I bought a farm in the highest mountains of Maricao, Puerto Rico. Since then the team has worked hard to create the most unique coffee shop in New York City. Bringing a grown in USA, from farm to cup coffee experience!"
+    lat: 40.728274
+    lng: -73.986447
+  - id: 15
+    name: "Lina And Jared: Farm-to-Table"
+    cuisine: "American"
+    cost: 4
+    region: "South Loop"
+    location_id: 4
+    phone_number: "395-657-9845"
+    menu: "To be decided by seasonality and dietary"
+    description: "Jared is a Chicago based chef with more than 17 years of experience. He will be teaching you during our culinary adventure. Jared is an experienced farm-to-table chef, creating locally sourced meals and tasting menus for restaurants such as Ten Tables, Journeyman, No. 9 Park and the Boston Harbor Hotel."
+    host_infor: "We'll start by sourcing ingredients to learn how to understand what's fresh and seasonal. We'll then create a delicious meal in our home kitchen. Make dishes such as fresh vegetable gnocchi, New England oyster shooters, local meat and fish and much much more. Every lesson is hand crafted specifically for what your dietary needs are and what the farmers brought in that day."
+    lat: 41.882869
+    lng: -87.629041
+  - id: 16
+    name: "Phillipe's Local Pasta Making"
+    cuisine: "Italian"
+    cost: 4
+    region: "South Loop"
+    location_id: 4
+    phone_number: "534-734-8450"
+    menu: "Two different pastas based on seasonality"
+    description: "I will be teaching you how to make 2 different types of pasta from scratch, how to incorporate a healthy twist into each one, show you how to make a delicious sauce using ingredients already in the pantry. Did I mention that it is BYOB! We can enjoy our beverages on the rooftop overlooking the Chicago skyline during the end of our cooking! (If weather permits)."
+    host_infor: "Phillipe has been a finalist on Masterchef Season 5, a contestant on Food Network's Cooks vs. Cons Season 2, appeared on LIVE with Kelly & Ryan, USA Today, WGN, a finalist for World Food Championships 2017, HMS Host 2017 finalist and has worked with Fabio Viviani and Graham Elliot. Has also cooked for Scott Conant, Geoffrey Zakarian and Lorena Garcia."
+    lat: 41.881080
+    lng: -87.634964
 
-cities:
+locations:
   - id: 1
-    name: "San Francisco"
+    city: "San Francisco"
     country: "United States"
   - id: 2
-    name: "Los Angeles"
+    city: "Los Angeles"
     country: "United States"
   - id: 3
-    name: "New York"
+    city: "New York"
     country: "United States"
   - id: 4
-    name: "Chicago"
+    city: "Chicago"
     country: "United States"
   - id: 5
-    name: "Tokyo"
+    city: "Tokyo"
     country: "Japan"
   - id: 6
-    name: "Seoul"
+    city: "Seoul"
     country: "Korea"
   - id: 7
-    name: "Rome"
+    city: "Rome"
     country: "Italy"
   - id: 8
-    name: "Paris"
+    city: "Paris"
     country: "France"
 
 cuisines:

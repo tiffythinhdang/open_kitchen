@@ -10,18 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_15_053756) do
+ActiveRecord::Schema.define(version: 2019_09_16_170631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cities", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "country", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name", "country"], name: "index_cities_on_name_and_country", unique: true
-  end
 
   create_table "cuisines", force: :cascade do |t|
     t.string "name", null: false
@@ -45,9 +37,6 @@ ActiveRecord::Schema.define(version: 2019_09_15_053756) do
     t.string "name", null: false
     t.string "cuisine", null: false
     t.integer "cost", null: false
-    t.string "address", null: false
-    t.string "city", null: false
-    t.string "country", null: false
     t.string "phone_number", null: false
     t.text "menu", null: false
     t.datetime "created_at", null: false
@@ -58,9 +47,18 @@ ActiveRecord::Schema.define(version: 2019_09_15_053756) do
     t.text "description", null: false
     t.text "host_infor", null: false
     t.float "average_rating"
-    t.index ["city"], name: "index_kitchens_on_city"
+    t.integer "location_id", null: false
+    t.string "region", null: false
     t.index ["cost"], name: "index_kitchens_on_cost"
-    t.index ["country"], name: "index_kitchens_on_country"
+    t.index ["location_id"], name: "index_kitchens_on_location_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "city", null: false
+    t.string "country", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city", "country"], name: "index_locations_on_city_and_country", unique: true
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -72,6 +70,7 @@ ActiveRecord::Schema.define(version: 2019_09_15_053756) do
     t.string "state", default: "upcoming"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "optional_request"
     t.index ["date"], name: "index_reservations_on_date"
     t.index ["kitchen_id"], name: "index_reservations_on_kitchen_id"
     t.index ["state"], name: "index_reservations_on_state"

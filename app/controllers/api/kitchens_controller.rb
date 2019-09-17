@@ -1,16 +1,29 @@
 class Api::KitchensController < ApplicationController
   def index
-    #Need to comeback for other params process
-    req_city = kitchen_params[:city]
-    req_country = kitchen_params[:country]
-    req_party_size = kitchen_params[:party_size]
-    req_timeslot_id = Timeslot.find_by(
-      "time = ? and day = ?", 
-      kitchen_params[:time], 
-      kitchen_params[:date].to_time.strftime("%A")
-    ).id
+    req_location = kitchen_params[:location_id]
+    req_party_size = kitchen_params[:party_size].to_i
+    req_time = kitchen_params[:time].to_i # return hour of the day
+    req_date = kitchen_params[:date].to_date # return the date object of request date
+    req_day = kitchen_params[:date].to_time.strftime("%A") # return day of the week
 
-    @kitchens = Kitchen.where("city = ? and country = ?", req_city, req_country)
+    # Generate 3 timeslots to search for availabilities based on request time & day
+    req_timeslots = Timeslot.generate_searching_timeslots(req_time, req_day)
+
+    # Get all kitchens in the search area
+    kitchens_in_area = Kitchen.where(location_id: req_location)
+
+    # Filter kitchens based on availability 
+    @available_kitchens = []
+    
+    kitchens_in_area.each do |kitchen|
+      availabilities = []
+      req_timeslots.each do |timeslot|
+        if kitchen.num_availabilities(req_date, timeslot.id) >= req_party_size
+          availabilities.push(timeslot)
+        end
+      end
+      @available_kitchens.push([kitchen, availabilities]) unless availabilities.empty?
+    end
 
     render :index
   end
@@ -28,6 +41,6 @@ class Api::KitchensController < ApplicationController
   private
 
   def kitchen_params
-    params.require(:request).permit(:date, :time, :city, :country, :party_size)
+    params.require(:request).permit(:date, :time, :location_id, :party_size)
   end
 end

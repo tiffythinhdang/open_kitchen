@@ -1,0 +1,80 @@
+@import './utils.scss';
+
+.reservation-form.container {
+  width: 50%;
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 75px;
+  margin-bottom: 25px;
+}
+
+.reservation-form.container > h3{
+  font-size: 18px;
+  color: $mediumgray;
+  font-weight: bold;
+  margin: 10px 20px;
+
+}
+
+.reservation-form.kitchen-img > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.reservation-form.summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+.reservation-form.name-dtp {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reservation-form.name-dtp > h2 {
+  font-size: 28px;
+  color: $main_blue;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.reservation-form.name-dtp.dtp, .reservation-form.name-dtp.date, .reservation-form.name-dtp.time, .reservation-form.name-dtp.party {
+  height: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reservation-form.name-dtp.date, .reservation-form.name-dtp.time, .reservation-form.name-dtp.party {
+  margin-right: 25px;
+}
+
+.reservation-form.name-dtp.date > p, .reservation-form.name-dtp.time > p, .reservation-form.name-dtp.party > p {
+  margin-left: 10px;
+}
+
+.reservation-form.special-requests {
+  margin-bottom: 20px;
+}
+
+.reservation-form.action-button-and-link > .link-container, .reservation-form.action-links {
+  margin-left: 20px;
+}
+
+.reservation-form.foot-note{
+  font-size: 12px;
+  margin: 10px 20px;
+}
+
+.hightlight.text {
+  color: $main_orange;
+}

@@ -1,0 +1,58 @@
+@import './utils.scss';
+
+// Sign-up Form
+.sign-up.modal-alert.container {
+  width: 644px;
+  height: 757px;
+}
+
+// Log-in Form
+.log-in.modal-alert.container {
+  width: 644px;
+  height: 550px;
+}
+
+// Reservation Cancel Form
+.cancel-reservation.modal-alert.container {
+  width: 644px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-reservation.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-reservation.summary > .question {
+  margin-bottom: 25px;
+}
+
+// Cancelation Success Pop-up
+
+.success-cancel.modal-alert.container {
+  width: 644px;
+  height: 175px;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-cancel.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-cancel.summary > p {
+  margin-bottom: 25px;
+}
+
+
+

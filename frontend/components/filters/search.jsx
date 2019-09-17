@@ -56,7 +56,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="search-page container">
         <header className="search-page header">
           <SearchBarContainer />
         </header>

@@ -1,0 +1,8 @@
+@import './utils.scss';
+
+.cancel-reservation.modal-alert.container {
+  width: 800px;
+  height: 300px;
+  display: flex;
+  flex-direction: space-between;
+}

@@ -5,10 +5,9 @@
   height: 275px;
   box-sizing: content-box;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-top: 20px;
-  border-top: 2px solid $lightgray;
-  margin-top: 20px;
+  border-bottom: 2px solid $lightgray;
 }
 
 .kitchen-index.item.profile-img {
@@ -20,7 +19,7 @@
   overflow: hidden;
 }
 
-.kitchen-index.item.profile-img > img {
+.kitchen-index.item.profile-img > a > img {
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -28,16 +27,17 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.kitchen-index.item.profile-img > img:hover {
+.kitchen-index.item.profile-img > a > img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
 .kitchen-index.item-infor {
   width: 500px;
+  height:250px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -101,5 +101,14 @@
   width: 300px;
 }
 
+.kitchen-index.item-timeslots {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
 
+.main.medium.button.timeslot {
+  margin: 0;
+}
 

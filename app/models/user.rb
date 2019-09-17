@@ -21,6 +21,8 @@ class User < ApplicationRecord
   attr_reader :password
   before_validation :ensure_session_token
 
+  has_many :reservations
+
   def password=(password)
     @password = password
     self.password_digest ||= BCrypt::Password.create(password)

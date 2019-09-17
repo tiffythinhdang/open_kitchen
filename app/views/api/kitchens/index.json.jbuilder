@@ -1,5 +1,14 @@
-@kitchens.each do |kitchen|
-  json.set! kitchen.id do
-    json.extract! kitchen, :id, :name, :cuisine, :cost, :address, :average_rating, :number_reviews
+@available_kitchens.each do |kitchen_with_timeslot|
+  json.set! kitchen_with_timeslot.first.id do
+    json.extract! kitchen_with_timeslot.first, 
+      :id, 
+      :name, 
+      :cuisine, 
+      :cost, 
+      :location_id, 
+      :region, 
+      :average_rating, 
+      :number_reviews
+    json.available_timeslots kitchen_with_timeslot.last
   end
 end

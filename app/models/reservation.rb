@@ -17,4 +17,15 @@ class Reservation < ApplicationRecord
   validates :user_id, :kitchen_id, :timeslot_id, :date, :party_size, :state, presence: true
   validates :state, inclusion: { in: ["upcoming", "cancelled", "fulfilled"] }
   
+  belongs_to :user
+  belongs_to :kitchen
+  belongs_to :timeslot
+
+  def self.is_possible?(reservation)
+    kitchen = Kitchen.find_by(id: reservation.kitchen_id)
+    kitchen.num_availabilities(
+      reservation.date, 
+      reservation.timeslot_id
+    ) >= reservation.party_size
+  end
 end
