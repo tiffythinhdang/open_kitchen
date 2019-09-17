@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 
-.kitchen-index.item.profile-img > img {
+.kitchen-index.item.profile-img > a > img {
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -27,7 +27,7 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.kitchen-index.item.profile-img > img:hover {
+.kitchen-index.item.profile-img > a > img:hover {
   opacity: 0.5;
   cursor: pointer;
 }

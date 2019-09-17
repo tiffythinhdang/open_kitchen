@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import RatingDisplay from './rating_display';
 import convertNumberToTime from '../../util/convert_time_util';
@@ -64,15 +64,18 @@ class KitchenIndexItem extends React.Component {
       <div className="kitchen-index item-container">
         <div className="kitchen-index item profile-img">
           {/* Need to link real pictures with S3 later */}
-          <img 
-            src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg" 
-            alt="profile-picture"
-            onClick={this.handleClick}
-          />
+          <Link target="_blank" to={`/kitchens/${this.props.kitchen.id}`}> 
+            <img
+              src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg"
+              alt="profile-picture"
+            />
+          </Link>
         </div>
 
         <div className="kitchen-index item-infor">
-          <a onClick={this.handleClick}>{this.props.kitchen.name}</a>
+          <Link target="_blank" to={`/kitchens/${this.props.kitchen.id}`}>
+            {this.props.kitchen.name}
+          </Link>
 
           <div className="kitchen-index item rating-review">
               <div className="rating">
