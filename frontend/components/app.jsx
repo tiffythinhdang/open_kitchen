@@ -24,8 +24,10 @@ const App = () => (
     <Route path="/search" component={SearchContainer} />
     <Route path="/kitchens/:kitchenId" component={KitchenShowContainer} />
 
-    <Route exact path="/reservations/new" component={CreateReservationFormContainer} />
-    <Route path="/reservations/:reservationId" component={ReservationShowContainer} />
+    <Switch>
+      <Route exact path="/reservations/new" component={CreateReservationFormContainer} />
+      <Route path="/reservations/:reservationId" component={ReservationShowContainer} />
+    </Switch>
 
     <Footer />
   </div>

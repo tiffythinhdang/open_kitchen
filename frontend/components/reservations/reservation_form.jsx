@@ -1,19 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import iconCalendar from 'assets/images/small_icon_calendar.png';
 import iconClock from 'assets/images/small_icon_clock.png';
-import iconUser from 'assets/images/small_icon_user.png'; 
-import iconCheck from 'assets/images/large_icon_white_check.png'; 
-import iconClose from 'assets/images/large_icon_white_close.png'; 
+import iconUser from 'assets/images/small_icon_user.png';  
 
 class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      reservation: this.props.form,
-      status: "incomplete"
-    } 
+    this.state = this.props.form;
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.goBack = this.goBack.bind(this);
@@ -33,94 +27,29 @@ class ReservationForm extends React.Component {
     }
   }
 
-  displayMessages() {
-    if (this.state.status === "incomplete") {
-      return <h3>You're almost done!</h3>;
-    } else if (this.state.status === "success") {
-      return (
-        <div className="success-messages container">
-          <img className="success icon" src={iconCheck} alt="icon check"/>
-          <div className="success-messages summary">
-            <p className="main-message">Thanks! Your reservation is confirmed.</p>
-            <p>Confirmation #00000</p>
-          </div>
-        </div>
-      )
-    } else if (this.state.status === "failed") {
-      return (
-        <div className="failed-messages container">
-          <img className="failed icon" src={iconClose} alt="icon close" />
-          <div className="failed-messages summary">
-            <p className="main-message">{this.props.errors}</p>
-            <p>Try again</p>
-          </div>
-        </div>
-      )
-    }
-  }
-
-  displayRequestBox() {
-    if (this.state.status === "incomplete") {
-      return (
-        <div className="reservation-form special-requests">
-          <input
-            type="text"
-            className="form input"
-            value={this.state.specialRequest}
-            onChange={this.handleChange('optional_request')}
-            placeholder="Add a special request (optional)"
-          />
-        </div>
-      )
-    } else {
-      return "";
-    }
-  }
-
-  displayButtons() {
-    if (this.state.status === "incomplete") {
-      return (
-        <div className="reservation-form action-button-and-link">
-          <input
-            className="large main button submit"
-            type="submit"
-            onClick={this.handleSubmit}
-            value={this.props.formType}
-          />
-
-          <p className="link-container">
-            <a
-              className="secondary link"
-              onClick={this.goBack}
-            >Cancel
-            </a>
-          </p>
-        </div>
-      )
-    } else {
-      return "";
-    }
-  }
-
-  displayFootnote() {
-    if (this.state.status === "incomplete") {
-      return (
-        <p className="reservation-form foot-note">By clicking “Complete reservation”, you agree to the <span className='hightlight text'>OpenKitchen Terms of Use</span> and <span className='hightlight text'>Privacy Policy</span>.</p>
-      )
-    } else {
-      return "";
-    }
-  }
-
   handleChange(type){
     return (e) => this.setState({ [type]: e.target.value })
   }
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.action(this.state.reservation)
-      .then(res => this.setState({ status: "success", reservation: res.reservation }))
-      .fail(error => this.setState({ status: "failed" }))
+    this.props.action(this.state)
+      .then(res => this.props.history.push(`/reservations/${res.reservation.id}`))
+      .fail(error => this.renderErrors(error))
+  }
+
+  renderErrors() {
+    return (
+      <ul className="errors">
+        {
+          this.props.errors.map((err, i) => (
+            <li key={`error-${i}`}>
+              {err}
+            </li>
+          ))
+        }
+      </ul>
+    )
   }
 
   goBack(){
@@ -130,8 +59,10 @@ class ReservationForm extends React.Component {
   render() {
     return (
       <div className="reservation-form container">
-          
-        {this.displayMessages()}
+        
+        {this.renderErrors()}
+
+        <h1>You're almost there!</h1>
 
         <div className="reservation-form summary">
           <div className="reservation-form kitchen-img">
@@ -161,10 +92,35 @@ class ReservationForm extends React.Component {
             </div>
           </div>
         </div>
-        { this.displayRequestBox() }
-        { this.displayButtons() }
-        { this.displayFootnote() }
-        { this.displayUpdateLinks() }
+
+        <div className="reservation-form special-requests">
+          <input
+            type="text"
+            className="form input"
+            value={this.state.specialRequest}
+            onChange={this.handleChange('optional_request')}
+            placeholder="Add a special request (optional)"
+          />
+        </div>
+
+        <div className="reservation-form action-button-and-link">
+          <input
+            className="large main button submit"
+            type="submit"
+            onClick={this.handleSubmit}
+            value={this.props.formType}
+          />
+
+          <p className="link-container">
+            <a
+              className="secondary link"
+              onClick={this.goBack}
+            >Cancel
+            </a>
+          </p>
+        </div>
+
+        <p className="reservation-form foot-note">By clicking “Complete reservation”, you agree to the <span className='hightlight text'>OpenKitchen Terms of Use</span> and <span className='hightlight text'>Privacy Policy</span>.</p>
       </div>
     )
   }

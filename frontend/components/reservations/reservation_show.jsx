@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import convertNumberToTime from '../../util/convert_time_util';
 import randNum from '../../util/random_number_util';
+import EditReservationFormContainer from './edit_resrvation_form_container';
 
 import iconCalendar from 'assets/images/small_icon_calendar.png';
 import iconClock from 'assets/images/small_icon_clock.png';
@@ -72,8 +73,37 @@ class ReservationShow extends React.Component {
     }
   }
 
-  handleModify() {
+  displayButtons() {
+    if ( this.props.reservation.state === "upcoming" ) {
+      return (
 
+        <div className="reservation-show-action-buttons container">
+          <div className="reservation-show action-buttons">
+            <button
+              className="main medium button"
+              onClick={this.handleModify}
+            >Modify
+            </button>
+
+            <div className="link-container">
+              <a
+                className="secondary link"
+                onClick={this.handleCancel}
+              >Cancel Reservation</a>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
+      return "";
+    }
+  }
+
+  handleModify() {
+    let editForm = document.querySelector('.reservation-edit.container');
+    let buttons = document.querySelector('.reservation-show-action-buttons.container');
+    editForm.classList.toggle("hidden");
+    buttons.classList.toggle("hidden");
   }
 
   handleCancel() {
@@ -82,17 +112,11 @@ class ReservationShow extends React.Component {
 
   render() {
     if (!this.props.reservation) return null;
+    
     return (
       <div className="reservation-show container">
         { this.displayMessages() }
-        {/* <div className="success-messages container">
-          <img className="success icon" src={iconCheck} alt="icon check" />
-          <div className="success-messages summary">
-            <p className="main-message">Thanks! Your reservation is confirmed.</p>
-            <p>Confirmation #00000</p>
-          </div>
-        </div> */}
-
+  
         <div className="reservation-show summary">
           <div className="reservation-show kitchen-img">
             <img
@@ -124,21 +148,9 @@ class ReservationShow extends React.Component {
           </div>
         </div>
 
-        <div className="reservation-show action-buttons">
-          <button 
-            className="main medium button"
-            onClick={this.handleModify}
-            >Modify
-          </button>
+        { this.displayButtons() } 
 
-          <div className="link-container">
-            <a 
-              className="secondary link"
-              onClick={this.handleCancel}
-            >Cancel Reservation</a>
-          </div>
-        </div>
-        
+        <EditReservationFormContainer reservation={this.props.reservation}/>
       </div>
     )
   }

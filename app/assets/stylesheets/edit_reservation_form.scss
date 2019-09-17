@@ -1,0 +1,39 @@
+@import './utils.scss';
+
+.reservation-edit.container{
+  width: 100%;
+  border-top: 1px solid $lightgray;
+}
+
+.reservation-edit.search.bar > form {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.reservation-edit.date-time-party.selector-container {
+  justify-content: flex-end;
+}
+
+.reservation-edit.action-buttons {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  border: none;
+}
+
+.reservation-edit.action-buttons > .link-container {
+  width: 100px;
+  height: 48px;
+  text-align: center;
+  margin: 10px 20px;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

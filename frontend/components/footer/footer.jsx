@@ -13,7 +13,7 @@ class Footer extends React.Component {
               className="link" 
               href="https://www.opentable.com/" 
               target="_blank"
-              >Inpriration site
+              >Inspiration site
             </a>
           </div>
 
