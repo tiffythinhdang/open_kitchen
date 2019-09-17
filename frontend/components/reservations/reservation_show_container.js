@@ -2,7 +2,9 @@ import { connect } from 'react-redux';
 
 import ReservationShow from './reservation_show';
 import { fetchAReservation } from '../../actions/reservations_actions';
-import { fetchAKitchen } from '../../actions/kitchen_actions';
+// import { fetchAKitchen } from '../../actions/kitchen_actions';
+
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const reservationId = ownProps.match.params.reservationId;
@@ -15,7 +17,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchAReservation: (id) => dispatch(fetchAReservation(id)),
-    fetchAKitchen: (kitchenId) => dispatch(fetchAKitchen(kitchenId))
+    // fetchAKitchen: (kitchenId) => dispatch(fetchAKitchen(kitchenId)),
+    openModal: (content, params) => dispatch(openModal(content, params)),
+    closeModal: () => dispatch(closeModal()),
   }
 };
 

@@ -12,6 +12,9 @@ class ReservationShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.reservation;
+
+    this.handleModify = this.handleModify.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   componentDidMount() {
@@ -46,7 +49,7 @@ class ReservationShow extends React.Component {
   }
 
   handleCancel() {
-
+    this.props.openModal('showCancel', this.props.reservation.id);
   }
 
   render() {
@@ -104,9 +107,10 @@ class ReservationShow extends React.Component {
             <a 
               className="secondary link"
               onClick={this.handleCancel}
-            >Cancel</a>
+            >Cancel Reservation</a>
           </div>
         </div>
+        
       </div>
     )
   }

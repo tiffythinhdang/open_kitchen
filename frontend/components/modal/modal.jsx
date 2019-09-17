@@ -2,6 +2,8 @@ import React from 'react';
 
 import SignUpFormContainer from '../session_form/signup_form_container';
 import LogInFormContainer from '../session_form/login_form_container';
+import CancelReservationContainer from '../reservations/cancel_reservation_container';
+import SuccessCancelContainer from '../reservations/success_cancel_container';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -34,7 +36,11 @@ class Modal extends React.Component {
     if (modal.showSignUp) {
       return <SignUpFormContainer />
     } else if (modal.showLogIn) {
-      return <LogInFormContainer/>
+      return <LogInFormContainer />
+    } else if (modal.showCancel) {
+      return <CancelReservationContainer />
+    } else if (modal.showSuccessCancel) {
+      return <SuccessCancelContainer />
     }
   }
 
