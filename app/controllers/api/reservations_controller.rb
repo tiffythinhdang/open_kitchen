@@ -34,7 +34,7 @@ class Api::ReservationsController < ApplicationController
 
   def update
     @reservation = Reservation.find_by(id: params[:id])
-    debugger
+
     if @reservation.update(reservation_params)
       render :show
     else

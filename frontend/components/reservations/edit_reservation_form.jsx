@@ -118,7 +118,7 @@ constructor(props) {
             </div>
 
             <div className="reservation-edit action-buttons container">
-              <button type="submit" className="main medium button search">Search</button>
+              <button type="submit" className="secondary medium button search">Search</button>
               <p className="link-container">
                 <a
                   className="secondary link"

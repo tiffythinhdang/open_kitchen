@@ -4,11 +4,9 @@ import EditReservationForm from './edit_reservation_form';
 import { updateReservation } from '../../actions/reservations_actions';
 import { fetchTimeslots } from '../../actions/timeslots_action';
 
-const mapStateToProps = (state, ownProps) => {
-  // const reservationId = ownProps.match.params.reservationId;
+const mapStateToProps = state => {
   return {
     timeslots: state.entities.timeslots
-    // kitchens: state.entities.kitchens
   }
 };
 

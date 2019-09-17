@@ -25,7 +25,6 @@ class TimeslotsIndex extends React.Component {
 
   handleUpdateReservation(timeSlotId) {
     return (e) => {
-      debugger
       e.preventDefault();
       let newReservation = {
         id: this.props.reservation.id,
@@ -35,8 +34,10 @@ class TimeslotsIndex extends React.Component {
         date: this.props.timeslots[timeSlotId].date,
         party_size: this.props.timeslots[timeSlotId].partySize
       };
+      
       this.props.updateReservation(newReservation)
         .then(res => {
+          this.props.clearTimeslots();
           this.props.fetchAReservation(res.reservation.id);
           this.props.toggleEditForm();
       })
