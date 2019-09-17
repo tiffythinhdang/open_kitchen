@@ -12,4 +12,9 @@
 #
 
 class Review < ApplicationRecord
+  validates :kitchen_id, :user_id, :body, :rating, presence: true
+  validates :rating, numericality: { greater_than: 0, less_than_or_equal_to: 5 }
+
+  belongs_to :kitchen
+  belongs_to :user
 end

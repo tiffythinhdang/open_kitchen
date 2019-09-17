@@ -26,6 +26,7 @@ class Kitchen < ApplicationRecord
   belongs_to :location
   has_many :kitchen_timeslot_capacities
   has_many :reservations
+  has_many :reviews
   has_many :photos
 
   def capacity(timeslot_id)
