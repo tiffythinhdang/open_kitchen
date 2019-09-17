@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TimeslotsIndexContainer from '../timeslots/timeslots_index_container';
 import convertNumberToTime from '../../util/convert_time_util';
 
 import iconCalendar from 'assets/images/small_icon_calendar.png';
@@ -9,10 +10,15 @@ import iconUser from 'assets/images/small_icon_user.png';
 class EditReservationForm extends React.Component {
 constructor(props) {
     super(props);
-    this.state = this.props.reservation;
+    this.state = {
+      reservation_id: this.props.reservation.id,
+      date: this.props.reservation.date,
+      time: this.props.reservation.time,
+      party_size: this.props.reservation.partySize
+    }
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   generateTimeOptions() {
@@ -61,18 +67,20 @@ constructor(props) {
     return (e) => this.setState({ [type]: e.target.value })
   }
 
-  handleSubmit(e) {
+  handleSearch(e) {
     e.preventDefault();
-    this.props.receiveSearch(this.state);
-    this.props.fetchKitchens(this.state)
-      .then(kitchens => this.props.history.push('/search'))
+
+    this.props.fetchTimeslots(this.state)
+    // this.props.receiveSearch(this.state);
+    // this.props.fetchKitchens(this.state)
+    //   .then(kitchens => this.props.history.push('/search'))
   }
 
   render() {
     return (
       <div className="reservation-edit container hidden">
         <div className="reservation-edit search bar">
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSearch}>
             <div className="reservation-edit date-time-party selector-container">
               <div className="input-container with-icon">
                 <img className="small icon calendar" src={iconCalendar} />
@@ -101,7 +109,7 @@ constructor(props) {
                 <img className="small icon user" src={iconUser} />
                 <select
                   className="party-size selector"
-                  value={this.state.partySize}
+                  value={this.state.party_size}
                   onChange={this.handleChange("party_size")}
                 >
                   {this.generatePartyOptions()}
@@ -122,6 +130,10 @@ constructor(props) {
 
           </form>
         </div>
+        <TimeslotsIndexContainer 
+          reservation={this.props.reservation}
+          toggleEditForm={this.toggleEditForm}
+        />
       </div>
     )
   }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import convertNumberToTime from '../../util/convert_time_util';
 import randNum from '../../util/random_number_util';
-import EditReservationFormContainer from './edit_resrvation_form_container';
+import EditReservationFormContainer from './edit_reservation_form_container';
 
 import iconCalendar from 'assets/images/small_icon_calendar.png';
 import iconClock from 'assets/images/small_icon_clock.png';
@@ -16,7 +16,7 @@ class ReservationShow extends React.Component {
     super(props);
     this.state = this.props.reservation;
 
-    this.handleModify = this.handleModify.bind(this);
+    this.toggleEditForm = this.toggleEditForm.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
   }
 
@@ -81,7 +81,7 @@ class ReservationShow extends React.Component {
           <div className="reservation-show action-buttons">
             <button
               className="main medium button"
-              onClick={this.handleModify}
+              onClick={this.toggleEditForm}
             >Modify
             </button>
 
@@ -99,7 +99,7 @@ class ReservationShow extends React.Component {
     }
   }
 
-  handleModify() {
+  toggleEditForm() {
     let editForm = document.querySelector('.reservation-edit.container');
     let buttons = document.querySelector('.reservation-show-action-buttons.container');
     editForm.classList.toggle("hidden");

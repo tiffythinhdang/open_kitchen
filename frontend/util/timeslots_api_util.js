@@ -1,7 +1,7 @@
-export const fetchAvailableTimeslots = (reservation) => (
+export const fetchTimeslots = (request) => (
   $.ajax({
-    url: `/api/reservations/${reservation.id}/timeslots`,
+    url: `/api/reservations/${request.reservation_id}/timeslots`,
     method: "GET",
-    data: { reservation }
+    data: { request }
   })
 );

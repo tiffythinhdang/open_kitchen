@@ -2,18 +2,20 @@ import { connect } from 'react-redux';
 
 import EditReservationForm from './edit_reservation_form';
 import { updateReservation } from '../../actions/reservations_actions';
+import { fetchTimeslots } from '../../actions/timeslots_action';
 
 const mapStateToProps = (state, ownProps) => {
   // const reservationId = ownProps.match.params.reservationId;
   return {
-    // reservation: state.entities.reservations[reservationId],
+    timeslots: state.entities.timeslots
     // kitchens: state.entities.kitchens
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    action: (reservation) => dispatch(updateReservation(reservation))
+    action: (reservation) => dispatch(updateReservation(reservation)),
+    fetchTimeslots: (reservation) => dispatch(fetchTimeslots(reservation))
   }
 };
 
