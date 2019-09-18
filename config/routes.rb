@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :update]
     resource :session, only: [:create, :destroy]
     resources :kitchens, only: [:index, :show]
+    resources :kitchens, only: [:show] do
+      resources :reviews, only:[:index, :create, :update, :destroy]
+    end
     
     resources :cuisines, only: [:index]
     resources :locations, only: [:index]

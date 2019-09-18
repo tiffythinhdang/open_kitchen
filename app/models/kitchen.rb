@@ -29,6 +29,7 @@ class Kitchen < ApplicationRecord
   has_many :reviews
   has_many :photos
 
+  # Reservation helper methods
   def capacity(timeslot_id)
     self.kitchen_timeslot_capacities.find_by(timeslot_id: timeslot_id).capacity
   end
@@ -49,4 +50,32 @@ class Kitchen < ApplicationRecord
     self.capacity(timeslot_id) - self.expecting_booked_party_size(date, timeslot_id)
   end
 
+  # Review/Rating helper methods
+  def self.increase_num_reviews(kitchen_id)
+    kitchen = Kitchen.find_by(id: kitchen_id)
+    curr_num_reviews = kitchen.number_reviews
+    kitchen.update!(number_reviews: curr_num_reviews + 1)
+  end
+
+  def self.decrease_num_reviews(kitchen_id)
+    kitchen = Kitchen.find_by(id: kitchen_id)
+    curr_num_reviews = kitchen.number_reviews
+    kitchen.update!(number_reviews: curr_num_reviews - 1)
+  end
+
+  def self.recalculate_avg_rating(kitchen_id, action, rating, old_rating = nil)
+    kitchen = Kitchen.find_by(id: kitchen_id)
+    curr_avg_rating = kitchen.average_rating
+    curr_num_reviews = kitchen.number_reviews
+
+    if action == "create"
+      new_avg_rating = (curr_avg_rating * curr_num_reviews + rating) / (curr_num_reviews + 1)
+    elsif action == "update"
+      new_avg_rating = (curr_avg_rating * curr_num_reviews - old_rating + rating) / curr_num_reviews
+    elsif action =="destroy"
+      new_avg_rating = (curr_avg_rating * curr_num_reviews - rating) / (curr_num_reviews - 1)
+    end
+
+    kitchen.update!(average_rating: new_avg_rating)
+  end
 end

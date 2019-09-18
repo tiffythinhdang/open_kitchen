@@ -61,6 +61,7 @@ constructor(props) {
   }
 
   handleSearch(e) {
+    debugger
     e.preventDefault();
     this.props.fetchTimeslots(this.state)
   }
