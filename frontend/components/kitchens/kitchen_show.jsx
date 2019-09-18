@@ -1,6 +1,8 @@
 import React from 'react';
 
 import KitchenBasicInfo from './kitchen_basic_info';
+import ReviewIndexContainer from '../reviews/review_index_container';
+
 import KitchenCreateReservationContainer from '../reservations/kitchen_create_reservation_container';
 
 class KitchenShow extends React.Component {
@@ -33,8 +35,8 @@ class KitchenShow extends React.Component {
             <div className="kitchen-show nav">
               <a className="kitchen-show-nav item active" href="#overview">Overview</a>
               <a className="kitchen-show-nav item" href="#photos">Photos</a>
-              <a className="kitchen-show-nav item" href="menus">Menu</a>
-              <a className="kitchen-show-nav item" href="reviews">Reviews</a>
+              <a className="kitchen-show-nav item" href="#menus">Menu</a>
+              <a className="kitchen-show-nav item" href="#reviews">Reviews</a>
             </div>
             <div className="slider-bar"></div>
           </div>
@@ -45,12 +47,12 @@ class KitchenShow extends React.Component {
             <KitchenBasicInfo kitchen={this.props.kitchen}/>
 
             <div className="kitchen-show description">
-              <h3>Overview</h3>
+              <h3 name="overview">Overview</h3>
               <p>{this.props.kitchen.description}</p>
             </div>
 
             <div className="kitchen-show description">
-              <h3>Menu</h3>
+              <h3 name="menus">Menu</h3>
               <p>{this.props.kitchen.menu}</p>
             </div>
 
@@ -60,13 +62,13 @@ class KitchenShow extends React.Component {
             </div>
 
             <div className="kitchen-show photos">
-              <h3>Photos</h3>
+              <h3 name="photos">Photos</h3>
               {/* S3 goes hereeeeeeeeee */}
             </div>
 
             <div className="kitchen-show reviews">
-              <h3>Reviews</h3>
-              {/* React Component */}
+              <h3 name="reviews">Reviews</h3>
+              <ReviewIndexContainer kitchen={this.props.kitchen} />
             </div>
 
           </div>

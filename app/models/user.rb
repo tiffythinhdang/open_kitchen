@@ -22,6 +22,7 @@ class User < ApplicationRecord
   before_validation :ensure_session_token
 
   has_many :reservations
+  has_many :reviews
 
   def password=(password)
     @password = password
