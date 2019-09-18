@@ -1,0 +1,34 @@
+@import './utils.scss';
+
+.splash-page.header {
+  width: 100%;
+  height: 416px;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("https://a0.muscache.com/4ea/air/v2/pictures/64438769-6d53-4e9a-89e0-2639a8184931.jpg?t=r:w3393-h1356-sfit,e:fjpg-c90");
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash.header.title {
+  font-size: 45px;
+  text-align: center;
+  color: $white;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.splash-page.header > .search.bar {
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .splash.header.title {
+  font-size: 36px;
+  padding-left: 200px;
+  padding-right: 200px;
+  }
+}
