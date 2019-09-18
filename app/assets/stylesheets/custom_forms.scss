@@ -54,5 +54,39 @@
   margin-bottom: 25px;
 }
 
+// Review Form
+
+.review-form.container {
+  background-color: $super_lightgray;
+  border-bottom: 1px solid $mediumgray;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.review-form.container > h3 {
+  color: $mediumgray;
+  font-size: 14px;
+  padding: 10px 25px;
+}
+
+.review-form.container > form > textarea {
+  background-color: $white;
+  width: 80%;
+  height: 100px;
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.review-form.buttons > p.link-container {
+  width: 75px;
+}
+
+.review-form.container > form > .review-form.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 
