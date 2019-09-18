@@ -18,6 +18,7 @@ ActiveRecord::Base.transaction do
   kitchens = yaml['kitchens']
   locations = yaml['locations']
   cuisines = yaml['cuisines']
+  reviews = yaml['reviews']
 
   # Create locations
   locations.each do |location|
@@ -126,7 +127,7 @@ ActiveRecord::Base.transaction do
     end
   end
 
-  #Create kitchen_timeslot_capacities
+  # Create kitchen_timeslot_capacities
   Kitchen.all.each do |kitchen|
     capacity = rand(10..25)
     Timeslot.all.each do |timeslot|
@@ -134,13 +135,18 @@ ActiveRecord::Base.transaction do
     end
   end
 
-  #Create reservations
-#   Reservation.create(user_id: user_1.id, kitchen_id: 1, timeslot_id: 3, date: "2019-12-22", )
-#   user_id     :integer          not null
-# #  kitchen_id  :integer          not null
-# #  timeslot_id :integer          not null
-# #  date        :date             not null
-# #  party_size  :integer          not null
-# #  state       :string           default("upcoming")
+ # Create reviews
+  reviews.each do |review|
+    Review.create!(review)
+  end
+
+  # Compute avg_rating and num_reviews for each kitchen
+
+  Kitchen.all.each do |kitchen|
+    num_reviews = kitchen.reviews.count
+    sum_rating = kitchen.reviews.map{ |review| review.rating }.sum
+    avg_rating = ( sum_rating / num_reviews ).round(2)
+    kitchen.update!(num_reviews: num_reviews, average_rating: avg_rating)
+  end
 end
 
