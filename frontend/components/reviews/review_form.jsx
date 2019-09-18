@@ -31,11 +31,6 @@ class ReviewForm extends React.Component {
       const newRating = this.state.rating + 1;
       this.setState({ rating: newRating })
     }
-
-    // e.target.classList.toggle("active");
-    // let rating = document.getElementsByClassName('review-star active');
-    // rating = rating.length;
-    // this.setState({ rating: rating });
   }
 
   renderErrors() {

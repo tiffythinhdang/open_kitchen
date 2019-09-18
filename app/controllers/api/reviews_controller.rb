@@ -50,9 +50,10 @@ class Api::ReviewsController < ApplicationController
 
     ActiveRecord::Base.transaction do
       if @review.user_id == current_user.id
+        @user = current_user
         @review.destroy
         Kitchen.recalculate_avg_rating_and_num_reviews(kitchen_id, "destroy", @review.rating)
-        render json: @review
+        render :show
       else
         render json: ["Cannot delete comment that are not yours!"]
       end

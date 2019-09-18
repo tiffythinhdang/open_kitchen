@@ -8,9 +8,10 @@ class ReviewIndexItem extends React.Component {
     super(props);
 
     this.toggleEditReviewForm = this.toggleEditReviewForm.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
-  displayEditButton(){
+  displayEditDeleteButton(){
     const currentUserId = parseInt(this.props.currentUserId);
     if (this.props.review.userId === currentUserId) {
       return (
@@ -19,6 +20,11 @@ class ReviewIndexItem extends React.Component {
             className="edit-review secondary link"
             onClick={this.toggleEditReviewForm}
             >Edit
+          </a>
+          <a 
+            className="edit-review secondary link"
+            onClick={this.handleDelete}
+            >Delete
           </a>
         </div>
       )
@@ -29,6 +35,11 @@ class ReviewIndexItem extends React.Component {
     const editFormContainer = document.getElementsByClassName(`edit-review-form ${this.props.review.id}`)[0];
     const editForm = editFormContainer.getElementsByClassName("review-form-outer-container")[0];
     editForm.classList.toggle("hidden");
+  }
+
+  handleDelete() {
+    this.props.deleteReview(this.parseReview())
+      .then( res => this.props.fetchReviews(res.review.kitchenId) )
   }
 
   parseReview() {
@@ -64,7 +75,7 @@ class ReviewIndexItem extends React.Component {
             {this.props.review.body}
           </div>
 
-          { this.displayEditButton() }
+          { this.displayEditDeleteButton() }
           <EditReviewFormContainer 
             review={this.parseReview()}
             toggleEditReviewForm={this.toggleEditReviewForm}
