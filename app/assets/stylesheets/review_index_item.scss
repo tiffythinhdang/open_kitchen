@@ -59,5 +59,10 @@
 .review-index.body {
   font-size: 14px;
   line-height: 18px;
+}
 
+.review-index.edit-review {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
 }

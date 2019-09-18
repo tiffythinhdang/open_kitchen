@@ -7,6 +7,25 @@ class ReviewIndexItem extends React.Component {
     super(props);
   }
 
+  displayEditButton(){
+    const currentUserId = parseInt(this.props.currentUserId);
+    if (this.props.review.userId === currentUserId) {
+      return (
+        <div className="review-index edit-review">
+          <a 
+            className="edit-review secondary link"
+            onClick={this.toggleEditReviewForm}
+            >Edit
+          </a>
+        </div>
+      )
+    }
+  }
+
+  toggleEditReviewForm() {
+    
+  }
+
   render() {
     if (!this.props.review) return null
     return (
@@ -29,6 +48,8 @@ class ReviewIndexItem extends React.Component {
           <div className="review-index body">
             {this.props.review.body}
           </div>
+
+          { this.displayEditButton() }
         </div>
       </div>
     )

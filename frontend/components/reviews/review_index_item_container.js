@@ -5,6 +5,7 @@ import { updateReview, deleteReview } from '../../actions/reviews_actions';
 
 const mapStateToProps = state => {
   return {
+    currentUserId: state.session.currentUserId,
     errors: state.errors.review
   }
 };
