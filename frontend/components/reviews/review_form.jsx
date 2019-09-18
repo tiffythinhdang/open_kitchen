@@ -61,7 +61,7 @@ class ReviewForm extends React.Component {
         <div className="review-form container">
           { this.renderErrors() }
 
-          <h3>Leave a Review</h3>
+          <h3>{this.props.formType}</h3>
           <form onSubmit={this.handleSubmit}>
             <div className="review-form rating">
               { this.displayReviewStars() }

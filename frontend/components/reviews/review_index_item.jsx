@@ -1,10 +1,13 @@
 import React from 'react';
 
 import RatingDisplay from '../kitchens/rating_display';
+import EditReviewFormContainer from './edit_review_form_container.jsx';
 
 class ReviewIndexItem extends React.Component {
   constructor(props) {
     super(props);
+
+    this.toggleEditReviewForm = this.toggleEditReviewForm.bind(this);
   }
 
   displayEditButton(){
@@ -23,7 +26,9 @@ class ReviewIndexItem extends React.Component {
   }
 
   toggleEditReviewForm() {
-    
+    const editFormContainer = document.getElementsByClassName(`edit-review-form ${this.props.review.id}`)[0];
+    const editForm = editFormContainer.querySelector(".review-form-outer-container");
+    editForm.classList.toggle("hidden");
   }
 
   render() {
@@ -50,6 +55,7 @@ class ReviewIndexItem extends React.Component {
           </div>
 
           { this.displayEditButton() }
+          <EditReviewFormContainer review={this.props.review}/>
         </div>
       </div>
     )

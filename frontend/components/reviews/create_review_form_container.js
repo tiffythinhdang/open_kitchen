@@ -11,8 +11,8 @@ const mapStateToProps = (state, ownProps) => {
       user_id: state.session.currentUserId,
       rating: 0,
       body: ""
-
     },
+    formType: "Leave a Review",
     errors: state.errors.review
   }
 };
