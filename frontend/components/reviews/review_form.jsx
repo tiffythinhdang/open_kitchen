@@ -22,10 +22,20 @@ class ReviewForm extends React.Component {
   }
 
   toggleActiveReviewStar(e) {
-    e.target.classList.toggle("active");
-    let rating = document.getElementsByClassName('review-star active');
-    rating = rating.length;
-    this.setState({ rating: rating });
+    if ( e.target.classList.contains("active") ) {
+      e.target.classList.remove("active");
+      const newRating = this.state.rating - 1;
+      this.setState({ rating: newRating })
+    } else {
+      e.target.classList.add("active");
+      const newRating = this.state.rating + 1;
+      this.setState({ rating: newRating })
+    }
+
+    // e.target.classList.toggle("active");
+    // let rating = document.getElementsByClassName('review-star active');
+    // rating = rating.length;
+    // this.setState({ rating: rating });
   }
 
   renderErrors() {

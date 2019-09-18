@@ -27,8 +27,18 @@ class ReviewIndexItem extends React.Component {
 
   toggleEditReviewForm() {
     const editFormContainer = document.getElementsByClassName(`edit-review-form ${this.props.review.id}`)[0];
-    const editForm = editFormContainer.querySelector(".review-form-outer-container");
+    const editForm = editFormContainer.getElementsByClassName("review-form-outer-container")[0];
     editForm.classList.toggle("hidden");
+  }
+
+  parseReview() {
+    return {
+      id: this.props.review.id,
+      user_id: this.props.review.userId,
+      kitchen_id: this.props.review.kitchenId,
+      rating: 0,
+      body: this.props.review.body,
+    }
   }
 
   render() {
@@ -55,7 +65,10 @@ class ReviewIndexItem extends React.Component {
           </div>
 
           { this.displayEditButton() }
-          <EditReviewFormContainer review={this.props.review}/>
+          <EditReviewFormContainer 
+            review={this.parseReview()}
+            toggleEditReviewForm={this.toggleEditReviewForm}
+          />
         </div>
       </div>
     )

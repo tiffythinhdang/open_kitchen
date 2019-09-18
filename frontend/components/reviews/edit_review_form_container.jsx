@@ -18,6 +18,8 @@ class EditReviewForm extends React.Component {
           action={this.props.action}
           review={this.props.review}
           errors={this.props.errors}
+          fetchReviews={this.props.fetchReviews}
+          toggleCreateReviewForm={this.props.toggleEditReviewForm}
         />
       </div>
     )
