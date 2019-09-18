@@ -5,6 +5,7 @@ import { fetchReviews, createReview } from '../../actions/reviews_actions';
 
 const mapStateToProps = state => {
   return {
+    reviews: Object.values(state.entities.reviews),
     errors: state.errors.review
   }
 };

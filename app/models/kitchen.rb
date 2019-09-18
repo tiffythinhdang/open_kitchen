@@ -50,7 +50,7 @@ class Kitchen < ApplicationRecord
     self.capacity(timeslot_id) - self.expecting_booked_party_size(date, timeslot_id)
   end
 
-  # Review/Rating helper methods
+  # Review/Rating helper methods - Need to combine
   def self.increase_num_reviews(kitchen_id)
     kitchen = Kitchen.find_by(id: kitchen_id)
     curr_num_reviews = kitchen.number_reviews

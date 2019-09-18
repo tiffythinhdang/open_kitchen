@@ -234,11 +234,245 @@ cuisines:
   - id: 7
     name: "Mexican"
 
-
-# reviews:
-#   - id: 1
-#     body: "The food is good"
-#     rating: 5
-#     user_id: 1
-#     kitchen_id: 
+reviews:
+  # kitchen_id: 1
+  - body: "Maira is an amazing host! I had such a wonderful time spending the afternoon baking with Maira, learning about madeleines and how to bake them. It felt like spending the afternoon with a friend, and I also got to walk away with and delicious bag of goodies and a stellar new recipe. Maira really went above and beyond and was so welcoming, warm and accommodating. I instantly felt at ease and had so much fun getting to know everyone. I can't wait to impress my friends with my new skills!"
+    rating: 5
+    user_id: 1
+    kitchen_id: 1
+  - body: "Maira is a wonderful host. I gained a new hobby of baking and can not wait to try baking my own batch. She is very knowledgeable and very passionate about what she does. It was an beautiful experience leaning baking while having a great view of the channel at the mission bay." 
+    rating: 5
+    user_id: 2
+    kitchen_id: 1
+  - body: "Absolutely the best host ever. Kind heart and full of fun. My jaw hurts for the laughs and smiling the enitre time."
+    rating: 5
+    user_id: 3
+    kitchen_id: 1
+  - body: "Good experience but it was slightly overpriced in my opinion."
+    rating: 4
+    user_id: 4
+    kitchen_id: 1
+  # kitchen_id: 2
+  - body: "We had a very enjoyable afternoon learning how to make mochi with Yukiko. The entire process was very thought out and fun. Yukiko took her time and really showed us how to procure the ingredients for mochi and also how to have fun making mochi (for adults and kids). I would highly recommend taking Yukiko's class!"
+    rating: 5
+    user_id: 1
+    kitchen_id: 2
+  - body: "Attended the mochi-making class with my husband and mother in law. We had so much fun! Loved that Yukiko had a little picture station for us at the end, too. The Polaroid is hanging on our fridge as a reminder of a lovely afternoon."
+    rating: 5
+    user_id: 5
+    kitchen_id: 2
+  - body: "The class was great and exciting. Both wonderful ladies were friendly and informative with every step of the way. They showed their skills and techniques."
+    rating: 5
+    user_id: 6
+    kitchen_id: 2
+  - body: "Good experience but it was very overpriced in my opinion."
+    rating: 2
+    user_id: 4
+    kitchen_id: 2
+  # kitchen_id: 3
+  - body: "This class was so enjoyable. Not only were the hosts extremely knowledgeable, but they were constantly checking in with guests to ensure we were following along with confidence. Making mooncakes is not an easy project, but our professional host explained everything from the baking theory to what could have caused bad outcomes. This interaction gave me confidence in what I was doing and, unlike many other how-to cooking classes I've taken, allowed me to explore the WHY of everything I'm doing so I can try again at home."
+    rating: 5
+    user_id: 7
+    kitchen_id: 3
+  - body: "I enjoyed my mooncake-making class with Patta! The concept and community felt really welcoming and friendly; I really liked the casual environment. Making mooncakes can be time-intensive, so expect to divide up the work. All-in-all, a fun experience where you leave with your own mooncakes!"
+    rating: 5
+    user_id: 8
+    kitchen_id: 3
+  - body: "Great fun exploring moon cakes at Bites Unite!"
+    rating: 5
+    user_id: 1
+    kitchen_id: 3
+  - body: "This is an awesome experience! We not only get to make something transitional and we learn the science behind it!"
+    rating: 5
+    user_id: 2
+    kitchen_id: 3
+  # kitchen_id: 4
+  - body: "Crystal is so lovely and a wonderful instructor. I did the class with my son and we had such a wonderful time. AND we learned so much!!! I am a chef myself but have never learned to roll dumplings properly. This was really a treat! I also loved watching her cook the other parts of the meal that were included. It was an amazing and incredibly authentic experience! I felt like I could have been in China!"
+    rating: 5
+    user_id: 3
+    kitchen_id: 4
+  - body: "Crystal - with warmth - taught us from start to finish how to make a variety of dumplings. We tremendously enjoyed her teaching style and the result was delicious!"
+    rating: 5
+    user_id: 4
+    kitchen_id: 4
+  - body: "I really enjoyed Crystal’s dumpling class. All the dumplings were very delicious and we had a small feast at the end. Thank you for teaching me how to make delicious dumplings Crystal!"
+    rating: 5
+    user_id: 5
+    kitchen_id: 4
+  - body: "I learned to make dumplings from the very beginning to the end to my mouth. Really enjoyed making different foldings. Crystal shared her solid knowledge and skills, as well as hospitality."
+    rating: 5
+    user_id: 7
+    kitchen_id: 4
+  # kitchen_id: 5
+  - body: "This experience was fantastic! Both Alex and Hector were super knowledgeable, friendly, and welcoming! Everyone was able to participate in the cooking experience, and the portions were definitely filling. They provided us with high quality ingredients and a wonderful environment to enjoy our food in! Would definitely recommend!"
+    rating: 5
+    user_id: 8
+    kitchen_id: 5
+  - body: "Really great experience! Paella boys shared detailed instructions about the paella recipes with us and guests were encouraged to take part into the cooking as well. The foods were fresh and delicious! Paella boys also prepared some homemade snacks for us during the cooking time, so come with an empty stomach~"
+    rating: 5
+    user_id: 1
+    kitchen_id: 5
+  - body: "A unique experience! Bring friends and enjoy tapas, sangria and a plate of delicious seafood paella."
+    rating: 4
+    user_id: 2
+    kitchen_id: 5
+  - body: "Loved it. Had a great time."
+    rating: 4
+    user_id: 4
+    kitchen_id: 5
+  # kitchen_id: 6
+  - body: "Had such a lovely time at our experience, the space was lovely, she had a cute dog and I learned lots about pasta making. Would definitely recommend"
+    rating: 5
+    user_id: 4
+    kitchen_id: 6
+  - body: "If you’re even considering doing this class, just do it already. Veronica is a delight to be around and an expert on the subject. My wife and I learned a bunch about making pasta and sauces and just better practices in the kitchen. Plus we got to eat and drink all evening. Thank you to the chef and her assistant!"
+    rating: 5
+    user_id: 5
+    kitchen_id: 6
+  - body: "Such a great time. Met some lovely people along the way and learnt how to make great pasta in a unique location thanks to Veronica! Highly recommend."
+    rating: 4
+    user_id: 6
+    kitchen_id: 6
+  - body: "This was my wife's favorite excursion of the 5 we did on our honeymoon, and the best food we had the whole trip. Awesome time, super fun and delicious"
+    rating: 5
+    user_id: 7
+    kitchen_id: 6
+  # kitchen_id: 7
+  - body: "Andrea is an amazing host! He taught us step by step and the explanation was so clear and the results were amazing.. I will never forget this night. The recipe we tried was soooo good. I will definitely try at my home. thank you so much Andrea!"
+    rating: 5
+    user_id: 7
+    kitchen_id: 7
+  - body: "A truly amazing experience and felt like we were family. Loved everything about this experience and made our trip to Italy exactly what we came to accomplish. The expertise shared with us from being raised in an Italian family was priceless."
+    rating: 5
+    user_id: 8
+    kitchen_id: 7
+  - body: "This was an amazing experience Andrea and Emma were so welcoming and friendly. It was so unique to be invited to their home to cook a delicious meal. Loved meeting them and can’t wait to try these recipes at home! Feel blessed to take a piece of Italy home with me. I would highly recommend this experience to all!"
+    rating: 5
+    user_id: 1
+    kitchen_id: 7
+  - body: "This was such a wonderful experience. We had such a great time with the hosts and the other guests, and... wow! The Food! Everything was so good and the recipes were practical and accessible... I definitely feel confident that I'll be able to recreate this amazing food once I am back home. This will be an absolute highlight of my trip to Italy. Highly recommended."
+    rating: 5
+    user_id: 4
+    kitchen_id: 7
+  # kitchen_id: 8
+  - body: "Well, these guys were super communicative and wonderfully flexible, but we sadly were not able to make it up to see them. The rain and the drive with the kids proved not to work for our quick stay in Sicily. Another time, we hope."
+    rating: 5
+    user_id: 4
+    kitchen_id: 8
+  - body: "We had a day we will remember forever. Fro. The moment we met it felt like we were old friends, and we got a rare insight into Sicilian culture, food traditions and life. We brought with us two kids, that were a little sceptical in the beginning, but in the end they did not want to leave. Amazing food too of course. Better than any restaurant we have visited. I will give this experience my warmest recommendations."
+    rating: 5
+    user_id: 7
+    kitchen_id: 8
+  # kitchen_id: 9
+  - body: "Bekah was a great host and made us feel welcome in her beautiful home. She was great at explaining what we were going to prepare and walking us though the steps. The end result was a delicious Italian meal. We are looking forward to trying one of her meal experience."
+    rating: 5
+    user_id: 5
+    kitchen_id: 9
+  - body: "I had such a wonderful time with Bekah! The cooking class was great and I really enjoyed the food. I felt like I learned a lot from her and I look forward to taking more cooking classes in the future"
+    rating: 5
+    user_id: 6
+    kitchen_id: 9
+  - body: "This was the highlight of our vacation!!!! The recipes were simple and soooooo delicious. We learned how to make homemade pasta!!! The menu was amazing we had a 3 course meal and could take the extra food with us that we could not finish. Who knew plant based food could be so delicious!!! Would recommend this class to anyone!!! Even if you are not plant based you will enjoy this class!!"
+    rating: 5
+    user_id: 8
+    kitchen_id: 9
+  - body: "I had a lovely time cooking and dining with Bee, and talking about everything, more or less!!"
+    rating: 5
+    user_id: 2
+    kitchen_id: 9
+  # kitchen_id: 10
+  - body: "What an amazing experience! Blaire was a wonderful host. She is very passionate about making the gluten free lifestyle rich. Everything we made was blow your mind tasty, easy to make and reachable. This was an informative experience. Fun! I would recommend this to anyone that has dietary restrictions. Great experience. You will not be disappointed."
+    rating: 5
+    user_id: 3
+    kitchen_id: 10
+  # kitchen_id: 11
+  - body: "This was so much fun. I learned so much. Noah is very genuine and friendly. He took so much time to answer all of our questions and was so helpful with not only educating us about the brewery, how the different beers are made. He took time to give us help finding great restaurants and places to make our vacation special. So my recommendation is. Go to this first on your trip. He was better than my travel agent Lol."
+    rating: 5
+    user_id: 4
+    kitchen_id: 11
+  # kitchen_id: 12
+  - body: "The staff were very kind and welcoming, though we expected more given what was advertised. This is a good experience if you are looking for a very quick demo/overview of the gelato making process - it does not include much time to actually participate in the process, and took about 35-40 minutes total. We very much appreciate the warm welcome to our children."
+    rating: 5
+    user_id: 5
+    kitchen_id: 12
+  - body: "The gelato was delicious and we were provided with good inside into was is and isn't genuine Italian Gelato which we have used to find only authentic gelato on our trip since"
+    rating: 5
+    user_id: 1
+    kitchen_id: 12
+  - body: "Absolutely wonderful experience! While it's a bit pricey, my family and I loved this. We learned so much about gelato including how to tell good gelato - which knowledge we used for the rest of our Italy trip. In addition, the gelato in the shop is seriously the best gelato I've ever had. Wow wow!"
+    rating: 5
+    user_id: 2
+    kitchen_id: 12
+  - body: "Delightful experience and I now feel like a gelato expert!"
+    rating: 5
+    user_id: 8
+    kitchen_id: 12
+  # kitchen_id: 13
+  - body: "This was an amazing experience. We are locals in NYC and had never found either of location we went. The music was incredible and the host was super friendly, inviting and knowledgable. I would highly recommend"
+    rating: 5
+    user_id: 2
+    kitchen_id: 13
+  - body: "This was such a unique experience. I truly learned so much and enjoyed every second. I left feeling inspired and hope to continue exploring natural remedies. Thank you so much, Jazzy!!"
+    rating: 5
+    user_id: 3
+    kitchen_id: 13
+  - body: "Overall a good experience of tea making. However, it lasted only one hour, despite informed 1 hour and a half. She is knowledgeable, but it's not a class, she basically guides you through your questions."
+    rating: 4
+    user_id: 5
+    kitchen_id: 13
+  - body: "Jazzy was so easy to get along with. She was perfect from the moment she opened the door, very inviting and knowledgeable. She really knew her stuff and was impressive with the outside knowledge she had in every herb and how to use it. We had an amazing experience!!!!"
+    rating: 5
+    user_id: 7
+    kitchen_id: 13
+  # kitchen_id: 14
+  - body: "I highly recommend this experience for someone who loves coffee and wants to learn more about it. The experience at 787 was exceptional from the minute I walked into the coffee shop. I was able to share my passion for coffee and learn so many things I wouldn't have been able to learn otherwise. The best part about the experience was that it was hands-on in nature - I was able to touch and feel coffee beans through their different maturity stages, test different brewing methods, and most importantly ask questions that I wouldn't be able to ask my barista in the hustle and bustle of city life. I plan to come back for additional experiences once they are developed."
+    rating: 5
+    user_id: 7
+    kitchen_id: 14
+  - body: "We left before the end. It was very slow. Too serious.. and we were looking for some fun. Some intersecting stories, some exciting things.."
+    rating: 2
+    user_id: 8
+    kitchen_id: 14
+  - body: "Great experience! Highly recommended to anyone who’s interested in coffee making. I learned so much from this experience and definitely fell in love with the coffee shop :)"
+    rating: 5
+    user_id: 5
+    kitchen_id: 14
+  - body: "I learned a ton about coffee: how the plant is grew to how the bean is processed to how the coffee is grind and brewed. The whole experience was educational, especially the example of what a badly brewed cup of coffee would taste like. Everyone was so nice. Loved it."
+    rating: 5
+    user_id: 3
+    kitchen_id: 14
+  # kitchen_id: 15
+  - body: "Amazing experience. My Fiancé and I loved celebrating her birthday with a hands on cooking class. We left with great food and a passion to do some cooking of our own with what we learned. Jared was attentive, knowledgeable, and put on a fun class. He even reached out and customized the class to our allergies and requests. Highly recommend."
+    rating: 5
+    user_id: 2
+    kitchen_id: 15
+  - body: "A great demonstration of cooking techniques by trained chef. We really loved the sour dough bread. As we were there for 3 hours over lunch we would have liked a little more to eat."
+    rating: 3
+    user_id: 3
+    kitchen_id: 15
+  - body: "Wow - I picked this experience as a birthday present for my girlfriend and we were both blown away. If you're looking for a unique, intimate, fun, and affordable culinary experience this is for you. Lina was awesome about planning the night for us and giving us a heads up about all the details. She asked us about some food preferences and even gave us wine recommendations. Jared is a brilliant chef, and you can tell that he's doing this because he loves it. Not only is he an excellent chef, he's also got an impressive knowledge about the science behind cooking and baking, and he is clearly passionate about sustainable agriculture and the restaurant/food industry. Together with Jared we made blue fish and beef tongue - which we paired with a selection of local vegetables/greens from Jared's garden and his neighborhood in JP. And for dessert we made macarons and butter cream cake. Our favorite part of the evening was chatting with Jared about the processes behind all the things we were making, the ingredients we were using, and soaking up all of his insights on everything from fish cookery to the details of baking the perfect macarons. We were blown away by Jared & Lina's hospitality, and Jared's passion for what he does. We couldn't believe that this 3+ hour experience was as affordable as it was... we would recommend it to any foodie or cook out there - whether you an experienced chef or not! Can't wait to go back for a second round :) PS: Jared even gave us a bunch of goodies on our way out - leftovers, recipe's, and some of his sourdough starter!"
+    rating: 5
+    user_id: 5
+    kitchen_id: 15
+  - body: "Jared was a great host and very informative. He made you feel welcome, and showed us how to create an amazing, top notch meal in your own home. Would recommend this to anyone !"
+    rating: 5
+    user_id: 6
+    kitchen_id: 15
+  # kitchen_id: 16
+  - body: "We had a really good experience. Phillipe’s space was clean and inviting and he did a great job teaching us about Italian culture & pasta with clear instructions. Everyone had a chance to actually participate to make the dough and use the hand crank pasta machine. We loved getting to eat the pasta with his toppings, it gave us ideas of dishes to make in the future and we left excited to make pasta soon. You HAVE to go on the rooftop after, we brought our own wine and finished it on the roof with incredible views of the city. Definitely recommending this experience to friends !"
+    rating: 5
+    user_id: 1
+    kitchen_id: 16
+  - body: "Great experience! I came in not knowing anything on how to make pasta and left with planning on ordering a pasta maker to try the dishes we made at home. Both dishes were simple yet delicious! Only “con” is that we didn’t get the recipes, but I believe you can contact Phillipe to get it later."
+    rating: 5
+    user_id: 7
+    kitchen_id: 16
+  - body: "Phillipe was a really cool person and the atmosphere during the entire class was positive. I would recommend this event to others who are interested."
+    rating: 5
+    user_id: 4
+    kitchen_id: 16
+  - body: "Great company, great pasta."
+    rating: 5
+    user_id: 8
+    kitchen_id: 16
 
