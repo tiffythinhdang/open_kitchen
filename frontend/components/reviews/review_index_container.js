@@ -6,6 +6,7 @@ import { clearReviewErrors } from '../../actions/reviews_actions';
 
 const mapStateToProps = state => {
   return {
+    currentUserId: state.session.currentUserId,
     reviews: Object.values(state.entities.reviews),
     errors: state.errors.review
   }

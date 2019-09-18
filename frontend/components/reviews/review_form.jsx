@@ -10,10 +10,6 @@ class ReviewForm extends React.Component {
     this.toggleActiveReviewStar = this.toggleActiveReviewStar.bind(this);
   }
 
-  componentWillUnmount() {
-    
-  }
-
   displayReviewStars() {
     const stars = [1, 2, 3, 4, 5];
     return stars.map(star =>

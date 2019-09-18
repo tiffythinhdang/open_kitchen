@@ -22,6 +22,13 @@ class ReviewIndex extends React.Component {
     button.classList.toggle("hidden");
   }
 
+  arrangeReviews() {
+    const currentUserId = parseInt(this.props.currentUserId);
+    const reviewsByCurrentUser = this.props.reviews.filter(review => review.userId === currentUserId )
+    const otherReviews = this.props.reviews.filter(review => review.userId !== currentUserId )
+    return reviewsByCurrentUser.concat(otherReviews);
+  }
+
   render() {
     if (!this.props.reviews) return null
     return (
@@ -38,7 +45,7 @@ class ReviewIndex extends React.Component {
           toggleCreateReviewForm={this.toggleCreateReviewForm}
         />
         { 
-          this.props.reviews.reverse().map(review =>
+          this.arrangeReviews().map(review =>
             <ReviewIndexItemContainer
               key={review.id}
               review={review} 
