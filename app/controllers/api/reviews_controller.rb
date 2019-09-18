@@ -2,6 +2,7 @@ class Api::ReviewsController < ApplicationController
   before_action :ensure_log_in, only: [:create, :update, :destroy]
 
   def index
+    # debugger
     @kitchen = Kitchen.find_by(id: params[:kitchen_id])
     @reviews = @kitchen.reviews
     @users = @reviews.map do |review|
@@ -18,8 +19,7 @@ class Api::ReviewsController < ApplicationController
 
     ActiveRecord::Base.transaction do
       if @review.save
-        Kitchen.increase_num_reviews(kitchen_id)
-        Kitchen.recalculate_avg_rating(kitchen_id, "create", @review.rating)
+        Kitchen.recalculate_avg_rating_and_num_reviews(kitchen_id, "create", @review.rating)
         render :show
       else
         render json: @review.errors.full_messages, status: 422
@@ -35,7 +35,7 @@ class Api::ReviewsController < ApplicationController
 
     ActiveRecord::Base.transaction do
       if @review.update(review_params)
-        Kitchen.recalculate_avg_rating(kitchen_id, "update", @review.rating, old_rating)
+        Kitchen.recalculate_avg_rating_and_num_reviews(kitchen_id, "update", @review.rating, old_rating)
         render :show
       else
         render json: @review.errors.full_messages, status: 422
@@ -51,8 +51,7 @@ class Api::ReviewsController < ApplicationController
     ActiveRecord::Base.transaction do
       if @review.user_id == current_user.id
         @review.destroy
-        Kitchen.decrease_num_reviews(kitchen_id)
-        Kitchen.recalculate_avg_rating(kitchen_id, "destroy", @review.rating)
+        Kitchen.recalculate_avg_rating_and_num_reviews(kitchen_id, "destroy", @review.rating)
         render json: @review
       else
         render json: ["Cannot delete comment that are not yours!"]

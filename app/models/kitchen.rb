@@ -51,31 +51,23 @@ class Kitchen < ApplicationRecord
   end
 
   # Review/Rating helper methods - Need to combine
-  def self.increase_num_reviews(kitchen_id)
-    kitchen = Kitchen.find_by(id: kitchen_id)
-    curr_num_reviews = kitchen.number_reviews
-    kitchen.update!(number_reviews: curr_num_reviews + 1)
-  end
 
-  def self.decrease_num_reviews(kitchen_id)
-    kitchen = Kitchen.find_by(id: kitchen_id)
-    curr_num_reviews = kitchen.number_reviews
-    kitchen.update!(number_reviews: curr_num_reviews - 1)
-  end
-
-  def self.recalculate_avg_rating(kitchen_id, action, rating, old_rating = nil)
+  def self.recalculate_avg_rating_and_num_reviews(kitchen_id, action, rating, old_rating = nil)
     kitchen = Kitchen.find_by(id: kitchen_id)
     curr_avg_rating = kitchen.average_rating
     curr_num_reviews = kitchen.number_reviews
 
     if action == "create"
-      new_avg_rating = (curr_avg_rating * curr_num_reviews + rating) / (curr_num_reviews + 1)
+      new_num_reviews = curr_num_reviews + 1
+      new_avg_rating = (curr_avg_rating * curr_num_reviews + rating) / new_num_reviews
     elsif action == "update"
-      new_avg_rating = (curr_avg_rating * curr_num_reviews - old_rating + rating) / curr_num_reviews
+      new_num_reviews = curr_num_reviews
+      new_avg_rating = (curr_avg_rating * curr_num_reviews - old_rating + rating) / new_num_reviews
     elsif action =="destroy"
-      new_avg_rating = (curr_avg_rating * curr_num_reviews - rating) / (curr_num_reviews - 1)
+      new_num_reviews = curr_num_reviews - 1
+      new_avg_rating = (curr_avg_rating * curr_num_reviews - rating) / new_num_reviews
     end
 
-    kitchen.update!(average_rating: new_avg_rating)
+    kitchen.update!(average_rating: new_avg_rating, number_reviews: new_num_reviews)
   end
 end

@@ -6,6 +6,8 @@ import CreateReviewFormContainer from './create_review_form_container';
 class ReviewIndex extends React.Component {
   constructor(props){
     super(props);
+
+    this.toggleCreateReviewForm = this.toggleCreateReviewForm.bind(this);
   }
 
   componentDidMount(){
@@ -15,7 +17,7 @@ class ReviewIndex extends React.Component {
   toggleCreateReviewForm(){
     let CreateReviewForm = document.querySelector('.review-form-outer-container');
     let button = document.querySelector('.create-review.button.container');
-    // this.props.clearTimeslots();
+    this.props.clearReviewErrors();
     CreateReviewForm.classList.toggle("hidden");
     button.classList.toggle("hidden");
   }
@@ -36,7 +38,7 @@ class ReviewIndex extends React.Component {
           toggleCreateReviewForm={this.toggleCreateReviewForm}
         />
         { 
-          this.props.reviews.map(review =>
+          this.props.reviews.reverse().map(review =>
             <ReviewIndexItemContainer
               key={review.id}
               review={review} 

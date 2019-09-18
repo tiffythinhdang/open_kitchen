@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import ReviewIndex from './review_index';
 import { fetchReviews, createReview } from '../../actions/reviews_actions';
+import { clearReviewErrors } from '../../actions/reviews_actions';
 
 const mapStateToProps = state => {
   return {
@@ -13,7 +14,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchReviews: (kitchenId) => dispatch(fetchReviews(kitchenId)),
-    createReview: (review) => dispatch(createReview(review))
+    clearReviewErrors: () => dispatch(clearReviewErrors())
   }
 };
 

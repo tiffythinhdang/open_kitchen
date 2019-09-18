@@ -6,32 +6,76 @@ class ReviewForm extends React.Component {
     this.state = this.props.review
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.toggleActiveReviewStar = this.toggleActiveReviewStar.bind(this);
   }
 
   componentWillUnmount() {
     
   }
 
+  displayReviewStars() {
+    const stars = [1, 2, 3, 4, 5];
+    return stars.map(star =>
+      <i 
+        key={star}
+        className="review-star" 
+        onClick={this.toggleActiveReviewStar}>
+      </i>
+    )
+  }
+
+  toggleActiveReviewStar(e) {
+    e.target.classList.toggle("active");
+    let rating = document.getElementsByClassName('review-star active');
+    rating = rating.length;
+    this.setState({ rating: rating });
+  }
+
+  renderErrors() {
+    return (
+      <ul className="review errors">
+        {
+          this.props.errors.map((err, i) => (
+            <li key={`error-${i}`}>
+              {err}
+            </li>
+          ))
+        }
+      </ul>
+    )
+  }
+
   handleChange(type) {
     return (e) => this.setState({ [type]: e.target.value })
   }
 
-  handleSubmit() {
-
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.action(this.state)
+      .then(res => {
+        this.props.toggleCreateReviewForm()
+        this.props.fetchReviews(res.review.kitchenId)
+      })
   }
 
   render() {
     return (
       <div className="review-form-outer-container hidden">
         <div className="review-form container">
-          <h3>Leave a Comment</h3>
+          { this.renderErrors() }
+
+          <h3>Leave a Review</h3>
           <form onSubmit={this.handleSubmit}>
+            <div className="review-form rating">
+              { this.displayReviewStars() }
+            </div>
             <textarea
               className="form input"
               value={this.state.body}
               onChange={this.handleChange('body')}
               placeholder="Write your comment here"
-              wrap
+              wrap="true"
             ></textarea>
 
             <div className="review-form buttons">
