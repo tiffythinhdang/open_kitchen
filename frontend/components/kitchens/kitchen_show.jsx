@@ -1,6 +1,8 @@
 import React from 'react';
 
 import KitchenBasicInfo from './kitchen_basic_info';
+import ReviewIndexContainer from '../reviews/review_index_container';
+
 import KitchenCreateReservationContainer from '../reservations/kitchen_create_reservation_container';
 
 class KitchenShow extends React.Component {
@@ -66,7 +68,7 @@ class KitchenShow extends React.Component {
 
             <div className="kitchen-show reviews">
               <h3 name="reviews">Reviews</h3>
-              {/* React Component */}
+              <ReviewIndexContainer kitchen={this.props.kitchen} />
             </div>
 
           </div>
