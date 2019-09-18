@@ -146,7 +146,7 @@ ActiveRecord::Base.transaction do
     num_reviews = kitchen.reviews.count
     sum_rating = kitchen.reviews.map{ |review| review.rating }.sum
     avg_rating = ( sum_rating / num_reviews ).round(2)
-    kitchen.update!(num_reviews: num_reviews, average_rating: avg_rating)
+    kitchen.update!(number_reviews: num_reviews, average_rating: avg_rating)
   end
 end
 
