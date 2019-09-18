@@ -12,11 +12,29 @@ class ReviewIndex extends React.Component {
     this.props.fetchReviews(this.props.kitchen.id)
   }
 
+  toggleCreateReviewForm(){
+    let CreateReviewForm = document.querySelector('.review-form-outer-container');
+    let button = document.querySelector('.create-review.button.container');
+    // this.props.clearTimeslots();
+    CreateReviewForm.classList.toggle("hidden");
+    button.classList.toggle("hidden");
+  }
+
   render() {
     if (!this.props.reviews) return null
     return (
       <div className="review-index container">
-        <CreateReviewFormContainer />
+        <div className="create-review button container clearfix">
+          <button
+            className="create-review small main button"
+            onClick={this.toggleCreateReviewForm}
+            >Leave a Review
+          </button>
+        </div>
+
+        <CreateReviewFormContainer 
+          toggleCreateReviewForm={this.toggleCreateReviewForm}
+        />
         { 
           this.props.reviews.map(review =>
             <ReviewIndexItemContainer

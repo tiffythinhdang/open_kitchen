@@ -22,31 +22,33 @@ class ReviewForm extends React.Component {
 
   render() {
     return (
-      <div className="review-form container">
-        <h3>Leave a Comment</h3>
-        <form onSubmit={this.handleSubmit}>
-          <textarea
-            className="form input"
-            value={this.state.body}
-            onChange={this.handleChange('body')}
-            placeholder="Write your comment here"
-            wrap
-          ></textarea>
+      <div className="review-form-outer-container hidden">
+        <div className="review-form container">
+          <h3>Leave a Comment</h3>
+          <form onSubmit={this.handleSubmit}>
+            <textarea
+              className="form input"
+              value={this.state.body}
+              onChange={this.handleChange('body')}
+              placeholder="Write your comment here"
+              wrap
+            ></textarea>
 
-          <div className="review-form buttons">
-            <button
-              type="submit"
-              className="medium main button">Submit
+            <div className="review-form buttons">
+              <button
+                type="submit"
+                className="medium main button">Submit
             </button>
-            <p className="link-container">
-              <a
-                className="secondary link"
-                onClick={this.props.closeModal}
-              >Cancel
+              <p className="link-container">
+                <a
+                  className="secondary link"
+                  onClick={this.props.toggleCreateReviewForm}
+                >Cancel
               </a>
-            </p>
-          </div>
-        </form>
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }

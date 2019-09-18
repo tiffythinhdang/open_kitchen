@@ -56,9 +56,21 @@
 
 // Review Form
 
+.create-review.small.main.button {
+  float: right;
+  margin-right: 0px;
+  width: 150px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .review-form.container {
   background-color: $super_lightgray;
-  border-bottom: 1px solid $mediumgray;
+  border-bottom: 1px solid $lightgray;
   padding: 20px 0px;
   display: flex;
   flex-direction: column;
@@ -75,7 +87,7 @@
   background-color: $white;
   width: 80%;
   height: 100px;
-  padding-top: 15px;
+  padding: 15px;
   font-size: 16px;
 }
 
