@@ -103,3 +103,19 @@
   font-size: 14px;
   color: $lightgray;
 }
+
+@media only screen and (min-width: 1600px) {
+  .feature-kitchen-index.main-content {
+  width: 100%;
+  padding: 0px 300px;
+  }
+
+  .featured-title {
+    margin: 0px 310px;
+  }
+
+  .feature-kitchen-index-item.container {
+  width: 275px;
+  height: 275px;
+  }
+}

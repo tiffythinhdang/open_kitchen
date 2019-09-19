@@ -48,3 +48,18 @@
   color: $white;
 }
 
+@media only screen and (min-width: 1600px) {
+  .feature-city-index-item.container {
+  width: 620px;
+  height: 300px;
+  }
+
+  .feature-location-index.main-content {
+  padding: 0px 300px;
+  }
+
+  .city-background::after {
+  margin-top: -280px;
+  height: 300px;
+  }
+}
