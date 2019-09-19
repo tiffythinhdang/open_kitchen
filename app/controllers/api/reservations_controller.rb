@@ -1,8 +1,8 @@
 class Api::ReservationsController < ApplicationController
   def index
-    user = User.find_by(id: params[:id])
+    user = User.find_by(id: params[:user_id])
     @reservations = user.reservations
-    render json: @reservations
+    render :index
   end
   
   def create
