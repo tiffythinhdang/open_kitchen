@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:create, :update]
     resources :users, only: [:show] do
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
       resources :timeslots, only: [:index]
       # get '/timeslots/kitchens/:id', to: 'timeslots#timeslots_by_kitchen'
     end
+
+    resources :favorites, only: [:index, :create, :destroy]
 
   end
 
