@@ -23,6 +23,8 @@ class User < ApplicationRecord
 
   has_many :reservations
   has_many :reviews
+  has_many :favorites
+  has_many :favorite_kitchens, through: :favorites
 
   def password=(password)
     @password = password
