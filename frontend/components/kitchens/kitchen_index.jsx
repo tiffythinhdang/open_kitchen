@@ -29,7 +29,10 @@ class KitchenIndex extends React.Component {
             <KitchenIndexItem 
               key={kitchen.id} 
               kitchen={kitchen}
-              fetchAKitchen={this.props.fetchAKitchen} 
+              currentUser={this.props.currentUser}
+              fetchAKitchen={this.props.fetchAKitchen}
+              openModal={this.props.openModal}
+              closeModal={this.props.closeModal}
             />
           )
         }

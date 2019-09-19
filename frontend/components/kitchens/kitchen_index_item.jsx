@@ -49,6 +49,10 @@ class KitchenIndexItem extends React.Component {
   handleMakeReservation(timeSLotId) {
     return (e) => {
       e.preventDefault();
+      if (!this.props.currentUser) {
+        this.props.openModal('showLogIn');
+        return;
+      }
       const kitchen = this.props.kitchen;
       const req_time = e.target.value;
 
