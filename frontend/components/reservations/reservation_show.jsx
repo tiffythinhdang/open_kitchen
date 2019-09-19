@@ -117,48 +117,54 @@ class ReservationShow extends React.Component {
     
     return (
       <div className="reservation-show-outer-container">
-        <ToSearchAndResButtons />
+        <div className="res-show-buttons-form-container">
+          <ToSearchAndResButtons />
 
-        <div className="reservation-show container">
-          {this.displayMessages()}
+          <div className="reservation-show container">
+            {this.displayMessages()}
 
-          <div className="reservation-show summary">
-            <div className="reservation-show kitchen-img">
-              <img
-                src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg"
-                alt="kitchen imgage" />
-            </div>
-
-            <div className="reservation-show name-dtp">
-              <h2>{this.props.reservation.kitchenName}</h2>
-
-              <div className="reservation-show name-dtp dtp">
-                <div className="reservation-show name-dtp date">
-                  <img className="small icon calendar light" src={iconCalendar} />
-                  <p>{this.displayDate()}</p>
-                </div>
-
-                <div className="reservation-show name-dtp time">
-                  <img className="small icon clock light" src={iconClock} />
-                  <p>{convertNumberToTime(this.props.reservation.time)}</p>
-                </div>
-
-                <div className="reservation-show name-dtp party">
-                  <img className="small icon suser light" src={iconUser} />
-                  <p>{this.displayPartySize()}</p>
-                </div>
+            <div className="reservation-show summary">
+              <div className="reservation-show kitchen-img">
+                <img
+                  src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg"
+                  alt="kitchen imgage" />
               </div>
 
-              {this.displayRequest()}
+              <div className="reservation-show name-dtp">
+                <h2>{this.props.reservation.kitchenName}</h2>
+
+                <div className="reservation-show name-dtp dtp">
+                  <div className="reservation-show name-dtp date">
+                    <img className="small icon calendar light" src={iconCalendar} />
+                    <p>{this.displayDate()}</p>
+                  </div>
+
+                  <div className="reservation-show name-dtp time">
+                    <img className="small icon clock light" src={iconClock} />
+                    <p>{convertNumberToTime(this.props.reservation.time)}</p>
+                  </div>
+
+                  <div className="reservation-show name-dtp party">
+                    <img className="small icon suser light" src={iconUser} />
+                    <p>{this.displayPartySize()}</p>
+                  </div>
+                </div>
+
+                {this.displayRequest()}
+              </div>
             </div>
+
+            {this.displayButtons()}
+
+            <EditReservationFormContainer
+              reservation={this.props.reservation}
+              toggleEditForm={this.toggleEditForm}
+            />
           </div>
+        </div>
 
-          {this.displayButtons()}
-
-          <EditReservationFormContainer
-            reservation={this.props.reservation}
-            toggleEditForm={this.toggleEditForm}
-          />
+        <div className="reservation-form show cooking-image">
+          <img src="https://image.flaticon.com/sprites/new_packs/2010744-cooking.png" alt="cooking-image" />
         </div>
       </div>
     )
