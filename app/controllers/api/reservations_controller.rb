@@ -5,7 +5,7 @@ class Api::ReservationsController < ApplicationController
     @image_urls = []
     @kitchen_names = []
     
-    @reservations.map do |reservation|
+    @reservations.each do |reservation|
       kitchen = Kitchen.find_by(id: reservation.kitchen_id)
       @kitchen_names.push(kitchen.name)
       @image_urls.push(kitchen.photos.where(profile_photo: true).pluck(:image_url)[0])

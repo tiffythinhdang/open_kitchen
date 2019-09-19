@@ -8,10 +8,19 @@ import PhotosIndex from '../photos/photo_index';
 class KitchenShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      // favorite: {
+      //   user_id: this.props.currentUserId,
+      //   kitchen_id: this.props.kitchen.id
+      // }
+    }
+
+    this.handleFavorite = this.handleFavorite.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchAKitchen(this.props.match.params.kitchenId)
+    this.props.fetchFavorites()
   }
 
   componentDidUpdate(prevProps) {
@@ -20,12 +29,48 @@ class KitchenShow extends React.Component {
     }
   }
 
+  displayFavoriteButton() {
+    let kitchenId = this.props.kitchen.id;
+    if ( !this.props.favKitchenIds.includes(kitchenId) ) {
+      return (
+        <button
+          className="quaternary medium button favorite"
+          id="favorite-button"
+          onClick={this.handleFavorite}
+        >Save this kitchen
+        </button>
+      )
+    } else {
+      return (
+        <button
+          className="quaternary medium button favorite"
+          id="unfavorite-button"
+          onClick={this.handleFavorite}
+        >Unsave this kitchen
+        </button>
+      )
+    }
+  }
+
+  handleFavorite(e) {
+    if ( e.target.id === "favorite-button" ) {
+      this.props.createFavorite(this.state.favorite)
+    } else if ( e.target.id === "unfavorite-button" ) {
+      this.props.deleteFavorite(this.state.favorite)
+    }
+  }
+  
+
   render() {
     if (!this.props.kitchen) return null;
     return (
       <div className="kitchen-show-outer-container">
         <header className="kitchen-show header">
-          <img src="https://www.bakefromscratch.com/wp-content/uploads/2017/09/Unknown-3.jpeg" alt="temp_img"/>
+          { this.displayFavoriteButton() }
+
+          <div className="header-image container">
+            <img src="https://www.bakefromscratch.com/wp-content/uploads/2017/09/Unknown-3.jpeg" alt="temp_img"/>
+          </div>
         </header>
 
         <div className="kitchen-show container">

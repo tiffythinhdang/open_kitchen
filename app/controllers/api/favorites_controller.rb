@@ -3,9 +3,16 @@ class Api::FavoritesController < ApplicationController
 
   def index
     @favorites = current_user.favorites
-    @favorite_kitchens = @favorites.map do |favorite|
-      Kitchen.find_by(id: favorite.kitchen_id)
+    debugger
+    @image_urls = []
+    @kitchens = []
+    
+    @favorites.each do |favorite|
+      kitchen = Kitchen.find_by(id: favorite.kitchen_id)
+      @kitchen.push(kitchen)
+      @image_urls.push(kitchen.photos.where(profile_photo: true).pluck(:image_url)[0])
     end
+    
     render :index
   end
 
