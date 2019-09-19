@@ -63,10 +63,9 @@ class KitchenIndexItem extends React.Component {
     return (
       <div className="kitchen-index item-container">
         <div className="kitchen-index item profile-img">
-          {/* Need to link real pictures with S3 later */}
           <Link target="_blank" to={`/kitchens/${this.props.kitchen.id}`}> 
             <img
-              src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg"
+              src={this.props.kitchen.profilePhoto}
               alt="profile-picture"
             />
           </Link>

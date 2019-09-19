@@ -19,6 +19,7 @@ ActiveRecord::Base.transaction do
   locations = yaml['locations']
   cuisines = yaml['cuisines']
   reviews = yaml['reviews']
+  kitchen_images = yaml['kitchen_images']
 
   # Create locations
   locations.each do |location|
@@ -140,8 +141,12 @@ ActiveRecord::Base.transaction do
     Review.create!(review)
   end
 
-  # Compute avg_rating and num_reviews for each kitchen
+ # Create photos attachment
+  kitchen_images.each do |img|
+    Photo.create!(img)
+  end
 
+  # Compute avg_rating and num_reviews for each kitchen
   Kitchen.all.each do |kitchen|
     num_reviews = kitchen.reviews.count
     sum_rating = kitchen.reviews.map{ |review| review.rating }.sum

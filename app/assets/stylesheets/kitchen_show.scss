@@ -100,4 +100,27 @@
   line-height: 18px;
 }
 
+// photos
+.photo-index {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.photo-index-image.container {
+  width: 290px;
+  height: 290px;
+  margin-bottom: 10px;
+}
+
+.photo-index-image.container > img {
+  width: 285px;
+  height: 285px;
+  object-fit: cover;
+}
+
+
 

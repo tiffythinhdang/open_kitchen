@@ -19,7 +19,7 @@ class FeaturedKitchenIndexItem extends React.Component {
         <Link target="_blank" to={`/kitchens/${this.props.kitchen.id}`}>
           <div className="item profile-img">
             <img
-              src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg"
+              src={this.props.kitchen.profilePhoto}
               alt="profile-picture"
             />
           </div>

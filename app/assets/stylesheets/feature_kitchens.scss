@@ -47,6 +47,14 @@
   height: 50%;
   overflow: hidden;
   border-radius: 8px 8px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item.profile-img > img {
+  width: 100%;
+  height: auto;
 }
 
 .item.main-content {
@@ -94,4 +102,20 @@
 .item.rating-and-reviews > .reviews {
   font-size: 14px;
   color: $lightgray;
+}
+
+@media only screen and (min-width: 1600px) {
+  .feature-kitchen-index.main-content {
+  width: 100%;
+  padding: 0px 300px;
+  }
+
+  .featured-title {
+    margin: 0px 310px;
+  }
+
+  .feature-kitchen-index-item.container {
+  width: 275px;
+  height: 275px;
+  }
 }

@@ -476,3 +476,165 @@ reviews:
     user_id: 8
     kitchen_id: 16
 
+kitchen_images:
+  # kitchen_id: 1
+  - kitchen_id: 1
+    image_url: "https://www.dropbox.com/s/kbiasghw8ljfklj/0aefa94e-3fb6-4e3a-b96e-4dc6a678ba3a.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 1
+    image_url: "https://www.dropbox.com/s/3g1wqv5fw4gs1ni/22de216c-8849-48a3-9380-4d2c3fc8b0ed.jpg?raw=1"
+  - kitchen_id: 1
+    image_url: "https://www.dropbox.com/s/0osxk8eca4ea3n1/craftsymadeleines-1.jpg?raw=1"
+  - kitchen_id: 1
+    image_url: "https://www.dropbox.com/s/bf2usu3xas2h0j5/Shiokman-Delights-Madeleines-1.png?raw=1"
+  # kitchen_id: 2
+  - kitchen_id: 2
+    image_url: "https://www.dropbox.com/s/bbnvkbowc7cimje/29mochi-web1-articleLarge.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 2
+    image_url: "https://www.dropbox.com/s/1uqmv65od66vfjl/c6.jpg?raw=1"
+  - kitchen_id: 2
+    image_url: "https://www.dropbox.com/s/mkrxqslu27tarda/ichigo-daifuku.jpg?raw=1"
+  - kitchen_id: 2
+    image_url: "https://www.dropbox.com/s/sdz0atn42bkrscx/sakura-mochi-00-825x510.jpg?raw=1"
+  # kitchen_id: 3
+  - kitchen_id: 3
+    image_url: "https://www.dropbox.com/s/f5n3z3wdohq8uch/505b8953-0c78-4746-b07b-d2697bb4fb35.jpeg?raw=1"
+    profile_photo: true
+  - kitchen_id: 3
+    image_url: "https://www.dropbox.com/s/r4r3y2epg7tximi/84033fd4-f813-4c92-ae1f-13097cf3990a.jpeg?raw=1"
+  - kitchen_id: 3
+    image_url: "https://www.dropbox.com/s/vnjtv5pik2hraik/lotus-mooncakes-33.jpg?raw=1"
+  - kitchen_id: 3
+    image_url: "https://www.dropbox.com/s/1zfh2xe94qqkm0m/maxresdefault.jpg?raw=1"
+  # kitchen_id: 4
+  - kitchen_id: 4
+    image_url: "https://www.dropbox.com/s/u7oppzrs8ooa3rn/ezgif-5-8d208a0ad4d5.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 4
+    image_url: "https://www.dropbox.com/s/8ltg0y8ni12juzc/ezgif-5-708a0825d51a.jpg?raw=1"
+  - kitchen_id: 4
+    image_url: "https://www.dropbox.com/s/x0nnfqchq70n4n8/ezgif-5-b60a695b3677.jpg?raw=1"
+  - kitchen_id: 4
+    image_url: "https://www.dropbox.com/s/rt38pi278f2zf1t/ezgif-5-c989bd9d5733.jpg?raw=1"
+  # kitchen_id: 5
+  - kitchen_id: 5
+    image_url: "https://www.dropbox.com/s/bxwz7dx0v0fgcov/8d623785-d37b-4471-81f3-2217a344f2ba.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 5
+    image_url: "https://www.dropbox.com/s/nw1bgsjlbm3lyr6/ezgif-5-61d6179dc1ee.jpg?raw=1"
+  - kitchen_id: 5
+    image_url: "https://www.dropbox.com/s/s15chpk1nidmlqn/ezgif-5-ac12fb335ee8.jpg?raw=1"
+  - kitchen_id: 5
+    image_url: "https://www.dropbox.com/s/68r85j24jnc9zdu/ezgif-5-b016cbdaea43.jpg?raw=1"
+  # kitchen_id: 6
+  - kitchen_id: 6
+    image_url: "https://www.dropbox.com/s/4eb6osf1h2pv039/ezgif-5-0ed6ca757641.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 6
+    image_url: "https://www.dropbox.com/s/os725vcgy7p5gfp/ezgif-5-2a783a55b821.jpg?raw=1"
+  - kitchen_id: 6
+    image_url: "https://www.dropbox.com/s/n88pen8c2a1571e/ezgif-5-44ed6d848838.jpg?raw=1"
+  - kitchen_id: 6
+    image_url: "https://www.dropbox.com/s/8ieg7ak7jv6ruzb/ezgif-5-98a0a1370475.jpg?raw=1"
+  # kitchen_id: 7
+  - kitchen_id: 7
+    image_url: "https://www.dropbox.com/s/wr7xvfkwcylpb85/ac6ba96c-b0aa-4bf7-bcee-b5d38d509e94.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 7
+    image_url: "https://www.dropbox.com/s/jwkxzex5chlspmy/ezgif-5-52dd369582c3.jpg?raw=1"
+  - kitchen_id: 7
+    image_url: "https://www.dropbox.com/s/pwuq9qab4xbxolh/ezgif-5-315b58fffa0e.jpg?raw=1"
+  - kitchen_id: 7
+    image_url: "https://www.dropbox.com/s/dkhcbn0fervd0tj/ezgif-5-ccbf100ee04f.jpg?raw=1"
+  # kitchen_id: 8
+  - kitchen_id: 8
+    image_url: "https://www.dropbox.com/s/8fgybfuiahjcvu0/947b2cdd-a5ac-41eb-ad15-5f4cec31d3a7.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 8
+    image_url: "https://www.dropbox.com/s/i7h64oker879z0s/a138842f-a2fa-417e-9f01-b4b9fcf3008a.jpg?raw=1"
+  - kitchen_id: 8
+    image_url: "https://www.dropbox.com/s/wzscqgfql7ezezh/aecc24fc-a1dc-4df3-b3d7-0a8fae7a1d73.jpg?raw=1"
+  - kitchen_id: 8
+    image_url: "https://www.dropbox.com/s/57m6wq97umgptam/c549e4ce-9026-49f9-8cc9-ea40cd926225.jpg?raw=1"
+  # kitchen_id: 9
+  - kitchen_id: 9
+    image_url: "https://www.dropbox.com/s/1t7np1v1q3y9w6n/2f310b63-0400-412f-aa69-dd502a5c8f8d.jpeg?raw=1"
+    profile_photo: true
+  - kitchen_id: 9
+    image_url: "https://www.dropbox.com/s/z1y181tnf0bnni4/67f4f008-2c96-4415-88c5-90b568c822ea.jpg?raw=1"
+  - kitchen_id: 9
+    image_url: "https://www.dropbox.com/s/navsu1f61koy42x/280d1a46-0b53-48e8-9922-42bbee155d42.jpg?raw=1"
+  - kitchen_id: 9
+    image_url: "https://www.dropbox.com/s/ob4idd54qnot9mm/47558ee6-0318-4169-8402-4139cf8399bd.jpg?raw=1"
+  # kitchen_id: 10
+  - kitchen_id: 10
+    image_url: "https://www.dropbox.com/s/vvdn5xvwkknoale/70e1205e-aaa2-482a-af2d-62bc70661d3b.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 10
+    image_url: "https://www.dropbox.com/s/ol0itfwa0vc2frz/345940d9-1112-41bf-a8c0-ac898f559ab6.jpg?raw=1"
+  - kitchen_id: 10
+    image_url: "https://www.dropbox.com/s/1ywnfrfal72fl9h/cee5202b-f917-40c3-b68b-90fde513a622.jpg?raw=1"
+  - kitchen_id: 10
+    image_url: "https://www.dropbox.com/s/302vmzdulm5edvc/f18d1cee-6f91-45d4-8900-ffd40f96e71c.jpg?raw=1"
+  # kitchen_id: 11
+  - kitchen_id: 11
+    image_url: "https://www.dropbox.com/s/pywokvvty1k5dqj/0da0afff-b394-4922-8d33-2d86588bdde1.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 11
+    image_url: "https://www.dropbox.com/s/035b14zaari8jkg/4ccd0e24-5f37-4292-be03-1f1f23c8bb36.jpg?raw=1"
+  - kitchen_id: 11
+    image_url: "https://www.dropbox.com/s/drgnafo7b0a8oyf/9679bcfb-46b0-432f-a941-cdd0e4ab2193.jpg?raw=1"
+  - kitchen_id: 11
+    image_url: "https://www.dropbox.com/s/ncxb5kllkz9g85f/a8463bb0-6f78-47f7-8a82-31a69a4d5b50.jpg?raw=1"
+  # kitchen_id: 12
+  - kitchen_id: 12
+    image_url: "https://www.dropbox.com/s/i4faclj3b3o1woi/ezgif-5-47f2f2f7ad93.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 12
+    image_url: "https://www.dropbox.com/s/gsdkae57l28xtei/ezgif-5-934defcdd527.jpg?raw=1"
+  - kitchen_id: 12
+    image_url: "https://www.dropbox.com/s/ya9car5eh4j0fio/gelato_making.jpg?raw=1"
+  - kitchen_id: 12
+    image_url: "https://www.dropbox.com/s/u1lgfey2h9y7og9/TWE-gelato-messina-appreciation-02-700x350-c-center.jpg?raw=1"
+  # kitchen_id: 13
+  - kitchen_id: 13
+    image_url: "https://www.dropbox.com/s/fftsptxv5a43iwd/3db1acd6-265c-4e26-a06c-f72485b6ec91.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 13
+    image_url: "https://www.dropbox.com/s/a6tban37icl3ian/18ee3b3c-0003-4be1-a0ac-d098e6433c7a.jpg?raw=1"
+  - kitchen_id: 13
+    image_url: "https://www.dropbox.com/s/scp1ujos78330gz/b4aa8c94-0961-4130-873a-36a5b3f4e1a3.jpg?raw=1"
+  - kitchen_id: 13
+    image_url: "https://www.dropbox.com/s/nj4b8usudv0em0n/df86dcd1-1d6d-4c4c-a94e-4cf90d465eff.jpeg?raw=1"
+  # kitchen_id: 14
+  - kitchen_id: 14
+    image_url: "https://www.dropbox.com/s/9xcki2tqivx6ks4/c53455df-67b3-4c09-a33b-a14c83968d6d.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 14
+    image_url: "https://www.dropbox.com/s/ei6do12qc1hv5xv/df98b101-ef73-444c-9777-f85281d5db0d.jpg?raw=1"
+  - kitchen_id: 14
+    image_url: "https://www.dropbox.com/s/mb5kxsputyxs2cl/e834dd4c-9da6-44e3-883d-68d9b8af8a60.jpg?raw=1"
+  - kitchen_id: 14
+    image_url: "https://www.dropbox.com/s/upkdwryx61pik6f/f85c6324-8658-492e-ac89-9f679d8e26ae.jpg?raw=1"
+  # kitchen_id: 15
+  - kitchen_id: 15
+    image_url: "https://www.dropbox.com/s/70eon5am6ru26mt/3fbf33b9-cf5e-4150-bb2c-0c1f57b48f01.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 15
+    image_url: "https://www.dropbox.com/s/9azxeptll6019hn/cb7fcafc-8d15-4ec7-a9ce-b804053a68ee.jpg?raw=1"
+  - kitchen_id: 15
+    image_url: "https://www.dropbox.com/s/x0vv7npaz1gkcpu/ezgif-5-2938eb28a267.jpg?raw=1"
+  - kitchen_id: 15
+    image_url: "https://www.dropbox.com/s/zbkrb84hnbien25/ezgif-5-85265a29fabe.jpg?raw=1"
+  # kitchen_id: 16
+  - kitchen_id: 16
+    image_url: "https://www.dropbox.com/s/t2jkm9ruetlxl00/ed659007-eb50-41a6-8048-f2561dfb3e6f.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 16
+    image_url: "https://www.dropbox.com/s/nxylfftolotvw3k/ezgif-5-28ebb8626055.jpg?raw=1"
+  - kitchen_id: 16
+    image_url: "https://www.dropbox.com/s/7jm2ov12ug7s3r6/ezgif-5-897385995d45.jpg?raw=1"
+  - kitchen_id: 16
+    image_url: "https://www.dropbox.com/s/lbk8rvs0dinrbq0/ezgif-5-f1990c5f429a.jpg?raw=1"
+
