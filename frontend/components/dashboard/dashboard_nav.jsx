@@ -1,26 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class DashBoardNav extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  displayActiveLink(type) {
+    if (type === this.props.match.path) {
+      return "active";
+    }
+  }
+
   render() {
     return (
       <div className="dashboard nav">
         <div className="dashboard nav-link">
-          <Link to='/my/profile'>My Profile</Link>
+          <Link className={this.displayActiveLink("/my/profile")} to='/my/profile'>My Profile</Link>
         </div>
         <div className="dashboard nav-link">
-          <Link to='/my/reservations'>My Reservations</Link>
+          <Link className={this.displayActiveLink("/my/reservations")} to='/my/reservations'>My Reservations</Link>
         </div>
         <div className="dashboard nav-link">
-          <Link to='/my/favorites'>My Saved Kitchens</Link>
+          <Link className={this.displayActiveLink("/my/favorites")} to='/my/favorites'>My Saved Kitchens</Link>
         </div>
       </div>
     )
   }
 }
 
-export default DashBoardNav;
+export default withRouter(DashBoardNav);

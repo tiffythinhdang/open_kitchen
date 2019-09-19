@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { fetchReservations } from '../../util/reservations_api_util';
 
 import Profile from './profile';
 
@@ -10,7 +11,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    
+    fetchReservations: (userId) => dispatch(fetchReservations(userId))
   }
 };
 

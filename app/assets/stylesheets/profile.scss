@@ -30,9 +30,17 @@
   color :$lightgray;
 }
 
+.dashboard.nav-link > .active {
+  color :$main_orange;
+}
+
 .dashboard.nav-link:hover {
   color :$main_orange;
-  text-decoration: underline;
+}
+
+.dashboard.nav-link > .active:hover{
+  text-decoration: none;
+  cursor: auto;
 }
 
 .user-basic-info.container {
