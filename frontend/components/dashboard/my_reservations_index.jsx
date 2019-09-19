@@ -7,17 +7,48 @@ class MyReservationsIndex extends React.Component {
     super(props);
   }
 
+  getUpcomingReservations() {
+    return this.props.reservations.filter(reservation => reservation.state === "upcoming")
+  }
+
+  getCancelledReservations() {
+    return this.props.reservations.filter(reservation => reservation.state === "cancelled")
+  }
+
+  // getPastResvervations() {
+  //   let today = new Date();
+  //   let yesterday = today.setDate(today.setDate() - 1);
+  //   return this.props.reservations.filter(reservation => reservation.date === "upcoming")
+  // }
+
   render() {
+    if (!this.props.reservations) return null;
     return (
       <div className="reservation-index container">
-        {
-          this.props.reservations.map(reservation =>
-            <MyReservationsIndexItem 
-              key={reservation.id}
-              reservation={reservation} 
-            />
-          )
-        }
+
+        <div className="reservation-index upcoming-container">
+          <h1 className="reservation-title">Upcoming</h1>
+          {
+            this.getUpcomingReservations().map(reservation =>
+              <MyReservationsIndexItem 
+                key={reservation.id}
+                reservation={reservation} 
+              />
+            )
+          }
+        </div>
+
+        <div className="reservation-index upcoming-container">
+          <h1 className="reservation-title">Cancelled</h1>
+          {
+            this.getCancelledReservations().map(reservation =>
+              <MyReservationsIndexItem 
+                key={reservation.id}
+                reservation={reservation} 
+              />
+            )
+          }
+        </div>
       </div>
     )
   }

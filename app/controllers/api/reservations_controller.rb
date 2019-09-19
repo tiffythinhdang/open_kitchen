@@ -2,6 +2,15 @@ class Api::ReservationsController < ApplicationController
   def index
     user = User.find_by(id: params[:user_id])
     @reservations = user.reservations
+    @image_urls = []
+    @kitchen_names = []
+    
+    @reservations.map do |reservation|
+      kitchen = Kitchen.find_by(id: reservation.kitchen_id)
+      @kitchen_names.push(kitchen.name)
+      @image_urls.push(kitchen.photos.where(profile_photo: true).pluck(:image_url)[0])
+    end
+
     render :index
   end
   
