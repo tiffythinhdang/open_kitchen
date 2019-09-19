@@ -1,0 +1,11 @@
+@import './utils.scss';
+
+.buttons-container {
+  margin: 25px 0;
+}
+
+.buttons-container > a > .button.to-main, .buttons-container > a > .button.to-res {
+  margin-left: 0px;
+  margin-right: 20px;
+  width: 150px;
+}

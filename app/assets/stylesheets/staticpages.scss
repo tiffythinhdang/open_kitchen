@@ -74,12 +74,20 @@
   background: $main_blue;
 }
 
+.tertiary.button {
+  background: $lightgray;
+}
+
 .main.button:hover {
   background: $hover_orange;
 }
 
 .secondary.button:hover {
   background: $hover_blue;
+}
+
+.tertiary.button:hover {
+  background: $main_blue;
 }
 
 .small.icon {
