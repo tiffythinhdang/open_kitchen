@@ -1,14 +1,35 @@
 @import './utils.scss';
 
+.reservation-form-outer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   margin-top: 75px;
+}
+
+.reservation-form.cooking-image {
+  width: 300px;
+  height: 300px;
+  margin-right: 150px;
+}
+
+.reservation-form.cooking-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
 .reservation-form.container {
   width: 50%;
-  margin-left: 80px;
+  margin-left: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 75px;
   margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
 }
 
 .reservation-form.container > h3{
@@ -19,11 +40,16 @@
 
 }
 
-.reservation-form.kitchen-img > img {
-  width: 70px;
-  height: 70px;
-  border-radius: 4px;
+.reservation-form.kitchen-img {
+  width: 75px;
+  height: 75px;
   margin-right: 20px;
+}
+
+.reservation-form.kitchen-img > a > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
   object-fit: cover;
 }
 
