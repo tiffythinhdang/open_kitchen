@@ -1,10 +1,14 @@
 import React from 'react';
 
-import FeaturedCityIndexItemContainer from './featured_city_index_container';
+import FeaturedCityIndexItem from './featured_city_index_item';
 
 class FeaturedCityIndex extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchAllLocations();
   }
 
   getUSCities() {
@@ -23,10 +27,12 @@ class FeaturedCityIndex extends React.Component {
           <h1 className="featured-title">Featured Regional Areas</h1>
           <div className="feature-location-index main-content">
             {
-              this.getUSCities().map(location =>
-                <FeaturedCityIndexItemContainer
-                  key={location.id}
-                  location={location}
+              this.getUSCities().map(local =>
+                <FeaturedCityIndexItem
+                  key={local.id}
+                  local={local}
+                  receiveSearch={this.props.receiveSearch}
+                  fetchKitchens={this.props.fetchKitchens}
                 />
               )
             }
@@ -37,10 +43,12 @@ class FeaturedCityIndex extends React.Component {
           <h1 className="featured-title">Featured International Areas</h1>
           <div className="feature-location-index main-content">
             {
-              this.getInternationalCities().map(location =>
-                <FeaturedCityIndexItemContainer
-                  key={location.id}
-                  location={location}
+              this.getInternationalCities().map(local =>
+                <FeaturedCityIndexItem
+                  key={local.id}
+                  local={local}
+                  receiveSearch={this.props.receiveSearch}
+                  fetchKitchens={this.props.fetchKitchens}
                 />
               )
             }
