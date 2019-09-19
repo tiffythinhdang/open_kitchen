@@ -2,8 +2,8 @@ import React from 'react';
 
 import KitchenBasicInfo from './kitchen_basic_info';
 import ReviewIndexContainer from '../reviews/review_index_container';
-
 import KitchenCreateReservationContainer from '../reservations/kitchen_create_reservation_container';
+import PhotosIndex from '../photos/photo_index';
 
 class KitchenShow extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ class KitchenShow extends React.Component {
 
             <div className="kitchen-show photos">
               <h3 name="photos">Photos</h3>
-              {/* S3 goes hereeeeeeeeee */}
+              <PhotosIndex imageUrls={this.props.kitchen.imageUrls} />
             </div>
 
             <div className="kitchen-show reviews">

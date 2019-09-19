@@ -9,6 +9,7 @@
       :region, 
       :average_rating, 
       :number_reviews
-    json.available_timeslots kitchen_with_timeslot.last
+    json.available_timeslots kitchen_with_timeslot[1]
+    json.profile_photo kitchen_with_timeslot.last
   end
 end

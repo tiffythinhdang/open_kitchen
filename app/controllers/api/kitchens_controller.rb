@@ -22,7 +22,8 @@ class Api::KitchensController < ApplicationController
           availabilities.push(timeslot)
         end
       end
-      @available_kitchens.push([kitchen, availabilities]) unless availabilities.empty?
+      profile_photo = kitchen.photos.where(profile_photo: true).pluck(:image_url)
+      @available_kitchens.push([kitchen, availabilities, profile_photo]) unless availabilities.empty?
     end
 
     render :index
@@ -30,6 +31,7 @@ class Api::KitchensController < ApplicationController
 
   def show
     @kitchen = Kitchen.find_by(id: params[:id])
+    @photos = @kitchen.photos.pluck(:image_url)
 
     if @kitchen
       render :show
