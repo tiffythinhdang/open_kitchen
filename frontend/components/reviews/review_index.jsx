@@ -15,6 +15,10 @@ class ReviewIndex extends React.Component {
   }
 
   toggleCreateReviewForm(){
+    if (!this.props.currentUserId) {
+      this.props.openModal('showLogIn');
+      return;
+    }
     let CreateReviewForm = document.querySelector('.review-form-outer-container');
     let button = document.querySelector('.create-review.button.container');
     this.props.clearReviewErrors();

@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 
 import ReviewIndex from './review_index';
-import { fetchReviews, createReview } from '../../actions/reviews_actions';
+import { fetchReviews } from '../../actions/reviews_actions';
 import { clearReviewErrors } from '../../actions/reviews_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => {
   return {
@@ -15,7 +16,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchReviews: (kitchenId) => dispatch(fetchReviews(kitchenId)),
-    clearReviewErrors: () => dispatch(clearReviewErrors())
+    clearReviewErrors: () => dispatch(clearReviewErrors()),
+    openModal: (content) => dispatch(openModal(content)),
+    closeModal: () => dispatch(closeModal())
   }
 };
 
