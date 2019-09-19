@@ -4,7 +4,9 @@ import {
   Redirect,
   Switch,
   Link,
-  HashRouter
+  withRouter,
+  HashRouter,
+  BrowserRouter as Router
 } from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -18,21 +20,37 @@ import CreateReservationFormContainer from './reservations/create_reservation_fo
 import ReservationShowContainer from './reservations/reservation_show_container';
 import Splash from './splash/splash';
 
+class ScrollToTop extends React.Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  render() {
+    return this.props.children;
+  }
+}
+
+const Scroll = withRouter(ScrollToTop);
+
+
 const App = () => (
-  <div>
+  <HashRouter>
     <ModalContainer />
     <TopBar />
-    <Route exact path="/" component={Splash} />
-    <Route path="/search" component={SearchContainer} />
-    <Route path="/kitchens/:kitchenId" component={KitchenShowContainer} />
+    <Scroll>
+      <Route exact path="/" component={Splash} />
+      <Route path="/search" component={SearchContainer} />
+      <Route path="/kitchens/:kitchenId" component={KitchenShowContainer} />
 
-    <Switch>
-      <Route exact path="/reservations/new" component={CreateReservationFormContainer} />
-      <Route path="/reservations/:reservationId" component={ReservationShowContainer} />
-    </Switch>
-
+      <Switch>
+        <Route exact path="/reservations/new" component={CreateReservationFormContainer} />
+        <Route path="/reservations/:reservationId" component={ReservationShowContainer} />
+      </Switch>
+    </Scroll>
     <Footer />
-  </div>
+  </HashRouter>
 );
 
 export default App;
