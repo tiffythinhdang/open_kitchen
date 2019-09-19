@@ -17,15 +17,6 @@ class FeaturedKitchenIndex extends React.Component {
     this.props.fetchKitchens(request)
   }
 
-  randomizeKitchens() {
-    // let randomIdx = [];
-    // const length = this.props.kitchen.length;
-    // for (i = 1; i < 5; i ++) {
-    //   let idx = Math.floor(Math.random() * length);
-    //   if (!randomIdx.includes(idx))
-    // }
-  }
-
   render() {
     if (!this.props.kitchens) return null;
     return (

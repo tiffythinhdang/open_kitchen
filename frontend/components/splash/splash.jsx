@@ -2,6 +2,7 @@ import React from 'react';
 
 import SearchBarContainer from '../search_bar/search_bar_container';
 import FeaturedKitchenIndexContainer from './featured_kitchens_index_container';
+import FeaturedCityIndexContainer from './featured_city_index_container.js';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Splash extends React.Component {
 
         <div className="splash-page main-content">
           <FeaturedKitchenIndexContainer />
-
+          <FeaturedCityIndexContainer />
         </div>
       </div>
     )
