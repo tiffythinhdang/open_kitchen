@@ -16,11 +16,13 @@ import SearchContainer from './filters/search_container';
 import KitchenShowContainer from './kitchens/kitchen_show_container';
 import CreateReservationFormContainer from './reservations/create_reservation_form_container';
 import ReservationShowContainer from './reservations/reservation_show_container';
+import Splash from './splash/splash';
 
 const App = () => (
   <div>
     <ModalContainer />
     <TopBar />
+    <Route exact path="/" component={Splash} />
     <Route path="/search" component={SearchContainer} />
     <Route path="/kitchens/:kitchenId" component={KitchenShowContainer} />
 

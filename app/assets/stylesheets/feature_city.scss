@@ -1,0 +1,50 @@
+@import './utils.scss';
+
+.feature-city-index-item.container {
+  width: 520px;
+  height: 250px;
+  margin: 25px 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-city-index-item.container:hover {
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
+  top: -5px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.feature-location-index.main-content {
+  width: 100%;
+  padding: 0px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.city-background::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 25%, $darkgray 100%);
+  margin-top: -320px;
+  height: 250px;
+  width: 100%;
+  content: '';
+}
+
+.city.main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.city-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: $white;
+}
+
