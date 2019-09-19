@@ -61,7 +61,6 @@ constructor(props) {
   }
 
   handleSearch(e) {
-    debugger
     e.preventDefault();
     this.props.fetchTimeslots(this.state)
   }
@@ -78,7 +77,7 @@ constructor(props) {
                   className="date selector"
                   type="date"
                   required="required"
-                  value={this.state.date}
+                  value={this.state.date || ""}
                   min={new Date().toISOString().substr(0, 10)}
                   onChange={this.handleChange("date")}
                 />
@@ -88,7 +87,7 @@ constructor(props) {
                 <img className="small icon clock" src={iconClock} />
                 <select
                   className="time selector"
-                  value={this.state.time}
+                  value={this.state.time || ""}
                   onChange={this.handleChange("time")}
                 >
                   {this.generateTimeOptions()}
@@ -99,7 +98,7 @@ constructor(props) {
                 <img className="small icon user" src={iconUser} />
                 <select
                   className="party-size selector"
-                  value={this.state.party_size}
+                  value={this.state.party_size || ""}
                   onChange={this.handleChange("party_size")}
                 >
                   {this.generatePartyOptions()}
