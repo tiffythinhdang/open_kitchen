@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 100;
   background: rgba(0, 0, 0, 0.8)
 }
 
@@ -18,7 +18,7 @@
   line-height: 1;
   cursor: pointer;
   color: $white;
-  z-index: 4;
+  z-index: 101;
 }
 
 .modal-close:hover {
@@ -29,11 +29,11 @@
   position: absolute;
   left: 27.64%;
   right: 27.64%;
-  top: 10%;
+  top: 75px;
   bottom: 10%;
   background: #FFFFFF;
   border-radius: 10px;
-  z-index: 3;
+  z-index: 102;
   box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
 }
 
