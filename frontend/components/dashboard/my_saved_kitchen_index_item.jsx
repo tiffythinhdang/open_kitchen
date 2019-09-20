@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import RatingDisplay from '../kitchens/rating_display';
+import displayPrice from '../kitchens/price_display';
+
 class MySavedKitchenIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -27,9 +30,11 @@ class MySavedKitchenIndexItem extends React.Component {
             <Link target="_blank" to={`/kitchens/${kitchenId}`}>
               <div className="kitchen-name">{kitchenName}</div>
             </Link>
-            <div className="kit-rating">{kitchenRating}</div>
+            <div className="kit-rating">
+              <RatingDisplay rating={kitchenRating} />
+            </div>
             <div className="kit-cusine">{kitchenCuisine}</div>
-            <div className="kit-cost">{kitchenCost}</div>
+            <div className="kit-price">{displayPrice(kitchenCost)}</div>
           </div>
         </div>
       </div>

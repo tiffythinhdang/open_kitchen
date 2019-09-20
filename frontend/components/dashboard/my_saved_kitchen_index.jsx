@@ -15,6 +15,7 @@ class MySavedKitchenIndex extends React.Component {
     if (!this.props.favorites) return null;
     return (
       <div className="favorites-index container">
+        <h1 className="favorites-title">My Saved Kitchens</h1>
           {
             this.props.favorites.map(favorite =>
               <MySavedKitchenIndexItem

@@ -40,14 +40,14 @@
 
 
 // Common props across mulitple containers
-.dashboard.nav, .user-basic-info.container, .reservation-index.container {
+.dashboard.nav, .user-basic-info.container, .reservation-index.container, .favorites-index.container {
   margin-top: 50px;
   background-color: $white;
   border-radius: 8px;
 }
 
-// reservation-index
-.reservation-index.container {
+// reservation-index & favorites-index
+.reservation-index.container, .favorites-index.container {
   width: 65%;
   display: flex;
   justify-content: flex-start;
@@ -56,11 +56,48 @@
   box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
 }
 
+// favorites-index
+.favorites-title {
+  margin: 20px 20px 20px 20px;
+}
+
+.saved-kitchen-index.item {
+  display: flex;
+  margin: 0px 20px 20px 20px;
+}
+
+.saved-item.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kit-rating {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.kit-rating > .medium.star {
+  height: 18px;
+  width: auto;
+}
+
+.kit-cuisine {
+  font-size: 16px;
+}
+
+.kit-price {
+  font-size: 14px;
+  color: $lightgray;
+  padding-top: 8px;
+}
+
+// reservations-index
 .reservation-index.upcoming-container, .reservation-index.cancelled-container {
   padding: 20px;
 }
 
-.reservation-title {
+.reservation-title, .favorites-title {
   font-size: 24px;
   color: $mediumgray;
   padding-bottom: 10px;
