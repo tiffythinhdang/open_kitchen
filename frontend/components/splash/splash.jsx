@@ -18,7 +18,7 @@ class Splash extends React.Component {
           <div className="carousel container">
             <img
               src="https://a0.muscache.com/4ea/air/v2/pictures/64438769-6d53-4e9a-89e0-2639a8184931.jpg?t=r:w3393-h1356-sfit,e:fjpg-c90"
-              class="carousel slide" />
+              className="carousel slide" />
             <div className="overlay-slide"></div>
             {/* <img class="mySlides w3-animate-fading" src="img_rr_02.jpg" />
             <img class="mySlides w3-animate-fading" src="img_rr_03.jpg" /> */}

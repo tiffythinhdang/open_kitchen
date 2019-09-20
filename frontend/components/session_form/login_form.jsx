@@ -18,6 +18,7 @@ class LogInForm extends React.Component {
   }
 
   logInDemo(e) {
+    e.preventDefault();
     if (e.target.id === "demo-login") {
       let user = {
         email: "demo_user@gmail.com",
