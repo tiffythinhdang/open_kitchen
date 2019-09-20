@@ -33,7 +33,9 @@ class Api::ReservationsController < ApplicationController
     @reservation = Reservation.find_by(id: params[:id])
 
     if @reservation
-      @kitchen_name = Kitchen.find_by(id: @reservation.kitchen_id).name
+      kitchen = Kitchen.find_by(id: @reservation.kitchen_id)
+      @kitchen_name = kitchen.name
+      @profile_img = kitchen.photos[0].image_url
       @time = Timeslot.find_by(id: @reservation.timeslot_id).time
       
       render :show

@@ -69,11 +69,16 @@
   margin: 10px 20px;
 }
 
-.reservation-show.kitchen-img > img {
-  width: 70px;
-  height: 70px;
-  border-radius: 4px;
+.reservation-show.kitchen-img {
+  width: 75px;
+  height: 75px;
   margin-right: 20px;
+}
+
+.reservation-show.kitchen-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
   object-fit: cover;
 }
 

@@ -126,7 +126,7 @@ class ReservationShow extends React.Component {
             <div className="reservation-show summary">
               <div className="reservation-show kitchen-img">
                 <img
-                  src={this.props.imageUrls[0]}
+                  src={this.props.reservation.profileImg}
                   alt="kitchen imgage" />
               </div>
 
