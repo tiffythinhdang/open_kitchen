@@ -23,21 +23,64 @@ Things you may want to cover:
 
 * ... -->
 
-Banner
-Name
+<!-- Banner -->
+<a href="https://aa-open-kitchen.herokuapp.com/#/">
+  <img 
+    src="https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen/blob/master/app/assets/images/finalize_logo.png"
+    alt="openkitchen logo" 
+    align="right" height="60"
+  />
+</a>
 
-Description
-OpenKitchen is 
+OpenKitchen
+======================
 
-Version/Installation
+<!-- Description -->
+**OpenKitchen**, inspired by _OpenTable_, is an online platform that allows users to **_discover_** and **_reserve culinary experiences_** that are **_designed and hosted by locals_** around the world. 
 
-Link 
+<!-- Image Header -->
+  <img src="/Users/tiffanydang/Desktop/full_stack_open_kitchen/README/screenshots/splash_page.png">
 
-Technologies used
+<!-- Table of Contents -->
+## Table of content
 
-Features to show
+- [Installation](#installation)
+    - [Setting up](#setting-up)
+    - [Running the app](#running-the-app)
+<!-- - [TYPO3 setup](#typo3-setup)
+    - [Extension](#extension)
+    - [Database](#database)
+- [Page setup](#page-setup)
+    - [Upload the page tree file](#upload-the-page-tree-file)
+    - [Go to the import view](#go-to-the-import-view)
+    - [Import the uploaded page tree file](#import-the-uploaded-page-tree-file)
+- [License](#license)
+- [Links](#links) -->
 
-Code snippets
+<!-- Version/Installation -->
+## Installation
+
+### Setting up
+Please run the following commands:
+- bundle install
+- npm install
+- bundle exec rails db:create
+- bundle exec rails db:migrate
+- bundle exec rails db:seed
+
+### Running the app
+Please run the following commands in seperated tabs:
+- rails s
+- npm start
+
+<!-- Link  -->
+
+<!-- Technologies used -->
+
+
+<!-- Features to show -->
+
+<!-- Code snippets -->
 
 
 

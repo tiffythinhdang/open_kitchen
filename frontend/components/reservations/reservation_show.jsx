@@ -163,9 +163,9 @@ class ReservationShow extends React.Component {
           </div>
         </div>
 
-        <div className="reservation-form show cooking-image">
+        {/* <div className="reservation-form show cooking-image">
           <img src="https://image.flaticon.com/sprites/new_packs/2010744-cooking.png" alt="cooking-image" />
-        </div>
+        </div> */}
       </div>
     )
   }
