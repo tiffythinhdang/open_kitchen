@@ -1,6 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
+<!-- This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
@@ -21,4 +21,23 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
+
+Banner
+Name
+
+Description
+OpenKitchen is 
+
+Version/Installation
+
+Link 
+
+Technologies used
+
+Features to show
+
+Code snippets
+
+
+

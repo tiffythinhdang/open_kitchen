@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import CancelReservation from './cancel_reservation';
-import { updateReservation } from '../../actions/reservations_actions';
+import { updateReservation, fetchAReservation } from '../../actions/reservations_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchAReservation: (id) => dispatch(fetchAReservation(id)),
     updateReservation: (id) => dispatch(updateReservation(id)),
     openModal: (content, params) => dispatch(openModal(content, params)),
     closeModal: () => dispatch(closeModal())

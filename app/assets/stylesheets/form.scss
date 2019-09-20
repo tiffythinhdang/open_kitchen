@@ -79,3 +79,17 @@
 .form.input:focus {
   border: 1px solid $main_orange;
 }
+
+@media only screen and (min-width: 1600px) {
+  .modal-alert.container {
+  left: 31%;
+  right: 31%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .modal-alert.container {
+  left: 33.33%;
+  right: 33.33%;
+  }
+}

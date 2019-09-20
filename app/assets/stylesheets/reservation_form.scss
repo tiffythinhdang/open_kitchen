@@ -104,3 +104,23 @@
 .hightlight.text {
   color: $main_orange;
 }
+
+@media only screen and (min-width: 1600px) {
+  .reservation-form.container {
+    margin-left: 180px;
+  }
+
+  .reservation-form.cooking-image {
+    margin-right: 200px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .reservation-form.container {
+    margin-left: 230px;
+  }
+
+  .reservation-form.cooking-image {
+    margin-right: 250px;
+  }
+}

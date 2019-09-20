@@ -15,7 +15,8 @@ class CancelReservation extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateReservation(this.state)
-      .then(reservation => {
+      .then(res => {
+        this.props.fetchAReservation(res.reservation.id);
         this.props.closeModal();
         this.props.openModal("showSuccessCancel")
       })
