@@ -191,6 +191,58 @@ kitchens:
     host_infor: "Phillipe has been a finalist on Masterchef Season 5, a contestant on Food Network's Cooks vs. Cons Season 2, appeared on LIVE with Kelly & Ryan, USA Today, WGN, a finalist for World Food Championships 2017, HMS Host 2017 finalist and has worked with Fabio Viviani and Graham Elliot. Has also cooked for Scott Conant, Geoffrey Zakarian and Lorena Garcia."
     lat: 41.881080
     lng: -87.634964
+  # Tokyo, Japan
+  - id: 17
+    name: "TAKOYAKI Dinner Party"
+    cuisine: "Japanese"
+    cost: 1
+    region: "Shibuya District"
+    location_id: 5
+    phone_number: "293-182-0034"
+    menu: "Takoyaki + Finger food"
+    description: "You can enjoy cooking and eating Takoyaki with local people. Takoyaki is Octopus balls. If you don’t like an octopus, you can have other options."
+    host_infor: "I'm Isseki. Traveling around the world for a year, I have visited over 35 countries. I enjoyed meeting local people when traveling, and I want to give the same opportunity to travelers in Tokyo. For the past 3 years, I've been holding parties for cultural exchange with travelers & friends."
+    lat: 35.676367
+    lng: 139.677107
+  # Paris, France
+  - id: 18
+    name: "Learn to Bake French Croissant"
+    cuisine: "French"
+    cost: 3
+    region: "Paris"
+    location_id: 8
+    phone_number: "940-119-8371"
+    menu: "French Croissant and Pain au chocolat"
+    description: "Learn how to make the typically \"French Croissant\" & the \"Pain au chocolat\"  :)"
+    host_infor: "We are the ultimate French foodlovers & 100% passionate about our culture. We created \"Foodies in Paris\", so that we could share some truly unique moments with other like-minded devotees like yourselves."
+    lat: 48.855731
+    lng: 2.334241
+  # Rome, Italy
+  - id: 19
+    name: "1 Hour Pizza Class in Rome"
+    cuisine: "Italian"
+    cost: 3
+    region: "Prati"
+    location_id: 7
+    phone_number: "536-471-1699"
+    menu: "Neapolitan Pizza"
+    description: "My crash pizza course is an experience that summarize the whole tradition of Italian pizza masters in an hour. You and me will prepare -strating from flour and water- the inimitable Neapolitan Pizza, from scratch."
+    host_infor: "Hello! I’m Davide your Chef, ethnologist and sommelier in Rome. During my journeys I collected recipes, knowledge and traditions from every different culture I met and now I want you to live a multisensory journey to discover the most incredible flavors of my country."
+    lat: 41.910616
+    lng: 12.455606
+  # Seoul, Korea
+  - id: 20
+    name: "Traditional Kimchi Making in Hongdae"
+    cuisine: "Korean"
+    cost: 3
+    region: "Hongdae"
+    location_id: 6
+    phone_number: "845-294-6432"
+    menu: "Kimchi, Bossam, and Buchimgae"
+    description: "We will meet in my lovely house, which is easy to find from the Hongdae and Hapjeong stations. Then we'll learn about the history of kimchi then start making kimchi. (We will use the best quality vegetables grown on my parents' farm) After that we will decorate our table with kimchi, bossam (boiled pork), Pancake, sticky rice, and various dishes. "
+    host_infor: "I am a person who live for cooking and traveling. While working for five years as an overseas marketer for K-Beauty, I visited USA, Europe, Middle East, Southeast Asia, and so on. I met a lot of people who were interested in Korean food. Now I live as a professional Korean cook, not as an expert on K Beauty. I inherited skill from my mother, who grows and sells kimchi directly from her farm. My class also serves high-quality vegetables and fish grown on my parents' farm in western Korea, where the sea and land coexist."
+    lat: 37.545653
+    lng: 126.918136
 
 locations:
   - id: 1
@@ -645,4 +697,44 @@ kitchen_images:
     image_url: "https://www.dropbox.com/s/7jm2ov12ug7s3r6/ezgif-5-897385995d45.jpg?raw=1"
   - kitchen_id: 16
     image_url: "https://www.dropbox.com/s/lbk8rvs0dinrbq0/ezgif-5-f1990c5f429a.jpg?raw=1"
+  # kitchen_id: 17
+  - kitchen_id: 17
+    image_url: "https://www.dropbox.com/s/5d1oo9r6g0clqqf/ezgif-5-4966ea5c5b35.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 17
+    image_url: "https://www.dropbox.com/s/zcqy4ns2aqttqfh/ezgif-5-231952a8ecb7.jpg?raw=1"
+  - kitchen_id: 17
+    image_url: "https://www.dropbox.com/s/pdqblgjll3vnhhb/ezgif-5-cace4cf68d07.jpg?raw=1"
+  - kitchen_id: 17
+    image_url: "https://www.dropbox.com/s/hi8b0dt1p74h8b6/ezgif-5-cfb699f1ebe8.jpg?raw=1"
+  # kitchen_id: 18
+  - kitchen_id: 18
+    image_url: "https://www.dropbox.com/s/6bdu21tr81vanq3/ezgif-5-1d49a2970772.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 18
+    image_url: "https://www.dropbox.com/s/8j14p1pyf3yuwze/ezgif-5-55aba548531a.jpg?raw=1"
+  - kitchen_id: 18
+    image_url: "https://www.dropbox.com/s/ncjmx3khfk7vkc8/ezgif-5-92d82a2042ef.jpg?raw=1"
+  - kitchen_id: 18
+    image_url: "https://www.dropbox.com/s/m134mlg214b9dxm/ezgif-5-ef34f93a2bc5.jpg?raw=1"
+  # kitchen_id: 19
+  - kitchen_id: 19
+    image_url: "https://www.dropbox.com/s/kql5a8dug5ls9ga/023ee2b6-13f7-427b-aeaf-98f4ee39eff8.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 19
+    image_url: "https://www.dropbox.com/s/632s44zfccesera/0413aac1-12ec-4d18-869d-12b88ee8ddaa.jpg?raw=1"
+  - kitchen_id: 19
+    image_url: "https://www.dropbox.com/s/m2esnnihet73pkv/de5ad72a-898e-4d9b-afc1-e7779d7f5761.jpg?raw=1"
+  - kitchen_id: 19
+    image_url: "https://www.dropbox.com/s/7qks1p4hhmlqed5/ezgif-5-2f31c48a4bcf.jpg?raw=1"
+  # kitchen_id: 20
+  - kitchen_id: 20
+    image_url: "https://www.dropbox.com/s/olqzsigbij19t2y/ezgif-5-00e692c77de1.jpg?raw=1"
+    profile_photo: true
+  - kitchen_id: 20
+    image_url: "https://www.dropbox.com/s/pjshe5ypgv5d1ki/ezgif-5-1e0d6e4d0e89.jpg?raw=1"
+  - kitchen_id: 20
+    image_url: "https://www.dropbox.com/s/7s8eqmmnxy7q10u/ezgif-5-99e95b340da6.jpg?raw=1"
+  - kitchen_id: 20
+    image_url: "https://www.dropbox.com/s/7yhucl4nlyovd45/ezgif-5-132f4edea53e.jpg?raw=1"
 
