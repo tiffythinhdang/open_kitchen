@@ -126,7 +126,7 @@ class ReservationShow extends React.Component {
             <div className="reservation-show summary">
               <div className="reservation-show kitchen-img">
                 <img
-                  src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg"
+                  src={this.props.imageUrls[0]}
                   alt="kitchen imgage" />
               </div>
 

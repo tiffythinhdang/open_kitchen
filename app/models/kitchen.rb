@@ -28,6 +28,10 @@ class Kitchen < ApplicationRecord
   has_many :reservations
   has_many :reviews
   has_many :photos
+  has_many :favorites
+  has_many :followers, 
+    through: :favorites,
+    source: :user
 
   # Reservation helper methods
   def capacity(timeslot_id)

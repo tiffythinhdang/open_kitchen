@@ -21,6 +21,8 @@ import ReservationShowContainer from './reservations/reservation_show_container'
 import Splash from './splash/splash';
 import ProfileContainer from './dashboard/profile_container';
 import MyReservationsContainer from './dashboard/my_reservations_container';
+import MySavedKitchens from './dashboard/my_saved_kitchens';
+import NoMatch from './nomatch/no_match';
 
 class ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
@@ -43,14 +45,16 @@ const App = () => (
     <TopBar />
     <Scroll>
       <Switch>
-      <Route exact path="/" component={Splash} />
-      <Route path="/search" component={SearchContainer} />
-      <Route path="/kitchens/:kitchenId" component={KitchenShowContainer} />
-      <Route exact path="/reservations/new" component={CreateReservationFormContainer} />
-      <Route path="/reservations/:reservationId" component={ReservationShowContainer} />
+        <Route exact path="/" component={Splash} />
+        <Route path="/search" component={SearchContainer} />
+        <Route path="/kitchens/:kitchenId" component={KitchenShowContainer} />
+        <Route exact path="/reservations/new" component={CreateReservationFormContainer} />
+        <Route path="/reservations/:reservationId" component={ReservationShowContainer} />
 
-      <Route exact path="/my/profile" component={ProfileContainer} />
-      <Route exact path="/my/reservations" component={MyReservationsContainer} />
+        <Route path="/my/profile" component={ProfileContainer} />
+        <Route path="/my/reservations" component={MyReservationsContainer} />
+        <Route path="/my/favorites" component={MySavedKitchens} />
+        <Route component={NoMatch} />
       </Switch>
     </Scroll>
     <Footer />

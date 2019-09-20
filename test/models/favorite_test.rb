@@ -1,18 +1,17 @@
 # == Schema Information
 #
-# Table name: locations
+# Table name: favorites
 #
 #  id         :bigint           not null, primary key
-#  city       :string           not null
-#  country    :string           not null
+#  user_id    :integer          not null
+#  kitchen_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  image_url  :string
 #
 
 require 'test_helper'
 
-class LocationTest < ActiveSupport::TestCase
+class FavoriteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
