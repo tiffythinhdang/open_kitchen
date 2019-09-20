@@ -10,15 +10,29 @@ class LogInForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.logInDemo = this.logInDemo.bind(this);
   }
 
   handleChange(type) {
     return (e) => this.setState({ [type]: e.target.value })
   }
 
+  logInDemo(e) {
+    debugger
+    if (e.target.id === "demo-login") {
+      let user = {
+        email: "demo_user@gmail.com",
+        password: "123456"
+      }
+      this.props.logIn(user)
+        .then(user => {
+          this.props.closeModal();
+      })
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-
     this.props.logIn(this.state)
       .then(user => {
         this.props.closeModal();
@@ -69,6 +83,11 @@ class LogInForm extends React.Component {
           <button 
             type="submit"
             className="large main button">Log In
+          </button>
+          <button 
+            id="demo-login"
+            onClick={this.logInDemo}
+            className="large secondary button">As Demo User
           </button>
           <p className="link-container">
             <a 
