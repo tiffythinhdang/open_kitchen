@@ -26,8 +26,9 @@ class FeaturedCityIndexItem extends React.Component {
     return (
       <div className="feature-city-index-item container" onClick={this.handleClick}>
         <div className="city-background">
+          <div className="overlay-img-color"></div>
           <img
-            src="https://image.winudf.com/v2/image/Y29tLkNoaWVmV2FsbHBhcGVycy5TYW4xNDlfc2NyZWVuc2hvdHNfMF8yZDk5MzdlMg/screen-0.jpg?fakeurl=1&type=.jpg" 
+            src={this.props.local.imageUrl}
             alt="city photo"
           />
         </div>
