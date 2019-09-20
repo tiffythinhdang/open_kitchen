@@ -196,27 +196,35 @@ locations:
   - id: 1
     city: "San Francisco"
     country: "United States"
+    image_url: "https://www.dropbox.com/s/zu1onu0e01v01b4/san_francisco.jpg?raw=1"
   - id: 2
     city: "Los Angeles"
     country: "United States"
+    image_url: "https://www.dropbox.com/s/gdg9btbuabnk63g/los_angeles.jpg?raw=1"
   - id: 3
     city: "New York"
     country: "United States"
+    image_url: "https://www.dropbox.com/s/y8meonb05ubhytb/new_york.jpg?raw=1"
   - id: 4
     city: "Chicago"
     country: "United States"
+    image_url: "https://www.dropbox.com/s/75hb8ca4yqetrcn/chicago.jpg?raw=1"
   - id: 5
     city: "Tokyo"
     country: "Japan"
+    image_url: "https://www.dropbox.com/s/v9sn02labaoje4t/tokyo.jpg?raw=1"
   - id: 6
     city: "Seoul"
     country: "Korea"
+    image_url: "https://www.dropbox.com/s/34ohzp5ls8ccre5/seoul.jpg?raw=1"
   - id: 7
     city: "Rome"
     country: "Italy"
+    image_url: "https://www.dropbox.com/s/0zfmofcqoikzkoi/rome.jpg?raw=1"
   - id: 8
     city: "Paris"
     country: "France"
+    image_url: "https://www.dropbox.com/s/mzegxcg7hwuzsbw/paris.jpg?raw=1"
 
 cuisines:
   - id: 1
