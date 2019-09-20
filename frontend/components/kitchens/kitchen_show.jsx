@@ -3,7 +3,6 @@ import { HashLink } from 'react-router-hash-link';
 
 import KitchenBasicInfo from './kitchen_basic_info';
 import ReviewIndexContainer from '../reviews/review_index_container';
-import KitchenCreateReservationContainer from '../reservations/kitchen_create_reservation_container';
 import PhotosIndex from '../photos/photo_index';
 
 class KitchenShow extends React.Component {
@@ -73,8 +72,6 @@ class KitchenShow extends React.Component {
         </header>
 
         <div className="kitchen-show container">
-          {/* <KitchenCreateReservationContainer kitchen={this.props.kitchen} /> */}
-          
           <div className="kitchen-show nav-container">
             <div className="kitchen-show nav">
               <HashLink 
