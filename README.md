@@ -56,7 +56,7 @@ Please run the following commands in seperated tabs:
 
 ### Reservation Search and Filter
 - Users can search for available kitchens by time, date, location, and party size.\
-  _This is accomplished through sending ajax calls to the database. Backend code is as below:_
+  _This is accomplished through sending ajax calls to the database. Backend code for the query is as below:_
   ```
   class Api::KitchensController < ApplicationController
     def index
@@ -92,7 +92,7 @@ Please run the following commands in seperated tabs:
   ```
 
 - Users can filter through these options by price, cuisine, and average rating.\
-  _This is accomplished through changing the state in the frontend without having to re-query the database. Frontend code is as below:_
+  _This is accomplished through changing the state in the frontend without having to re-query the database. Frontend code to filter is as below:_
   ```
   class Search extends React.Component {
     constructor(props) {
@@ -144,20 +144,15 @@ Please run the following commands in seperated tabs:
     }
   }
   ```
-- User can make reservations and keep track of them on the
+- Users can make reservations and keep track of them on their profiles.
 ### Review and Rating
 - Users can rate and leave reviews for kitchens on the site.
 
 ### Favorite/ Save
 - Users can save kitchens that they are interested in for booking in the future.
+- These kitchens are stored in their profiles.
 
-<!-- Link  -->
-
-<!-- Technologies used -->
-
-
-
-<!-- Code snippets -->
-
-
-
+<!-- Links -->
+## Links
+* [Web site](https://aa-open-kitchen.herokuapp.com/#/)
+* [Documentation](https://github.com/tiffythinhdang/open_kitchen/wiki)
