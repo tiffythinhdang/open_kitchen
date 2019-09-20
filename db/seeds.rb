@@ -149,6 +149,7 @@ ActiveRecord::Base.transaction do
   # Compute avg_rating and num_reviews for each kitchen
   Kitchen.all.each do |kitchen|
     num_reviews = kitchen.reviews.count
+    next if num_reviews == 0
     sum_rating = kitchen.reviews.map{ |review| review.rating }.sum
     avg_rating = ( sum_rating / num_reviews ).round(2)
     kitchen.update!(number_reviews: num_reviews, average_rating: avg_rating)
