@@ -17,6 +17,7 @@ class KitchenShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchAKitchen(this.props.match.params.kitchenId)
+    if (!this.props.currentUserId) return;
     this.props.fetchFavorites()
   }
 
@@ -27,6 +28,8 @@ class KitchenShow extends React.Component {
   }
 
   displayFavoriteButton() {
+    if (!this.props.currentUserId) return;
+
     let kitchenId = this.props.kitchen.id;
     if ( !this.props.favKitchenIds.includes(kitchenId) ) {
       return (
