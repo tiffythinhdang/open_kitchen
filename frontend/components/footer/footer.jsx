@@ -7,7 +7,11 @@ class Footer extends React.Component {
         <div className="footer block">
           <div className="footer block item">
             <p className="footer block title">OPEN KITCHEN</p>
-            <a className="link" href="#">About the Developer</a>
+            <a 
+              className="link" 
+              href="https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen"
+              target="_blank"
+              >About the Code</a>
             <a 
               className="link" 
               href="https://www.opentable.com/" 
