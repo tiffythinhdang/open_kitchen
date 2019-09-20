@@ -18,7 +18,6 @@ class LogInForm extends React.Component {
   }
 
   logInDemo(e) {
-    debugger
     if (e.target.id === "demo-login") {
       let user = {
         email: "demo_user@gmail.com",
@@ -65,6 +64,7 @@ class LogInForm extends React.Component {
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
           <input
+            id="email-input"
             type="email"
             className="form input"
             value={this.state.email}
@@ -73,6 +73,7 @@ class LogInForm extends React.Component {
           />
 
           <input
+            id="password-input"
             type="password"
             className="form input"
             value={this.state.password}

@@ -2,14 +2,13 @@ class Api::FavoritesController < ApplicationController
   before_action :ensure_log_in
 
   def index
-    debugger
     @favorites = current_user.favorites
     @image_urls = []
     @kitchens = []
     
     @favorites.each do |favorite|
       kitchen = Kitchen.find_by(id: favorite.kitchen_id)
-      @kitchen.push(kitchen)
+      @kitchens.push(kitchen)
       @image_urls.push(kitchen.photos.where(profile_photo: true).pluck(:image_url)[0])
     end
     
@@ -27,8 +26,11 @@ class Api::FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = Favorite.find_by(id: params[:id])
-
+    @favorite = Favorite.find_by(
+      user_id: favorite_params[:user_id], 
+      kitchen_id: favorite_params[:kitchen_id]
+    )
+  
     if @favorite.user_id = current_user.id
       @favorite.destroy
       render json: @favorite

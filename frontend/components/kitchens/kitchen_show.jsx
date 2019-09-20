@@ -10,10 +10,7 @@ class KitchenShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // favorite: {
-      //   user_id: this.props.currentUserId,
-      //   kitchen_id: this.props.kitchen.id
-      // }
+      favorite: this.props.favorite
     }
 
     this.handleFavorite = this.handleFavorite.bind(this);
@@ -21,7 +18,7 @@ class KitchenShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchAKitchen(this.props.match.params.kitchenId)
-    // this.props.fetchFavorites()
+    this.props.fetchFavorites()
   }
 
   componentDidUpdate(prevProps) {
@@ -56,11 +53,12 @@ class KitchenShow extends React.Component {
   handleFavorite(e) {
     if ( e.target.id === "favorite-button" ) {
       this.props.createFavorite(this.state.favorite)
+        .then(favorite => this.props.fetchFavorites())
     } else if ( e.target.id === "unfavorite-button" ) {
       this.props.deleteFavorite(this.state.favorite)
+        .then(favorite => this.props.fetchFavorites())
     }
   }
-  
 
   render() {
     if (!this.props.kitchen) return null;

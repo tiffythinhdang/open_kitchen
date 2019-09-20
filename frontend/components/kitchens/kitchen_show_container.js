@@ -12,7 +12,11 @@ const mapStateToProps = (state, ownProps) => {
     kitchen: state.entities.kitchens[kitchenId],
     currentUserId: state.session.currentUserId,
     favorites: state.entities.favorites,
-    favKitchenIds: favKitchenIds
+    favKitchenIds: favKitchenIds,
+    favorite: {
+      user_id: state.session.currentUserId,
+      kitchen_id: kitchenId
+    }
   }
 };
 

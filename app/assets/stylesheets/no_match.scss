@@ -1,0 +1,30 @@
+@import './utils.scss';
+
+.no-match.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.panda.container {
+  width: 30%;
+  height: auto;
+}
+
+.no-match-message.container {
+  text-align: center;
+}
+
+.no-match-message.container > h1 {
+  font-size: 54px;
+  font-weight: bold;
+  margin: 10px;
+  color: $main_orange;
+}
+
+.no-match-message.container > p {
+  font-size: 18px;
+  margin: 5px;
+  color: $mediumgray;
+}
