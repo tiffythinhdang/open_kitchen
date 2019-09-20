@@ -11,16 +11,29 @@
   position: relative;
 }
 
-.item.profile-img {
-  width: 100%;
-  height: 100%;
-}
-
 .feature-city-index-item.container:hover {
   box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
   top: -5px;
   opacity: 0.75;
   cursor: pointer;
+}
+
+.city-background {
+  width: 100%;
+  height: 100%;
+}
+
+.item.profile-img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-img-color {
+  background: $darkgray;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  opacity: 0.5;
 }
 
 .feature-location-index.main-content {
@@ -31,14 +44,6 @@
   align-items: center; 
   flex-wrap: wrap;
   box-sizing: border-box;
-}
-
-.overlay-img-color {
-  background: $darkgray;
-  position: absolute;
-  width: 100%;
-  height:100%;
-  opacity: 0.5;
 }
 
 .city.main-content {

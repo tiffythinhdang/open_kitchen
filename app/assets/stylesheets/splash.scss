@@ -3,7 +3,7 @@
 .splash-page.header {
   width: 100%;
   height: 416px;
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("https://a0.muscache.com/4ea/air/v2/pictures/64438769-6d53-4e9a-89e0-2639a8184931.jpg?t=r:w3393-h1356-sfit,e:fjpg-c90");
+  // background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("https://a0.muscache.com/4ea/air/v2/pictures/64438769-6d53-4e9a-89e0-2639a8184931.jpg?t=r:w3393-h1356-sfit,e:fjpg-c90");
   background-position: center;
   background-size: contain;
   display: flex;
@@ -12,18 +12,46 @@
   align-items: center;
 }
 
+.carousel.container {
+  position: absolute;
+  width: 100%;
+  height: 416px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel.slide {
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.carousel.container > .overlay-slide {
+  width: 100%;
+  height: 416px;
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
+  opacity: 0.5;
+  z-index: 2;
+  position: absolute;
+}
+
 .splash.header.title {
   font-size: 45px;
   text-align: center;
   color: $white;
   padding-left: 25%;
   padding-right: 25%;
+  z-index: 3;
+}
+
+.search.bar {
+  z-index: 3;
 }
 
 .splash-page.header > .search.bar {
   margin: 0;
 }
-
 
 @media only screen and (max-width: 1100px) {
   .splash.header.title {
