@@ -67,7 +67,6 @@ class KitchenShow extends React.Component {
           { this.displayFavoriteButton() }
 
           <div className="header-image container">
-            <img src="https://www.bakefromscratch.com/wp-content/uploads/2017/09/Unknown-3.jpeg" alt="temp_img"/>
           </div>
         </header>
 

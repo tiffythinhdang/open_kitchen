@@ -70,7 +70,7 @@ class ReservationForm extends React.Component {
             <div className="reservation-form kitchen-img">
               <Link target="_blank" to={`/kitchens/${this.props.form.kitchen_id}`}>
                 <img
-                  src="https://content.phuket101.net/wp-content/uploads/20190731181616/phuket-cooking-classes.jpg"
+                  src={this.props.kitchen.profilePhoto}
                   alt="kitchen imgage" />
               </Link>
             </div>

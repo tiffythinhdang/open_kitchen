@@ -1,11 +1,19 @@
 @import './utils.scss';
 
 .feature-city-index-item.container {
-  width: 532px;
+  width: 45%;
   height: 250px;
   margin: 25px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   position: relative;
+}
+
+.item.profile-img {
+  width: 100%;
+  height: 100%;
 }
 
 .feature-city-index-item.container:hover {
