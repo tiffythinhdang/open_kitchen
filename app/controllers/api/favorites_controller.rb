@@ -2,8 +2,8 @@ class Api::FavoritesController < ApplicationController
   before_action :ensure_log_in
 
   def index
-    @favorites = current_user.favorites
     debugger
+    @favorites = current_user.favorites
     @image_urls = []
     @kitchens = []
     

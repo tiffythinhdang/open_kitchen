@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 import KitchenBasicInfo from './kitchen_basic_info';
 import ReviewIndexContainer from '../reviews/review_index_container';
@@ -20,7 +21,7 @@ class KitchenShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchAKitchen(this.props.match.params.kitchenId)
-    this.props.fetchFavorites()
+    // this.props.fetchFavorites()
   }
 
   componentDidUpdate(prevProps) {
@@ -74,14 +75,33 @@ class KitchenShow extends React.Component {
         </header>
 
         <div className="kitchen-show container">
-          <KitchenCreateReservationContainer kitchen={this.props.kitchen} />
+          {/* <KitchenCreateReservationContainer kitchen={this.props.kitchen} /> */}
           
           <div className="kitchen-show nav-container">
             <div className="kitchen-show nav">
-              <a className="kitchen-show-nav item active" href="#overview">Overview</a>
-              <a className="kitchen-show-nav item" href="#photos">Photos</a>
-              <a className="kitchen-show-nav item" href="#menus">Menu</a>
-              <a className="kitchen-show-nav item" href="#reviews">Reviews</a>
+              <HashLink 
+                to={`/kitchens/${this.props.kitchen.id}#overview`}
+                className="kitchen-show-nav item active"
+                >Overview
+              </HashLink>
+
+              <HashLink
+                to={`/kitchens/${this.props.kitchen.id}#menu`}
+                className="kitchen-show-nav item"
+              >Menu
+              </HashLink>
+
+              <HashLink 
+                to={`/kitchens/${this.props.kitchen.id}#photos`}
+                className="kitchen-show-nav item"
+                >Photos
+              </HashLink>
+
+              <HashLink 
+                to={`/kitchens/${this.props.kitchen.id}#reviews`}
+                className="kitchen-show-nav item"
+                >Reviews
+              </HashLink>
             </div>
             <div className="slider-bar"></div>
           </div>
@@ -92,12 +112,12 @@ class KitchenShow extends React.Component {
             <KitchenBasicInfo kitchen={this.props.kitchen}/>
 
             <div className="kitchen-show description">
-              <h3 name="overview">Overview</h3>
+              <h3 id="overview">Overview</h3>
               <p>{this.props.kitchen.description}</p>
             </div>
 
             <div className="kitchen-show description">
-              <h3 name="menus">Menu</h3>
+              <h3 id="menu">Menu</h3>
               <p>{this.props.kitchen.menu}</p>
             </div>
 
@@ -107,12 +127,12 @@ class KitchenShow extends React.Component {
             </div>
 
             <div className="kitchen-show photos">
-              <h3 name="photos">Photos</h3>
+              <h3 id="photos">Photos</h3>
               <PhotosIndex imageUrls={this.props.kitchen.imageUrls} />
             </div>
 
             <div className="kitchen-show reviews">
-              <h3 name="reviews">Reviews</h3>
+              <h3 id="reviews">Reviews</h3>
               <ReviewIndexContainer kitchen={this.props.kitchen} />
             </div>
 
