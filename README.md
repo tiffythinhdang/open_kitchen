@@ -33,18 +33,25 @@ OpenKitchen
 <!-- Installation -->
 ## Installation
 
+### Prerequisites
+Postgres Database is required for OpenKitchen to operate correctly.
+
 ### Setting up
 Please run the following commands:
-- bundle install
-- npm install
-- bundle exec rails db:create
-- bundle exec rails db:migrate
-- bundle exec rails db:seed
+```ruby
+bundle install
+npm install
+bundle exec rails db:create
+bundle exec rails db:migrate
+bundle exec rails db:seed
+```
 
 ### Running the app
-Please run the following commands in seperated tabs:
-- rails s
-- npm start
+Please run the following commands in separate tabs:
+```ruby
+rails s
+npm start
+```
 
 <!-- Features to show -->
 ## OpenKitchen Features
@@ -151,6 +158,13 @@ Please run the following commands in seperated tabs:
 ### Favorite/ Save
 - Users can save kitchens that they are interested in for booking in the future.
 - These kitchens are stored in their profiles.
+
+<a>
+  <img 
+    src="https://i.imgur.com/NWXPRQl.gif"
+    alt="openkitchen profile walkthrough" 
+  />
+</a>
 
 <!-- Links -->
 ## Links
