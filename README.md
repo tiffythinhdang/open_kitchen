@@ -57,7 +57,7 @@ Please run the following commands in seperated tabs:
 ### Reservation Search and Filter
 - Users can search for available kitchens by time, date, location, and party size.\
   _This is accomplished through sending ajax calls to the database. Backend code for the query is as below:_
-  ```
+  ```ruby
   class Api::KitchensController < ApplicationController
     def index
       req_location = kitchen_params[:location_id]
@@ -93,7 +93,7 @@ Please run the following commands in seperated tabs:
 
 - Users can filter through these options by price, cuisine, and average rating.\
   _This is accomplished through changing the state in the frontend without having to re-query the database. Frontend code to filter is as below:_
-  ```
+  ```javascript
   class Search extends React.Component {
     constructor(props) {
       super(props);
