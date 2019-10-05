@@ -13,7 +13,7 @@ class Greeting extends React.Component {
   }
 
   toggleDropDown(e) {
-    e.preventDefault();
+    // e.preventDefault();
     let dropDown = document.getElementsByClassName("drop down container")[0];
     dropDown.classList.toggle("hidden");
   }
@@ -40,7 +40,9 @@ class Greeting extends React.Component {
         <a onClick={this.toggleDropDown} className="drop-down small icon">
           <img src={iconArrowDown} alt="arrow_down" />
         </a>
-        <DropDownPersonalNavContainer />
+        <DropDownPersonalNavContainer 
+          toggleDropDown={this.toggleDropDown}
+        />
       </div>
     )
   }
