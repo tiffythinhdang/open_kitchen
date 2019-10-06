@@ -6,14 +6,13 @@ import iconArrowDown from 'assets/images/small_icon_arrow-down.png';
 
 class Greeting extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.sessionLinks = this.sessionLinks.bind(this);
     this.personalGreeting = this.personalGreeting.bind(this);
   }
 
-  toggleDropDown(e) {
-    // e.preventDefault();
+  toggleDropDown() {
     let dropDown = document.getElementsByClassName("drop down container")[0];
     dropDown.classList.toggle("hidden");
   }
