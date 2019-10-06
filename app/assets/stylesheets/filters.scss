@@ -54,6 +54,14 @@
   width: auto;
 }
 
+.rating-selector > label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  color: $mediumgray;
+}
+
 .price-filter.items {
   flex-direction: row;
 }

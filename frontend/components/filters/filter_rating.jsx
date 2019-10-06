@@ -46,7 +46,7 @@ class RatingFilter extends React.Component {
               value="5" 
               onChange={this.toggleSelect}
               checked={this.state.averageRating.includes(5)}/>
-            <label><img className="rating-filter-stars" src={icon5Star} alt="icon 5-star"/></label>
+            <label><img className="rating-filter-stars" src={icon5Star} alt="icon 5-star" /> &nbsp; & up</label>
           </div>
 
           <div className="rating-selector">
@@ -56,7 +56,7 @@ class RatingFilter extends React.Component {
               value="4" 
               onChange={this.toggleSelect}
               checked={this.state.averageRating.includes(4)} />
-            <label><img className="rating-filter-stars" src={icon4Star} alt="icon 4-star"/></label>
+            <label><img className="rating-filter-stars" src={icon4Star} alt="icon 4-star" /> &nbsp; & up</label>
           </div>
 
           <div className="rating-selector">
@@ -66,7 +66,7 @@ class RatingFilter extends React.Component {
               value="3" 
               onChange={this.toggleSelect}
               checked={this.state.averageRating.includes(3)} />
-            <label><img className="rating-filter-stars" src={icon3Star} alt="icon 3-star"/></label>
+            <label><img className="rating-filter-stars" src={icon3Star} alt="icon 3-star" /> &nbsp; & up</label>
           </div>
         </div>
       </div>

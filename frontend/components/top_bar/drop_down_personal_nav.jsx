@@ -1,25 +1,57 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class DropDownPersonalNav extends React.Component {
+  constructor(props){
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
   logOutAndRedirect() {
     this.props.logOut().then(this.props.history.push('/'))
   };
+
+  handleClick(type) {
+    return () => { 
+      this.props.toggleDropDown();
+      switch (type) {
+        case "profile":
+          return this.props.history.push("/my/profile");
+        case "reservations":
+          return this.props.history.push("/my/reservations");
+        case "favorites":
+          return this.props.history.push("/my/favorites");
+        default:
+          break;
+      }
+    }
+  }
 
   render() {
     return (
       <div className="drop down container hidden">
         <div className="drop down personal nav">
           <div className="drop down items">
-            <Link className="link" to='/my/profile'>My Profile</Link>
+            <a 
+              className="link" 
+              onClick={this.handleClick("profile")}
+              >My Profile
+            </a>
           </div>
   
           <div className="drop down items">
-            <Link className="link" to='/my/reservations'>My Reservations</Link>
+            <a
+              className="link"
+              onClick={this.handleClick("reservations")}
+              >My Reservations
+            </a>
           </div>
   
           <div className="drop down items">
-            <Link className="link" to='/my/favorites'>My Saved Kitchens</Link>
+            <a
+              className="link"
+              onClick={this.handleClick("favorites")}
+              >My Saved Kitchens
+            </a>
           </div>
   
           <div className="drop down items last">
@@ -31,4 +63,4 @@ class DropDownPersonalNav extends React.Component {
   }
 };
 
-export default DropDownPersonalNav;
+export default withRouter(DropDownPersonalNav);
