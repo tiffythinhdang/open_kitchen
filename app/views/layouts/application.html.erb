@@ -7,8 +7,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="shortcut icon" type="image/png" href="../assets/logo.png" />
-     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap&subset=latin-ext,vietnamese"
+    <%= favicon_link_tag asset_path('logo.png') %>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap&subset=latin-ext,vietnamese"
     rel="stylesheet">
     
     <% if logged_in? %>
