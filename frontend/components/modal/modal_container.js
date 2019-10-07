@@ -9,9 +9,9 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = state => {
+const mapDispatchToProps = dispatch => {
   return {
-    openModal: (content) => dispatchEvent(openModal(content)),
+    openModal: (content) => dispatch(openModal(content)),
     closeModal: () => dispatch(closeModal())
   }
 }

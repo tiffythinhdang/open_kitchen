@@ -57,8 +57,9 @@ class Kitchen < ApplicationRecord
   # Review/Rating helper methods - Need to combine
 
   def self.recalculate_avg_rating_and_num_reviews(kitchen_id, action, rating, old_rating = nil)
+    debugger
     kitchen = Kitchen.find_by(id: kitchen_id)
-    curr_avg_rating = kitchen.average_rating
+    curr_avg_rating = kitchen.average_rating || 0
     curr_num_reviews = kitchen.number_reviews
 
     if action == "create"
