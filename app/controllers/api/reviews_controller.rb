@@ -2,7 +2,6 @@ class Api::ReviewsController < ApplicationController
   before_action :ensure_log_in, only: [:create, :update, :destroy]
 
   def index
-    # debugger
     @kitchen = Kitchen.find_by(id: params[:kitchen_id])
     @reviews = @kitchen.reviews
     @users = @reviews.map do |review|
