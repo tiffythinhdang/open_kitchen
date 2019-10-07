@@ -20,8 +20,9 @@ OpenKitchen
 
 <!-- Table of Contents -->
 ## Table of content
-
+- [Technologies](#technologies)
 - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
     - [Setting up](#setting-up)
     - [Running the app](#running-the-app)
 - [OpenKitchen Features](#openkitchen-features)
@@ -29,7 +30,13 @@ OpenKitchen
     - [Reservation Search and Filter](#reservation-search-and-filter)
     - [Review and Rating](#review-and-rating)
     - [Favorite/ Save](#favorite-save)
-    
+
+<!-- Technologies -->
+## Technologies
+  - Database: PostgreSQL
+  - Backend: Ruby on Rails
+  - Frontend: React.js, Redux.js, JavaScript, jQuery
+
 <!-- Installation -->
 ## Installation
 
