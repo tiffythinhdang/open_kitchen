@@ -4,6 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 import KitchenBasicInfo from './kitchen_basic_info';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import PhotosIndex from '../photos/photo_index';
+import IndividualMap from '../map/individual_map';
 
 class KitchenShow extends React.Component {
   constructor(props) {
@@ -95,6 +96,12 @@ class KitchenShow extends React.Component {
               </HashLink>
 
               <HashLink 
+                to={`/kitchens/${this.props.kitchen.id}#location`}
+                className="kitchen-show-nav item"
+                >Location
+              </HashLink>
+
+              <HashLink 
                 to={`/kitchens/${this.props.kitchen.id}#reviews`}
                 className="kitchen-show-nav item"
                 >Reviews
@@ -126,6 +133,11 @@ class KitchenShow extends React.Component {
             <div className="kitchen-show photos">
               <h3 id="photos">Photos</h3>
               <PhotosIndex imageUrls={this.props.kitchen.imageUrls} />
+            </div>
+
+            <div className="kitchen-show map">
+              <h3 id="location">Location</h3>
+              <IndividualMap lat={this.props.kitchen.lat} lng={this.props.kitchen.lng}/>
             </div>
 
             <div className="kitchen-show reviews">
