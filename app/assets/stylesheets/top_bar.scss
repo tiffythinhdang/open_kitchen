@@ -103,11 +103,28 @@
   }
 
   .personal.greeting {
-    font-size: 18px;
+    font-size: 16px;
     width: 50vw;
     display: flex;
     justify-content: flex-end;
-  } 
+  }
+  
+  .drop.down.personal.nav {
+    position: absolute;
+    width: 200px;
+    height: 160px;
+    right: 5vw;
+    top: 48px;
+  }
+
+  .drop.down.items {
+    width: 199px;
+    height: 40px;
+  }
+
+  .drop.down.items > a {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
