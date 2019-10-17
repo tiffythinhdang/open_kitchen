@@ -86,6 +86,7 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .footer.content {
+    position: relative;
     width: 100vw;
     height: auto;
     padding: 25px 5vw;
