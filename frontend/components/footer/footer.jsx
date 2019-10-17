@@ -11,32 +11,32 @@ class Footer extends React.Component {
         <div className="footer block">
           <div className="footer block item">
             <p className="footer block title">OPEN KITCHEN</p>
-            <a 
-              className="link" 
+            <a
+              className="link"
               href="https://github.com/tiffythinhdang/aa_full_stack_project_open_kitchen"
               target="_blank"
-              >About the Code</a>
-            <a 
-              className="link" 
-              href="https://www.opentable.com/" 
+            >About the Code</a>
+            <a
+              className="link"
+              href="https://www.opentable.com/"
               target="_blank"
-              >Inspiration site
-            </a>
+            >Inspiration site
+          </a>
           </div>
 
           <div className="footer block item">
             <p className="footer block title">DISCOVER</p>
-            <a 
-              className="link" 
+            <a
+              className="link"
               href="https://influencermarketinghub.com/12-best-food-blogs/"
               target="_blank"
-              >Beautiful Food Blogs
-            </a>
-            <a 
-              className="link" 
+            >Beautiful Food Blogs
+          </a>
+            <a
+              className="link"
               href="https://www.eater.com/a/food-cities-maps-travel-guide"
               target="_blank"
-              >Eater: Around the World</a>
+            >Eater: Around the World</a>
           </div>
 
           <div className="footer block item ">

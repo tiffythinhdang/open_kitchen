@@ -11,6 +11,7 @@
 }
 
 .search.bar > form {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,12 +77,59 @@ input[type="date"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (min-width: 679px), (max-width: 1100px) {
   .search.bar > form {
     flex-direction: column;
   }
 
   .city-country.selector,.main.medium.button.search {
     width: 540px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .search.bar > form {
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .selector {
+    height: 54px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .input-container.with-icon > .icon {
+    padding-left: 17px;
+    padding-top: 17px;
+  }
+
+  .city-country.selector, .main.medium.button.search {
+    width: 90vw;
+  }
+
+  .date.selector {
+    width: 90vw;
+    border-radius: 4px;
+  }
+
+  .time.selector {
+    width: 90vw;
+    border-radius: 4px;
+    border-style: solid;
+  }
+
+  .party-size.selector {
+    width: 90vw;
+    border-radius: 4px;
+  }
+
+  .date-time-party.selector-container {
+    width: 90vw;
+    margin: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
