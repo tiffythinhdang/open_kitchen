@@ -137,7 +137,12 @@ class KitchenShow extends React.Component {
 
             <div className="kitchen-show map">
               <h3 id="location">Location</h3>
-              <IndividualMap lat={this.props.kitchen.lat} lng={this.props.kitchen.lng}/>
+              <IndividualMap 
+                lat={this.props.kitchen.lat} 
+                lng={this.props.kitchen.lng}
+                name={this.props.kitchen.name}
+                region={this.props.kitchen.region}
+              />
             </div>
 
             <div className="kitchen-show reviews">
