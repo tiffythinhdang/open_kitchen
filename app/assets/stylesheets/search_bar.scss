@@ -11,6 +11,7 @@
 }
 
 .search.bar > form {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,11 +77,20 @@ input[type="date"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+@media only screen and (min-width: 679px), (max-width: 1100px) {
+  .search.bar > form {
+    flex-direction: column;
+  }
+
+  .city-country.selector,.main.medium.button.search {
+    width: 540px;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .search.bar > form {
-    width: 100%;
+    width: 100vw;
     flex-direction: column;
   }
 
@@ -122,5 +132,4 @@ input[type="date"]::-webkit-inner-spin-button {
     justify-content: center;
     align-items: center;
   }
-
 }

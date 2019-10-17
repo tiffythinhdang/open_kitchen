@@ -80,6 +80,41 @@
   border: 1px solid $main_orange;
 }
 
+@media only screen and (max-width: 768px) {
+  .modal-alert.container {
+    left: 2.5vw;
+    right: 2.5vw;
+    top: 50px;
+    bottom: auto;
+    padding: 25px 0px;
+  }
+
+  .modal-alert > h1 {
+    width: 90vw;
+    font-size: 32px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .form.input {
+    width: 80vw;
+  }
+
+  .sign-up.modal-alert.container button, .log-in.modal-alert.container button {
+    width: 80vw;
+  }
+
+  // Sign-up Form
+  .sign-up.modal-alert.container {
+    width: 95vw;
+  }
+
+  // Log-in Form
+  .log-in.modal-alert.container {
+    width: 95vw;
+  }
+}
+
 @media only screen and (min-width: 1600px) {
   .modal-alert.container {
   left: 31%;

@@ -61,7 +61,7 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .splash-page.header {
-    height: 500px;
+    height: 550px;
   }
 
   .splash.header.title {
@@ -70,14 +70,15 @@
     padding-left: 5vw;
     padding-right: 5vw;
     text-align: start;
+    margin-bottom: 20px;
   }
 
   .carousel.container {
-    height: 500px;
+    height: 550px;
   }
 
   .carousel.container > .overlay-slide {
-    height: 500px;
+    height: 550px;
   }
 
   .carousel.slide {
