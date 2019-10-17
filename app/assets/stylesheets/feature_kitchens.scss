@@ -104,7 +104,8 @@
   color: $lightgray;
 }
 
-@media only screen and (min-width: 375px) {
+
+@media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .feature-kitchen-index.main-content {
     width: 100vw;
@@ -118,12 +119,15 @@
 
   .feature-kitchen-index-item.container {
     flex: 0 0 auto;
-    width: 275px;
-    height: 275px;
+    width: 250px;
+    height: 250px;
+    margin: 25px 0px;
+    margin-right: 10px;
   }
 
   .featured-title {
     margin: 0px 5vw;
+    font-size: 22px;
   }
 }
 

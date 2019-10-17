@@ -59,7 +59,7 @@
   color: $white;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .feature-location-index.main-content {
     width: 100vw;
@@ -73,12 +73,20 @@
 
   .feature-city-index-item.container {
     flex: 0 0 auto;
-    width: 50vw;
-    height: 275px;
+    width: 80vw;
+    height: 250px;
+    margin: 25px 0px;
+    margin-right: 10px;
   }
 
   .featured-title {
     margin: 0px 5vw;
+  }
+
+  .city-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: $white;
   }
 }
 
