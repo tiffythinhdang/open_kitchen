@@ -74,82 +74,92 @@ class KitchenShow extends React.Component {
           </div>
         </header>
 
-        <div className="kitchen-show container">
-          <div className="kitchen-show nav-container">
-            <div className="kitchen-show nav">
-              <HashLink 
-                to={`/kitchens/${this.props.kitchen.id}#overview`}
-                className="kitchen-show-nav item active"
+        <div className="kitchen-show infor-reservation container">
+          <div className="kitchen-show reservation search">
+            <h1>Find a reservation</h1>
+            <button
+              className="medium main button"
+            >Search
+          </button>
+          </div>
+
+          <div className="kitchen-show container">
+            <div className="kitchen-show nav-container">
+              <div className="kitchen-show nav">
+                <HashLink
+                  to={`/kitchens/${this.props.kitchen.id}#overview`}
+                  className="kitchen-show-nav item active"
                 >Overview
               </HashLink>
 
-              <HashLink
-                to={`/kitchens/${this.props.kitchen.id}#menu`}
-                className="kitchen-show-nav item"
-              >Menu
+                <HashLink
+                  to={`/kitchens/${this.props.kitchen.id}#menu`}
+                  className="kitchen-show-nav item"
+                >Menu
               </HashLink>
 
-              <HashLink 
-                to={`/kitchens/${this.props.kitchen.id}#photos`}
-                className="kitchen-show-nav item"
+                <HashLink
+                  to={`/kitchens/${this.props.kitchen.id}#photos`}
+                  className="kitchen-show-nav item"
                 >Photos
               </HashLink>
 
-              <HashLink 
-                to={`/kitchens/${this.props.kitchen.id}#location`}
-                className="kitchen-show-nav item"
+                <HashLink
+                  to={`/kitchens/${this.props.kitchen.id}#location`}
+                  className="kitchen-show-nav item"
                 >Location
               </HashLink>
 
-              <HashLink 
-                to={`/kitchens/${this.props.kitchen.id}#reviews`}
-                className="kitchen-show-nav item"
+                <HashLink
+                  to={`/kitchens/${this.props.kitchen.id}#reviews`}
+                  className="kitchen-show-nav item"
                 >Reviews
               </HashLink>
-            </div>
-            <div className="slider-bar"></div>
-          </div>
-
-          <div className="kitchen-show main-content">
-            <h1>{this.props.kitchen.name}</h1>
-          
-            <KitchenBasicInfo kitchen={this.props.kitchen}/>
-
-            <div className="kitchen-show description">
-              <h3 id="overview">Overview</h3>
-              <p>{this.props.kitchen.description}</p>
+              </div>
+              <div className="slider-bar"></div>
             </div>
 
-            <div className="kitchen-show description">
-              <h3 id="menu">Menu</h3>
-              <p>{this.props.kitchen.menu}</p>
-            </div>
+            <div className="kitchen-show main-content">
+              <h1>{this.props.kitchen.name}</h1>
 
-            <div className="kitchen-show host-infor">
-              <h3>About the host</h3>
-              <p>{this.props.kitchen.hostInfor}</p>
-            </div>
+              <KitchenBasicInfo kitchen={this.props.kitchen} />
 
-            <div className="kitchen-show photos">
-              <h3 id="photos">Photos</h3>
-              <PhotosIndex imageUrls={this.props.kitchen.imageUrls} />
-            </div>
+              <div className="kitchen-show description">
+                <h3 id="overview">Overview</h3>
+                <p>{this.props.kitchen.description}</p>
+              </div>
 
-            <div className="kitchen-show map">
-              <h3 id="location">Location</h3>
-              <IndividualMap 
+              <div className="kitchen-show description">
+                <h3 id="menu">Menu</h3>
+                <p>{this.props.kitchen.menu}</p>
+              </div>
+
+              <div className="kitchen-show host-infor">
+                <h3>About the host</h3>
+                <p>{this.props.kitchen.hostInfor}</p>
+              </div>
+
+              <div className="kitchen-show photos">
+                <h3 id="photos">Photos</h3>
+                <PhotosIndex imageUrls={this.props.kitchen.imageUrls} />
+              </div>
+
+              <div className="kitchen-show map">
+                <h3 id="location">Location</h3>
+                {/* <IndividualMap 
                 lat={this.props.kitchen.lat} 
                 lng={this.props.kitchen.lng}
                 name={this.props.kitchen.name}
                 region={this.props.kitchen.region}
-              />
-            </div>
+              /> */}
+              </div>
 
-            <div className="kitchen-show reviews">
-              <h3 id="reviews">Reviews</h3>
-              <ReviewIndexContainer kitchen={this.props.kitchen} />
-            </div>
+              <div className="kitchen-show reviews">
+                <h3 id="reviews">Reviews</h3>
+                <ReviewIndexContainer kitchen={this.props.kitchen} />
+              </div>
 
+            </div>
           </div>
         </div>
 
