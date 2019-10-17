@@ -104,6 +104,35 @@
   color: $lightgray;
 }
 
+@media only screen and (min-width: 375px) {
+  /* For mobile phones: */
+  .feature-kitchen-index.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .feature-kitchen-index.main-content {
+    width: 100vw;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .feature-kitchen-index-item.container {
+    flex: 0 0 auto;
+    width: 275px;
+    height: 275px;
+  }
+
+  .featured-title {
+    margin: 0px 5vw;
+  }
+}
+
 @media only screen and (min-width: 1600px) {
   .feature-kitchen-index.main-content {
   width: 100%;

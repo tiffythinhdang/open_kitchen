@@ -53,11 +53,13 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (min-width: 375px) {
+  /* For mobile phones: */
   .splash.header.title {
-  font-size: 36px;
-  padding-left: 200px;
-  padding-right: 200px;
+    font-size: 34px;
+    width: 90vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
 
@@ -68,3 +70,4 @@
   padding-right: 150px;
   }
 }
+

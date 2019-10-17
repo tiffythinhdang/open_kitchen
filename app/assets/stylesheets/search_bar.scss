@@ -76,12 +76,47 @@ input[type="date"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (min-width: 375px) {
+  /* For mobile phones: */
   .search.bar > form {
+    width: 100%;
     flex-direction: column;
   }
 
-  .city-country.selector,.main.medium.button.search {
-    width: 540px;
+  .selector {
+    height: 54px;
+    font-size: 18px;
   }
+
+  .input-container.with-icon > .icon {
+    padding-left: 17px;
+    padding-top: 17px;
+  }
+
+  .city-country.selector, .main.medium.button.search {
+    width: 90vw;
+  }
+
+  .date.selector {
+    width: 30vw;
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  .time.selector {
+    width: 30vw;
+    border-radius: 0px;
+    border-style: solid none solid none;
+  }
+
+  .party-size.selector {
+    width: 30vw;
+    border-radius: 0px 4px 4px 0px;
+  }
+
+  .date-time-party.selector-container {
+    width: 90vw;
+    margin: 10px 20px;
+  }
+
 }
+
