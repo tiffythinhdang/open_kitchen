@@ -106,12 +106,6 @@
 
 @media only screen and (min-width: 375px) {
   /* For mobile phones: */
-  .feature-kitchen-index.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
   .feature-kitchen-index.main-content {
     width: 100vw;
     padding: 0 5vw;

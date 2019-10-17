@@ -1,5 +1,15 @@
 @import './utils.scss';
 
+.feature-location-index.main-content {
+  width: 100%;
+  padding: 0px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
 .feature-city-index-item.container {
   width: 45%;
   height: 250px;
@@ -36,16 +46,6 @@
   opacity: 0.5;
 }
 
-.feature-location-index.main-content {
-  width: 100%;
-  padding: 0px 150px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-
 .city.main-content {
   position: absolute;
   top: 50%;
@@ -61,13 +61,7 @@
 
 @media only screen and (min-width: 375px) {
   /* For mobile phones: */
-  .feature-kitchen-index.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  .feature-kitchen-index.main-content {
+  .feature-location-index.main-content {
     width: 100vw;
     padding: 0 5vw;
     display: flex;
@@ -77,9 +71,9 @@
     overflow-x: auto;
   }
 
-  .feature-kitchen-index-item.container {
+  .feature-city-index-item.container {
     flex: 0 0 auto;
-    width: 275px;
+    width: 50vw;
     height: 275px;
   }
 
