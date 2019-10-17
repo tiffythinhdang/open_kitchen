@@ -18,7 +18,7 @@
   line-height: 1;
   cursor: pointer;
   color: $white;
-  z-index: 101;
+  z-index: 103;
 }
 
 .modal-close:hover {
@@ -81,12 +81,19 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .modal-close {
+    color: $mediumgray;
+    top: 5vh;
+    right: 10vw;
+  }
+
   .modal-alert.container {
     left: 2.5vw;
     right: 2.5vw;
-    top: 50px;
+    top: 2.5vh;
     bottom: auto;
     padding: 25px 0px;
+    overflow: scroll;
   }
 
   .modal-alert > h1 {
