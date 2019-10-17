@@ -94,7 +94,7 @@ kitchens:
     description: "I will teach you how to prepare a crusty shell, used to cover Cannoli, the typical Sicilian Sweet. You will kneadwith your hands and fry the dough into the peculiar shape. You will also see how the cream is prepared to fill up Cannoli’s shell, starting from the traditional Ricotta Sweet up to the custard."
     host_infor: "For many years,we offered the possibility to take Cooking Classes at our restaurants in the Bay Area. Courses are aimed at both beginners and experts, and provide the opportunity for entertaining experiences,which are both educational and unique to their kind."
     lat: 37.786722
-    lng: 122.434232
+    lng: -122.434232
   - id: 9
     name: "Downtown Vegan"
     cuisine: "American"
