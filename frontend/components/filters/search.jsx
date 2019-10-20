@@ -54,12 +54,25 @@ class Search extends React.Component {
     return this.applyEqualityFilters( this.applyRatingFilter(kitchens) );
   }
 
+  displayMobileFilter() {
+    let filters = document.querySelector(".filter-options");
+    filters.style.display = "block";
+  }
+
   render() {
     return (
       <div className="search-page container">
         <header className="search-page header">
           <SearchBarContainer />
         </header>
+
+        <button 
+          className="small secondary button"
+          id="mobile-kitchen-filter-button"
+          onClick={this.displayMobileFilter}
+          >
+          Filter
+        </button>
 
         <div className="search-page main-content">
           <Filters />

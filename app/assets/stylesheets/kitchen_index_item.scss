@@ -34,7 +34,7 @@
 
 .kitchen-index.item-infor {
   width: 500px;
-  height:250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -112,3 +112,67 @@
   margin: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .kitchen-index.item-container {
+    width: 90vw;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .kitchen-index.item.profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .kitchen-index.item.profile-img > a > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .kitchen-index.item-infor {
+    width: 60vw;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .kitchen-index.item-infor > a {
+    height: auto;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .kitchen-index.rating-review {
+    width: 60vw;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .kitchen-index.item.rating-review > .rating {
+    width: 100px;
+    align-items: center;
+  }
+
+  .medium.star {
+    width: 18px;
+    height: 18px;
+  }
+
+  .kitchen-index.item.cpl {
+    width: 60vw;
+    font-size: 14px;
+  }
+
+  .kitchen-index.item > p {
+    width: 20vw;
+  }
+
+  .kitchen-index.item > p.infor {
+    width: 40vw;
+  }
+
+  .main.medium.button.timeslot {
+    width: 32%;
+    font-size: 14px;
+    height: 36px;
+  }
+}
