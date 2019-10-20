@@ -9,9 +9,19 @@ class Filters extends React.Component {
     super(props);
   }
 
+  closeFilter() {
+    let filters = document.querySelector(".filter-options");
+    filters.style.display = "none";
+  }
+
   render() {
     return(
       <div className="filter-options">
+        <span
+          className="filter-close"
+          onClick={this.closeFilter}>
+          &times;
+        </span>
         <PriceFilterContainer />
         <RatingFilterContainer />
         <CuisineFilterContainer />

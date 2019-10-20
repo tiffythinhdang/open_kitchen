@@ -28,6 +28,21 @@
   padding-top: 25px;
 }
 
+@media only screen and (max-width: 768px) {
+  .kitchen-index.container {
+    width: 90vw;
+    margin-bottom: 50px;
+  }
 
+  .kitchen-index.notfound.container {
+    width: 90vw;
+  }
 
+  .kitchen-index.notfound.container > h1 {
+    font-size: 50px;
+  }
 
+  .kitchen-index.notfound.container > h3 {
+    font-size: 20px;
+  }
+}
