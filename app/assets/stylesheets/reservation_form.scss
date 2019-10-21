@@ -106,6 +106,87 @@
   color: $main_orange;
 }
 
+@media only screen and (max-width: 768px) {
+  .reservation-form-outer-container {
+    width: 100vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reservation-form.cooking-image {
+    width: 60vw;
+    height: 60vw;
+    margin: 20px 0 0 0 ;
+  }
+
+  .reservation-form.container {
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .reservation-form.container > h3{
+    font-size: 16px;
+    margin: 10px 20px;
+  }
+
+  .reservation-form.kitchen-img {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+  }
+
+  .reservation-form.summary {
+    width: 90vw;
+    padding: 5vw;
+    box-sizing: border-box;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .reservation-form.name-dtp {
+    height: auto;
+    font-size: 14px;
+  }
+
+  .reservation-form.name-dtp.dtp {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .reservation-form.name-dtp > h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .reservation-form.name-dtp.date, .reservation-form.name-dtp.time, .reservation-form.name-dtp.party {
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+  }
+
+  .reservation-form.name-dtp.date > p, .reservation-form.name-dtp.time > p, .reservation-form.name-dtp.party > p {
+    margin-left: 10px;
+  }
+
+  .reservation-form.special-requests {
+    margin-bottom: 20px;
+  }
+
+  .reservation-form.action-button-and-link > .link-container, .reservation-form.action-links {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .reservation-form.action-button-and-link > .main.button {
+    width: 80vw;
+  }
+}
+
 @media only screen and (min-width: 1600px) {
   .reservation-form.container {
     margin-left: 180px;
