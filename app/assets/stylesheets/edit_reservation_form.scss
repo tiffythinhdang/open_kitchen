@@ -50,3 +50,41 @@
   margin-left: 20px;
   margin-bottom: 50px;
 }
+
+@media only screen and (max-width: 768px) {
+  .reservation-edit.container{
+    width: 90vw;
+    border-top: 1px solid $lightgray;
+  }
+
+  .reservation-edit.search.bar > form {
+    width: 90vw;
+  }
+
+  .reservation-edit.search.bar > form .selector {
+    width: 80vw;
+  }
+
+  .reservation-edit.date-time-party.selector-container {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .reservation-edit.action-buttons {
+    justify-content: space-between;
+  }
+
+  // Timeslots display
+  .reservation-edit.timeslots {
+    padding: 0px 5vw;
+    justify-content: flex-end;
+  }
+
+  .reservation-edit.timeslots > .main.medium.button.timeslot {
+    margin-left: 10px;
+  }
+
+  .reservation-edit.timeslots > .main.medium.button.timeslot:first-child {
+    margin-left: 0px;
+  }
+}
