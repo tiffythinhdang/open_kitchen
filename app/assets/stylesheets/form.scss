@@ -107,7 +107,10 @@
     width: 80vw;
   }
 
-  .sign-up.modal-alert.container button, .log-in.modal-alert.container button {
+  .sign-up.modal-alert.container button, 
+  .log-in.modal-alert.container button, 
+  .cancel-reservation.modal-alert.container button,
+  .success-cancel.modal-alert.container button {
     width: 80vw;
   }
 
@@ -119,6 +122,44 @@
   // Log-in Form
   .log-in.modal-alert.container {
     width: 95vw;
+  }
+
+  //Cancel reservation
+  .cancel-reservation.modal-alert.container {
+    width: 95vw;
+    height: auto;
+  }
+
+  .cancel-reservation.summary {
+    width: 80vw;
+    padding-top: 5vh;
+    text-align: center;
+  }
+
+  .cancel-reservation.summary > .question {
+    margin-bottom: 25px;
+  }
+
+  // Cancelation Success Pop-up
+
+  .success-cancel.modal-alert.container {
+    width: 95vw;
+    height: auto;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .success-cancel.summary {
+    width: 80vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+  }
+
+  .success-cancel.summary > p {
+    margin-bottom: 25px;
   }
 }
 

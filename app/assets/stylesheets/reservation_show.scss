@@ -16,10 +16,6 @@
   width: 45%;
 }
 
-.reservation-form.show.cooking-image {
-  margin-right: 150px;
-}
-
 .reservation-show.container {
   width: 100%;
   border-radius: 8px;
@@ -148,6 +144,113 @@
 
 .reservation-show.action-buttons > .link-container > a:hover {
   color: $main_red;
+}
+
+@media only screen and (max-width: 768px) {
+  .reservation-show-outer-container {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: 50%;
+  }
+
+  .res-show-buttons-form-container {
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .res-show-buttons-form-container > .buttons-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .success-messages.container, .failed-messages.container {
+    width: 90vw;
+    height: auto;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .success-messages.container > img, .failed-messages.container > img {
+    height: 30px;
+  }
+
+  .success-messages.container > .summary, .failed-messages.container > .summary {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .success-messages.summary > .main-message, .failed-messages.summary > .main-message{
+    margin-bottom: 10px;
+  }
+
+  .reservation-show.container {
+    width: 90vw;
+  }
+
+  .reservation-show.kitchen-img {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+  }
+
+  .reservation-show.kitchen-img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .reservation-show.summary {
+    width: 90vw;
+    padding: 5vw;
+    box-sizing: border-box;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .reservation-show.name-dtp {
+    height: auto;
+    font-size: 14px;
+  }
+
+  .reservation-show.name-dtp.dtp {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .reservation-show.name-dtp > h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .reservation-show.name-dtp.date, .reservation-show.name-dtp.time, .reservation-show.name-dtp.party {
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+  }
+
+  .reservation-show.name-dtp.date > p, .reservation-show.name-dtp.time > p, .reservation-show.name-dtp.party > p {
+    margin-left: 10px;
+  }
+
+  .reservation-show.special-requests {
+    margin-bottom: 20px;
+  }
+
+  .reservation-show.action-button-and-link > .link-container, .reservation-show.action-links {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .reservation-show.action-buttons {
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
