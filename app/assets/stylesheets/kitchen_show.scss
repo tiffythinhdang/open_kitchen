@@ -138,6 +138,7 @@
 @media only screen and (max-width: 768px) {
   .kitchen-show.header > .button.favorite {
     position: absolute;
+    top: calc(54px + 1vh);
     right: 0;
     width: 250px;
   }
@@ -176,5 +177,33 @@
 
   .kitchen-show.main-content > h1 {
     font-size: 32px;
+  }
+
+  // photos
+  .photo-index {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .photo-index-image.container {
+    width: 75%;
+    height: 200px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .photo-index-image.container > img {
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
   }
 }
