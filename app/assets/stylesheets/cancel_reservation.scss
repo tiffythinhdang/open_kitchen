@@ -6,3 +6,9 @@
   display: flex;
   flex-direction: space-between;
 }
+
+@media only screen and (max-width: 768px) {
+  .cancel-reservation.modal-alert.container {
+    width: 95vw;
+  }
+}

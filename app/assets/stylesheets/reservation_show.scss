@@ -167,7 +167,7 @@
 
   .success-messages.container, .failed-messages.container {
     width: 90vw;
-    height: 100px;
+    height: auto;
     padding: 15px;
     font-size: 14px;
   }
@@ -177,10 +177,14 @@
   }
 
   .success-messages.container > .summary, .failed-messages.container > .summary {
-    height: 65px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .success-messages.summary > .main-message, .failed-messages.summary > .main-message{
+    margin-bottom: 10px;
   }
 
   .reservation-show.container {
