@@ -161,6 +161,50 @@
   .success-cancel.summary > p {
     margin-bottom: 25px;
   }
+
+  // Review Form
+  .create-review.button.container.clearfix {
+    margin: 10px 0px;
+  }
+
+  .review-form.container > h3 {
+    color: $mediumgray;
+    font-size: 14px;
+    padding: 10px 5vw;
+  }
+
+  .review-form.container > form > textarea {
+    width: 70vw;
+    height: 200px;
+    padding: 5vw;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .review-form.buttons > button {
+    width: 50%;
+  }
+
+  .review-form.buttons > p.link-container {
+    width: 50%;
+  }
+
+  .review-form.container > form > .review-form.buttons {
+    justify-content: space-between;
+  }
+
+  .review.errors {
+    padding-left: 5vw;
+  }
+
+  .review-form.rating {
+    padding: 10px 5vw;
+  }
+
+  .review-star {
+    /* Controlls the size of the stars. */
+    font-size: 12px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {

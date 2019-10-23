@@ -182,23 +182,15 @@
   // photos
   .photo-index {
     width: 100%;
-    display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
-    align-items: center;
-    margin-top: 15px;
   }
 
   .photo-index-image.container {
     width: 75%;
     height: 200px;
     flex: 0 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 10px;
   }
 
   .photo-index-image.container > img {
