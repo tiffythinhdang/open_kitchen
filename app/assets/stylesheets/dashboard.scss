@@ -256,6 +256,8 @@
   .user-basic-info.container {
     padding: 5vw;
     justify-content: space-between;
+    align-items: flex-start;
+
   }
 
   .user-basic-info.user-initials.container {
@@ -264,8 +266,17 @@
     padding: 0px 20px;
   }
 
+  .user-basic-info.items-container {
+    padding: 0;
+  }
+
   .user-basic-info.item {
     margin-bottom: 15px;
+    flex-direction: column;
+  }
+
+  .user-title {
+    width: 100%;
   }
 
   //reservation-index
