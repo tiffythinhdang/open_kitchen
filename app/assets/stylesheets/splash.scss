@@ -41,6 +41,19 @@
   position: absolute;
 }
 
+.mobile-friendly.sign {
+  position: absolute;
+  z-index: 3;
+  width: 60px;
+  right: 2vw;
+  top: calc(68px + 2vw);
+}
+
+.mobile-friendly.sign >img {
+  width: 100%;
+  height: 100%;
+}
+
 .splash.header.title {
   font-size: 45px;
   text-align: center;
@@ -64,6 +77,9 @@
     height: 550px;
   }
 
+  .mobile-friendly.sign {
+    display: none;
+  }
   .splash.header.title {
     font-size: 32px;
     width: 90vw;

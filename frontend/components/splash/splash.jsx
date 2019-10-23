@@ -3,6 +3,7 @@ import React from 'react';
 import SearchBarContainer from '../search_bar/search_bar_container';
 import FeaturedKitchenIndexContainer from './featured_kitchens_index_container';
 import FeaturedCityIndexContainer from './featured_city_index_container.js';
+import iconResponsive from 'assets/images/medium_icon_responsive_design.png'; 
 
 class Splash extends React.Component {
   constructor(props) {
@@ -14,6 +15,9 @@ class Splash extends React.Component {
       <div className="splash-page container">
         <header className="splash-page header">
           <div className="splash header title">Experience the World through someone else's kitchen</div>
+          <div className="mobile-friendly sign">
+            <img src={iconResponsive} alt="responsive-design icon"/>
+          </div>
           <SearchBarContainer />
           <div className="carousel container">
             <img
