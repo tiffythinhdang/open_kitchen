@@ -10,13 +10,38 @@ class Splash extends React.Component {
     super(props);
   }
 
+  displayMessage() {
+    let sign = document.querySelector("#responsive-design-sign");
+    let message = document.querySelector("#responsive-design-message");
+    sign.classList.add("hidden");
+    message.classList.remove("hidden");
+  }
+
+  hideMessage() {
+    let sign = document.querySelector("#responsive-design-sign");
+    let message = document.querySelector("#responsive-design-message");
+    message.classList.add("hidden");
+    sign.classList.remove("hidden");
+  }
+
   render() {
     return (
       <div className="splash-page container">
         <header className="splash-page header">
           <div className="splash header title">Experience the World through someone else's kitchen</div>
           <div className="mobile-friendly sign">
-            <img src={iconResponsive} alt="responsive-design icon"/>
+            <img
+              id="responsive-design-sign" 
+              src={iconResponsive} 
+              alt="responsive-design icon"
+              onMouseEnter={this.displayMessage}
+            />
+            <p 
+              id="responsive-design-message" 
+              className="hidden"
+              onMouseLeave={this.hideMessage}
+              >We are mobile friendly!
+            </p>
           </div>
           <SearchBarContainer />
           <div className="carousel container">
