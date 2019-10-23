@@ -170,17 +170,16 @@
 .user-basic-info.container {
   width: 65%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
 }
 
 .user-basic-info.user-initials.container {
-  width: 8px;
   height:85px;
   width: 85px;
-  padding: 0px 20px;
+  margin-right: 20px;
   border-radius: 50%;
   background-color: $main_blue;
   display: flex;
@@ -195,26 +194,22 @@
   font-weight: bold;
 }
 
-.user-basic-info.titles-container, .user-basic-info.info-container {
+.user-basic-info.items-container {
   flex-direction: column;
   padding: 20px;
+  width: 75%;
 }
 
-.user-basic-info.titles-container {
-  width: 30%;
-}
+.user-basic-info.item {
+  margin-bottom: 25px;
 
-.user-basic-info.info-container {
-  width: 50%;
-}
-
-.user-basic-info.titles-container > p, .user-basic-info.info-container > p{
-  height: 35px;
+  display: flex;
+  flex-direction: row;
 }
 
 .user-title {
   color: $lightgray;
-  margin-right: 20px;
+  width: 30%;
 }
 
 @media only screen and (max-width: 768px) {
