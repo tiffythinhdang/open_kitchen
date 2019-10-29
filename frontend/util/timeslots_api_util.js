@@ -5,3 +5,11 @@ export const fetchTimeslots = (request) => (
     data: { request }
   })
 );
+
+export const fetchTimeslotsByAKitchen = (request) => (
+  $.ajax({
+    url: `/api/timeslots/kitchens/${request.kitchen_id}`,
+    method: "GET",
+    data: { request }
+  })
+);

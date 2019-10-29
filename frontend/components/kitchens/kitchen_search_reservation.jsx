@@ -9,10 +9,16 @@ import iconUser from 'assets/images/small_icon_user.png';
 class KitchenSearchReservation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.search;
 
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      kitchen_id: this.props.kitchenId,
+      date: this.props.search.date,
+      time: this.props.search.time,
+      party_size: this.props.search.partySize
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -25,6 +31,11 @@ class KitchenSearchReservation extends React.Component {
 
   handleChange(type) {
     return (e) => this.setState({ [type]: e.target.value })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    
   }
 
   generateTimeOptions() {

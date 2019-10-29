@@ -76,7 +76,9 @@ class KitchenShow extends React.Component {
         </header>
 
         <div className="kitchen-show infor-reservation container">
-          <KitchenSearchReservationContainer />
+          <KitchenSearchReservationContainer 
+            kitchenId={this.props.kitchen.id}
+          />
 
           <div className="kitchen-show container">
             <div className="kitchen-show nav-container">
