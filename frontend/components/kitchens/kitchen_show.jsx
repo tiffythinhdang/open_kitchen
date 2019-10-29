@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 
+import KitchenSearchReservationContainer from './kitchen_search_reservation_container';
 import KitchenBasicInfo from './kitchen_basic_info';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import PhotosIndex from '../photos/photo_index';
@@ -75,13 +76,7 @@ class KitchenShow extends React.Component {
         </header>
 
         <div className="kitchen-show infor-reservation container">
-          <div className="kitchen-show reservation search">
-            <h1>Find a reservation</h1>
-            <button
-              className="medium main button"
-            >Search
-          </button>
-          </div>
+          <KitchenSearchReservationContainer />
 
           <div className="kitchen-show container">
             <div className="kitchen-show nav-container">
@@ -146,12 +141,12 @@ class KitchenShow extends React.Component {
 
               <div className="kitchen-show map">
                 <h3 id="location">Location</h3>
-                {/* <IndividualMap 
+                <IndividualMap 
                 lat={this.props.kitchen.lat} 
                 lng={this.props.kitchen.lng}
                 name={this.props.kitchen.name}
                 region={this.props.kitchen.region}
-              /> */}
+              />
               </div>
 
               <div className="kitchen-show reviews">
