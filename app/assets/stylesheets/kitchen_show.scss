@@ -233,7 +233,7 @@
 
   .kitchen-show.container {
     position: relative;
-    top: -96px;
+    // top: -96px;
     width: 90vw;
     margin: 0 ;
   }
@@ -256,6 +256,38 @@
 
   .kitchen-show-nav.item {
     padding-right: 25px;
+  }
+
+  .kitchen-show.infor-reservation.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kitchen-show.reservation.search {
+    position: fixed;
+    margin: 0;
+    top: auto;
+    bottom: 5vh;
+    right: 5vw;
+    width: 80vw;
+    background: $white;
+    z-index: 22;
+  }
+
+  .kitchen-show.reservation.search > form {
+    width: 90%;
+  }
+
+  .kitchen-show.reservation.timeslots {
+    width: 90%;
+    margin: 0;
+  }
+
+  .kitchen-show.reservation.timeslots > .timeslot {
+    width: 31%;
+    margin-top: 15px;
   }
 
   .kitchen-show.main-content { 
