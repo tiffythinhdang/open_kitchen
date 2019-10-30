@@ -45,10 +45,8 @@ class KitchenSearchReservation extends React.Component {
 
   handleMakeReservation(timeSlotId) {
     return (e) => {
-      debugger
       e.preventDefault();
       if (!this.props.currentUser) {
-        debugger
         this.props.openModal('showLogIn');
         return;
       }
