@@ -64,6 +64,22 @@ class KitchenShow extends React.Component {
     }
   }
 
+  displayReservationSearch(e) {
+    let reservationSearch = document.querySelector(".kitchen-show.reservation.search");
+    let closeButton = document.querySelector("#mobile-kitchen-reserve-button-close");
+    e.target.style.display = "none";
+    closeButton.style.display = "block";
+    reservationSearch.style.display = "block";
+  }
+
+  hideReservationSearch(e) {
+    let reservationSearch = document.querySelector(".kitchen-show.reservation.search");
+    let reserveButton = document.querySelector("#mobile-kitchen-reserve-button");
+    e.target.style.display = "none";
+    reservationSearch.style.display = "none";
+    reserveButton.style.display = "block";
+  }
+
   render() {
     if (!this.props.kitchen) return null;
     return (
@@ -74,6 +90,22 @@ class KitchenShow extends React.Component {
           <div className="header-image container">
           </div>
         </header>
+
+        <button
+          className="medium main button"
+          id="mobile-kitchen-reserve-button"
+          onClick={this.displayReservationSearch}
+        >
+          Reserve
+        </button>
+
+        <button
+          className="medium tertiary button"
+          id="mobile-kitchen-reserve-button-close"
+          onClick={this.hideReservationSearch}
+        >
+          Close
+        </button>
 
         <div className="kitchen-show infor-reservation container">
           <KitchenSearchReservationContainer 

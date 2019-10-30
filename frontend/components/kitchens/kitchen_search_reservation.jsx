@@ -109,49 +109,51 @@ class KitchenSearchReservation extends React.Component {
   render() {
     // if (!this.props.kitchen) return null;
     return (
-      <div className="kitchen-show reservation search">
-        <h1>Find a reservation</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div className="date-time-party selector-container">
-            <div className="input-container with-icon">
-              <img className="small icon calendar" src={iconCalendar} />
-              <input
-                className="date selector"
-                type="date"
-                required="required"
-                value={this.state.date}
-                min={new Date().toISOString().substr(0, 10)}
-                onChange={this.handleChange("date")}
-              />
+      <div className="kitchen-show reservation search container">
+        <div className="kitchen-show reservation search">
+          <h1>Find a reservation</h1>
+          <form onSubmit={this.handleSubmit}>
+            <div className="date-time-party selector-container">
+              <div className="input-container with-icon">
+                <img className="small icon calendar" src={iconCalendar} />
+                <input
+                  className="date selector"
+                  type="date"
+                  required="required"
+                  value={this.state.date}
+                  min={new Date().toISOString().substr(0, 10)}
+                  onChange={this.handleChange("date")}
+                />
+              </div>
+
+              <div className="input-container with-icon">
+                <img className="small icon clock" src={iconClock} />
+                <select
+                  className="time selector"
+                  value={this.state.time}
+                  onChange={this.handleChange("time")}
+                >
+                  {this.generateTimeOptions()}
+                </select>
+              </div>
+
+              <div className="input-container with-icon">
+                <img className="small icon user" src={iconUser} />
+                <select
+                  className="party-size selector"
+                  value={this.state.party_size}
+                  onChange={this.handleChange("party_size")}
+                >
+                  {this.generatePartyOptions()}
+                </select>
+              </div>
             </div>
 
-            <div className="input-container with-icon">
-              <img className="small icon clock" src={iconClock} />
-              <select
-                className="time selector"
-                value={this.state.time}
-                onChange={this.handleChange("time")}
-              >
-                {this.generateTimeOptions()}
-              </select>
-            </div>
-
-            <div className="input-container with-icon">
-              <img className="small icon user" src={iconUser} />
-              <select
-                className="party-size selector"
-                value={this.state.party_size}
-                onChange={this.handleChange("party_size")}
-              >
-                {this.generatePartyOptions()}
-              </select>
-            </div>
+            <button type="submit" className="main medium button search">Search</button>
+          </form>
+          <div className="kitchen-show reservation timeslots">
+            {this.displayTimeslots()}
           </div>
-
-          <button type="submit" className="main medium button search">Search</button>
-        </form>
-        <div className="kitchen-show reservation timeslots">
-          {this.displayTimeslots()}
         </div>
       </div>
     )

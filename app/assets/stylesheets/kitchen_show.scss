@@ -39,6 +39,10 @@
   justify-content: space-between;
 }
 
+#mobile-kitchen-reserve-button, #mobile-kitchen-reserve-button-close {
+  display: none;
+}
+
 .kitchen-show.reservation.search {
   position: fixed;
   top: calc(68px + 250px - 48px - 48px);
@@ -265,11 +269,32 @@
     align-items: center;
   }
 
+  #mobile-kitchen-reserve-button, #mobile-kitchen-reserve-button-close {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    z-index: 23;
+    margin: 0;
+    box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.45);
+  }
+
+  #mobile-kitchen-reserve-button {
+    display: block;
+  }
+
+  #mobile-kitchen-reserve-button-close {
+    display: none;
+  }
+
+  .kitchen-show.reservation.search.container {
+    display: none;
+  }
+
   .kitchen-show.reservation.search {
     position: fixed;
     margin: 0;
     top: auto;
-    bottom: 5vh;
+    bottom: calc(5vh + 48px + 15px);
     right: 5vw;
     width: 80vw;
     background: $white;
