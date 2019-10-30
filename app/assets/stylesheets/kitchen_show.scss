@@ -44,7 +44,7 @@
   top: calc(68px + 250px - 48px - 48px);
   width: 25%;
   right: 12.5%;
-  padding: 25px 15px;
+  padding: 25px 0px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -105,6 +105,20 @@
 .kitchen-show.reservation.search > form > .main.medium.button {
   width: 100%;
   margin: 10px 0;
+}
+
+.kitchen-show.reservation.timeslots {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.kitchen-show.reservation.timeslots > .timeslot {
+  width: 32%;
+  margin: 0;
 }
 
 .kitchen-show.container {

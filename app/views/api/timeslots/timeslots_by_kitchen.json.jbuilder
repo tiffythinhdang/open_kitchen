@@ -1,1 +1,0 @@
-json.extract! timeslot, :id, :time, :day

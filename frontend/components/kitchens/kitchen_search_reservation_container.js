@@ -1,19 +1,25 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { receiveSearch } from '../../actions/search_actions';
+import { fetchTimeslotsByAKitchen } from '../../actions/timeslots_action';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 import KitchenSearchReservation from './kitchen_search_reservation';
 
 const mapStateToProps = state => {
+  const currentUserId = state.session.currentUserId;
   return {
-    search: state.search
+    search: state.search,
+    currentUser: state.entities.users[currentUserId],
+    timeslots: state.entities.timeslots
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    receiveSearch: (search) => dispatch(receiveSearch(search))
+    fetchTimeslotsByAKitchen: (request) => dispatch(fetchTimeslotsByAKitchen(request)),
+    openModal: (content) => dispatch(openModal(content)),
+    closeModal: () => dispatch(closeModal())
   }
 };
 

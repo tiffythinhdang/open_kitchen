@@ -19,6 +19,7 @@ class KitchenSearchReservation extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleMakeReservation = this.handleMakeReservation.bind(this);
   }
 
   componentDidMount() {
@@ -29,13 +30,45 @@ class KitchenSearchReservation extends React.Component {
     
   }
 
+  displayTimeslots() {
+    const availableTimeslots = Object.values(this.props.timeslots);
+    return availableTimeslots.map(timeslot =>
+      <input
+        type="submit"
+        className="secondary small button timeslot"
+        key={timeslot.id}
+        onClick={this.handleMakeReservation(timeslot.id)}
+        value={convertNumberToTime(timeslot.time)}
+      />
+    )
+  }
+
+  handleMakeReservation(timeSlotId) {
+    return (e) => {
+      debugger
+      e.preventDefault();
+      if (!this.props.currentUser) {
+        debugger
+        this.props.openModal('showLogIn');
+        return;
+      }
+      const kitchenId = this.props.kitchenId;
+      const req_time = e.target.value;
+
+      this.props.history.push({
+        pathname: '/reservations/new',
+        search: `kitchenId=${kitchenId}&time=${req_time}&timeSlotId=${timeSlotId}`
+      });
+    }
+  }
+
   handleChange(type) {
     return (e) => this.setState({ [type]: e.target.value })
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    
+    this.props.fetchTimeslotsByAKitchen(this.state);
   }
 
   generateTimeOptions() {
@@ -117,6 +150,9 @@ class KitchenSearchReservation extends React.Component {
 
           <button type="submit" className="main medium button search">Search</button>
         </form>
+        <div className="kitchen-show reservation timeslots">
+          {this.displayTimeslots()}
+        </div>
       </div>
     )
   }

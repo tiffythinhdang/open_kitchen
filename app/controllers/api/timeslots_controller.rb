@@ -46,7 +46,7 @@ class Api::TimeslotsController < ApplicationController
       end
     end
 
-    render :timeslots_by_kitchen
+    render :index
   end
 
   private
