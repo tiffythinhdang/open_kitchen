@@ -16,8 +16,9 @@ Rails.application.routes.draw do
     resources :reservations, only: [:create, :update]
     resources :reservations, only: [:show] do
       resources :timeslots, only: [:index]
-      # get '/timeslots/kitchens/:id', to: 'timeslots#timeslots_by_kitchen'
     end
+
+    get 'timeslots/kitchens/:id', to: 'timeslots#timeslots_by_kitchen'
 
     resources :favorites, only: [:index, :create, :destroy]
 

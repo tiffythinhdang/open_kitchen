@@ -1,7 +1,7 @@
 @import './utils.scss';
 
 .kitchen-show-outer-container {
-  width: 100%;
+  width: 100vw;
   background-color: $off_white;
   display: flex;
   flex-direction: column;
@@ -33,10 +33,98 @@
   width: 250px;
 }
 
+.kitchen-show.infor-reservation.container {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kitchen-show.reservation.search {
+  position: fixed;
+  top: calc(68px + 250px - 48px - 48px);
+  width: 25%;
+  right: 10%;
+  padding: 25px 0px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25); 
+  box-sizing: border-box;
+}
+
+.kitchen-show.reservation.search > h1 {
+  font-size: 22px;
+  color: $main_orange;
+  margin-bottom: 15px;
+}
+
+.kitchen-show.reservation.search > form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kitchen-show.reservation.search > form > .date-time-party.selector-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.kitchen-show.reservation.search > form > .date-time-party.selector-container > .input-container{
+  width: 100%;
+}
+
+.kitchen-show.reservation.search > form > .date-time-party.selector-container .selector {
+  margin-bottom: 10px;
+  height: 48px;
+  width: 100%;
+}
+
+.kitchen-show.reservation.search > form > .date-time-party.selector-container .date.selector {
+  border-radius: 4px;
+}
+
+.kitchen-show.reservation.search > form > .date-time-party.selector-container .time.selector {
+  border-radius: 4px;
+  border-style: solid;
+}
+
+.kitchen-show.reservation.search > form > .date-time-party.selector-container .party-size.selector {
+  border-radius: 4px;
+}
+
+.kitchen-show.reservation.search > form > .main.medium.button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.kitchen-show.reservation.timeslots {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.kitchen-show.reservation.timeslots > .timeslot {
+  width: 32%;
+  margin: 0;
+}
+
 .kitchen-show.container {
   position: relative;
   top: -48px;
-  width: 75%;
+  width: 65%;
   margin: 0 ;
 }
 

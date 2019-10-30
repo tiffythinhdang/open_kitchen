@@ -19,3 +19,9 @@ export const fetchTimeslots = (reservation) => dispatch => (
     .then(timeslots => dispatch(receiveTimeslots(timeslots)))
     // .fail(errors => dispatch(receiveReservationErrors(errors.responseJSON)))
 );
+
+export const fetchTimeslotsByAKitchen = (request) => dispatch => (
+  TimeslotAPIUtil.fetchTimeslotsByAKitchen(request)
+    .then(timeslots => dispatch(receiveTimeslots(timeslots)))
+    // .fail(errors => dispatch(receiveReservationErrors(errors.responseJSON)))
+);
