@@ -34,7 +34,7 @@
 }
 
 .kitchen-show.infor-reservation.container {
-  width: 75vw;
+  width: 80vw;
   display: flex;
   justify-content: space-between;
 }
@@ -43,7 +43,7 @@
   position: fixed;
   top: calc(68px + 250px - 48px - 48px);
   width: 25%;
-  right: 12.5%;
+  right: 10%;
   padding: 25px 0px;
   z-index: 2;
   display: flex;
@@ -124,7 +124,7 @@
 .kitchen-show.container {
   position: relative;
   top: -48px;
-  width: 60%;
+  width: 65%;
   margin: 0 ;
 }
 
