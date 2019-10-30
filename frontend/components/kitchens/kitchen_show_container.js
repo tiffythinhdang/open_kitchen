@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import KitchenShow from './kitchen_show';
 import { fetchAKitchen } from '../../actions/kitchen_actions';
@@ -29,4 +30,4 @@ const mapDispatchToProps = dispatch => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(KitchenShow);
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(KitchenShow) );

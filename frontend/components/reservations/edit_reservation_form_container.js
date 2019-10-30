@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import EditReservationForm from './edit_reservation_form';
 import { updateReservation } from '../../actions/reservations_actions';
@@ -18,4 +19,4 @@ const mapDispatchToProps = dispatch => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditReservationForm);
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(EditReservationForm) );

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import Search from './search';
 import { updateFilter } from '../../actions/filters_actions';
@@ -17,4 +18,4 @@ const mapDistpatchToProps = dispatch => {
   }
 };
 
-export default connect(mapStateToProps, mapDistpatchToProps)(Search);
+export default withRouter( connect(mapStateToProps, mapDistpatchToProps)(Search) );
