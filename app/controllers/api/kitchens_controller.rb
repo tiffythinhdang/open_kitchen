@@ -32,6 +32,7 @@ class Api::KitchensController < ApplicationController
   def show
     @kitchen = Kitchen.find_by(id: params[:id])
     @photos = @kitchen.photos.pluck(:image_url)
+    @profile_photo = @kitchen.photos.where(profile_photo: true).pluck(:image_url)
 
     if @kitchen
       render :show
