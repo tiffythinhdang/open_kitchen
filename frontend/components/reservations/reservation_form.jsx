@@ -58,6 +58,7 @@ class ReservationForm extends React.Component {
   }
 
   render() {
+    if (!this.props.kitchen) return null;
     return (
       <div className="reservation-form-outer-container">
         <div className="reservation-form container">

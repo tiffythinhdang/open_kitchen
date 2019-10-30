@@ -23,7 +23,7 @@ class KitchenSearchReservation extends React.Component {
   }
 
   componentDidMount() {
-   
+    
   }
 
   componentDidUpdate(prevProps) {

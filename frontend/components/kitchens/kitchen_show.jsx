@@ -64,7 +64,7 @@ class KitchenShow extends React.Component {
     }
   }
 
-  displayReservationSearch(e) {
+  displayMobileReservationSearch(e) {
     let reservationSearch = document.querySelector(".kitchen-show.reservation.search");
     let closeButton = document.querySelector("#mobile-kitchen-reserve-button-close");
     e.target.style.display = "none";
@@ -72,7 +72,7 @@ class KitchenShow extends React.Component {
     reservationSearch.style.display = "block";
   }
 
-  hideReservationSearch(e) {
+  hideMobileReservationSearch(e) {
     let reservationSearch = document.querySelector(".kitchen-show.reservation.search");
     let reserveButton = document.querySelector("#mobile-kitchen-reserve-button");
     e.target.style.display = "none";
@@ -94,7 +94,7 @@ class KitchenShow extends React.Component {
         <button
           className="medium main button"
           id="mobile-kitchen-reserve-button"
-          onClick={this.displayReservationSearch}
+          onClick={this.displayMobileReservationSearch}
         >
           Reserve
         </button>
@@ -102,7 +102,7 @@ class KitchenShow extends React.Component {
         <button
           className="medium tertiary button"
           id="mobile-kitchen-reserve-button-close"
-          onClick={this.hideReservationSearch}
+          onClick={this.hideMobileReservationSearch}
         >
           Close
         </button>
