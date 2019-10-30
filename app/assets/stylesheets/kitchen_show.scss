@@ -305,6 +305,14 @@
     width: 90%;
   }
 
+  .kitchen-show.reservation.search > form > .date-time-party.selector-container .date.selector {
+    width: 100%;
+  }
+
+  .kitchen-show.reservation.search > form > .date-time-party.selector-container .icon.calendar {
+    display: none;
+  }
+
   .kitchen-show.reservation.timeslots {
     width: 90%;
     margin: 0;
