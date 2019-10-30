@@ -195,21 +195,23 @@
 }
 
 // photos
+
 .photo-index {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: flex-start;
+  // justify-content: space-between;
+  // align-items: center;
   margin-top: 15px;
 }
 
 .photo-index-image.container {
-  width: 24%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 0 0 auto;
   overflow: hidden;
   margin-bottom: 10px;
 }
@@ -218,6 +220,7 @@
   width: 300px;
   height: 300px;
   object-fit: cover;
+  margin-right: 10px;
 }
 
 //map
